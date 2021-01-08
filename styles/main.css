@@ -1,21 +1,52 @@
 body {
-    margin: 60px auto;
-    width: 70%;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-nav ul, footer ul {
     
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.main{
+    margin-top: 150px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.image{
+    margin-left: 60%;
+    align-items: right;
+}
+.mainFooter{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+nav ul li{
+    display: block;
     padding: 0px;
     list-style: none;
-    font-weight: bold;
+    padding: 20px;
+    
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+footer ul li {
+    margin-left: 20%;
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
 }
-a {
+
+.navbar {
+    display: flex;
+    align-items: left;
+    text-align: right;
+    margin-right: 15%;
+  
+}
+
+nav a {
     text-decoration: none;
-    color: #999;
+    color: #585858;
+    
 }
 a:hover {
     text-decoration: underline;
@@ -23,15 +54,29 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: #BBBE64;
 }
 p {
     font-size: 1 em;
     line-height: 1.4em;
-    color: rgb(87, 87, 87);
+    
+}
+
+.title{
+    font-size: 2.25em;
+    color: #443850
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px dotted #ac478a;
     font-size: .8em;
+    color: #4C3B4D;
+    margin-bottom: 50px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #4C3B4D;
+    
 }
 
 ul.posts { 
@@ -44,6 +89,35 @@ ul.posts li {
 }
 
 .container{
-    margin-top: 50px;
+    display: flex;
+    align-items: left;
+    flex-direction:row;
     margin-bottom: 50px;
+    
+}
+
+.blurb{
+    margin-left: 15%;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    text-align: right;
+    width: 30%;
+    top: 25%;
+}
+img{
+    border-radius: 10px;
+    opacity: 0.75;
+}
+img:hover{
+    opacity: 1;
+}
+.colorBlock{
+    margin: 30px;
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+}
+.color{
+    color: #A53860;
 }
