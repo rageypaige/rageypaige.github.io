@@ -1,13 +1,9 @@
-/*
- * Roxy: Bootstrap template by GettTemplates.com
- * https://gettemplates.co/roxy
- */
 html, body {
   width: 100%;
   overflow-x: hidden; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300; }
 
 h1,
@@ -26,7 +22,7 @@ h6,
   margin-top: 0; }
 
 a {
-  color: #ff00cc;
+  color: #393A5D;
   transition: all .3s ease-in-out; }
 
 a:focus,
@@ -116,11 +112,11 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00cc;
+    background: #2aa5c4;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #57ACBC, #898DCC);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #57ACBC, #898DCC);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .jumbotron h1 {
     line-height: .9;
@@ -149,9 +145,9 @@ section {
     right: 0;
     background: #ff00cc;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+    background: -webkit-linear-gradient(to right, #57ACBC, #898DCC);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
+    background: linear-gradient(to right, #57ACBC, #898DCC);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .overlay.bg-white {
     color: #000; }
@@ -161,7 +157,15 @@ section {
 
 .text-white {
   color: #fff; }
-
+.projects-link{
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.bio{
+  font-size: 18px;
+  margin-top: 20px;
+}
 /*==============================
 =            BUTTON            =
 ==============================*/
@@ -209,9 +213,9 @@ section {
 .rectangle-1 {
   width: 2000px;
   height: 400px;
-  background: #8E2DE2;
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: #2d7be2;
+  background: -webkit-linear-gradient(to right, #57ACBC, #a073c7);
+  background: linear-gradient(to right, #57ACBC, #a073c7);
   transform-origin: 50% 150% 0;
   position: absolute;
   left: 0;
@@ -220,11 +224,11 @@ section {
 
 .rectangle-2 {
   width: 2000px;
-  height: 400px;
+  height: 450px;
   background: #8E2DE2;
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
-  transform-origin: 65% 100% 0;
+  background: -webkit-linear-gradient(to right, #57ACBC, #a073c7);
+  background: linear-gradient(to right, #57ACBC, #a073c7);
+  transform-origin: 55% 100% 0;
   position: absolute;
   right: 0;
   z-index: 0;
@@ -270,7 +274,7 @@ section {
 .rectangle-2 {
   opacity: 0;
   animation: grow2 ease 1s forwards;
-  box-shadow: 0px 20px 30px 0px rgba(9, 21, 54, 0.25) !important; }
+  box-shadow: 0px 20px 30px 0px rgba(26, 9, 54, 0.13) !important; }
 
 .rectangle-transparent-1 {
   width: 500px;
@@ -293,15 +297,15 @@ section {
   animation: floating-slow ease-in-out 12s infinite; }
 
 .circle-1 {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #fff;
+  width: 150px;
+  height: 150px;
+  background-color:rgba(255, 255, 255, 0.233);
   position: absolute;
   display: block;
   border-radius: 50%;
   transform-origin: 50% 50%;
   left: 5%;
-  top: 50%;
+  top: 10%;
   animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite; }
 
 .circle-2 {
@@ -309,7 +313,7 @@ section {
   height: 70px;
   top: 20%;
   left: 83%;
-  border: 2px solid #fff;
+  background-color:rgba(255, 255, 255, 0.233);
   position: absolute;
   display: block;
   border-radius: 50%;
@@ -317,15 +321,26 @@ section {
   animation: fadeInFromTop .5s linear forwards, floating ease-in-out 4s infinite; }
 
 .circle-3 {
-  top: 80%;
-  right: 25%;
+  top: 60%;
+  right: 45%;
   width: 40px;
   height: 40px;
-  border: 2px solid #fff;
+  background-color:rgba(255, 255, 255, 0.233);
   position: absolute;
   display: block;
   border-radius: 50%;
   animation: fadeInFromTop .5s linear forwards, floating ease-in-out 4s infinite; }
+
+  .circle-4 {
+    top: 80%;
+    right: 15%;
+    width: 100px;
+    height: 100px;
+    background-color:rgba(255, 255, 255, 0.233);
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    animation: fadeInFromTop .5s linear forwards, floating ease-in-out 4s infinite; }
 
 @keyframes floating {
   0% {
