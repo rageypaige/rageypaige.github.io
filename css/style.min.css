@@ -216,6 +216,18 @@ section {
   padding: 10px;
   width: 20%;
 }
+.projects-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.project {
+  max-width: 50%;
+}
+.project:hover {
+background-color: grey;
+}
 .projects-link:hover {
   box-shadow: 1px 0px 20px 7px rgba(46, 28, 63, 0.445);
   transition: 0.3s ease;
