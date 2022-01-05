@@ -25,48 +25,47 @@
 
 </head>
 <body class="static-layout">
-    <nav id="header-navbar" class="navbar navbar-expand-sm">
-        <div class="container" style="padding:10px">
-            <a class="navbar-brand d-flex align-items-center text-white" href="/">
-                <img src="img/icon.png" width='190px'>
+<!--NAVIGATION BAR-->
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+	<nav id="header-navbar" class="navbar navbar-expand-sm">
+    <div class="container" style="padding:0px">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="../img/logo.svg" width='35px'>
+        </a>
+        <div class="navbar" id="navbar-nav-header">
+            <ul class="navbar-nav ml-auto" style="display: flex; justify-content: center">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html" style="font-size: 18px; ">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects.html" style="font-size: 18px; text-decoration:underline">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about.html" style="font-size: 18px;">About</a>
+                </li>
+            </ul>
+            <a class="nav-link-icon" href="https://www.linkedin.com/in/paigelatimer">
+                <i class="fab fa-linkedin"></i>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="lnr lnr-menu"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-nav-header">
-                <ul class="navbar-nav ml-auto" style="display: flex; justify-content: center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" style="font-size: 18px">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html" style="font-size: 18px; text-decoration:underline">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html" style="font-size: 18px;">About</a>
-                    </li>
-                </ul>
-                <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="nav-link" href="mailto:platimer@student.ubc.ca">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-            </div>
+            <a class="nav-link-icon" href="mailto:platimer@student.ubc.ca">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
         </div>
-    </nav>
-<div class="jumbotron jumbotron-single d-flex align-items-center">
+    </div>
+</nav>
+<!--- NAVIGATION BAR ENDS -->
+<div class="projects-page">
     <div class="projects-list">
-        <div class="project">
-            <a href="../rageypaige.github.io/projects/noggn.html"><img src="img/noggndesktop.png"/></a>
-        </div>
-        <div class="project">
-            <img src="img/mobilesimply.png" />
-        </div>
+            <a href="projects/noggn.html">
+                <img src="img/noggn-title.png" class="project"/>
+            </a>
+        
+            <!--<a href="projects/simply.html">-->
+                <img src="img/simply-title.png" class="project"/>
+            <!--</a> -->
     </div>
 </div>	
 
-
-<!-- End of Features Section--></div>
 <footer class="mastfoot my-3">
     <div class="inner container">
          <div class="row">

@@ -5,61 +5,212 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projects List | Paige</title>
-    <meta name="description" content="Roxy">
+    <title>Noggn | Paige</title>
+    <meta name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400|Work+Sans:300,400,700" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 </head>
 <body class="static-layout">
-    <nav id="header-navbar" class="navbar navbar-expand-sm">
-        <div class="container" style="padding:10px">
-            <a class="navbar-brand d-flex align-items-center text-white" href="/">
-                <img src="img/icon.png" width='190px'>
+    <!--NAVIGATION BAR-->
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+	<nav id="header-navbar" class="navbar navbar-expand-sm">
+    <div class="container" style="padding:0px">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="../img/logo.svg" width='35px'>
+        </a>
+        <div class="navbar" id="navbar-nav-header">
+            <ul class="navbar-nav ml-auto" style="display: flex; justify-content: center">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html" style="font-size: 18px; ">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects.html" style="font-size: 18px; text-decoration:underline">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about.html" style="font-size: 18px;">About</a>
+                </li>
+            </ul>
+            <a class="nav-link-icon" href="https://www.linkedin.com/in/paigelatimer">
+                <i class="fab fa-linkedin"></i>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="lnr lnr-menu"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-nav-header">
-                <ul class="navbar-nav ml-auto" style="display: flex; justify-content: center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" style="font-size: 18px">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html" style="font-size: 18px; text-decoration:underline">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html" style="font-size: 18px;">About</a>
-                    </li>
-                </ul>
-                <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="nav-link" href="mailto:platimer@student.ubc.ca">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-            </div>
+            <a class="nav-link-icon" href="mailto:platimer@student.ubc.ca">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
         </div>
-    </nav>
-<div class="jumbotron jumbotron-single d-flex align-items-center">
+    </div>
+</nav>
+<!--- NAVIGATION BAR ENDS -->
+<div class="projects-page">
+    <div class="project-page-full">
+        <div class="project-title">
+            <h1>Noggn Case Study</h1>
+            <h3>A brainstorming app for students.</h3>
+        </div>
+    <div class="sub-section">
+            <div class="section-text">
+                <h1>Overview</h1>
+                <p> During the 2020/2021 school year, University classes were almost entirely online. 
+                    This alone was a huge change for students. My class mate, Nick Hemmingway, and I decided to tackle this problem for our 4th year BMS Capstone Project.
+                    </p>
+
+                
+            </div>
+            <div class="section-text">
+                <h3>Role</h3>
+                <p>Branding, UX Design, UI Design, Front-end Development</p>
+            </div>
+    </div>
+
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Research</h1>
+            <p>After conducting a survey of 32 university students, we found that almost three-quarters of students were required to work in group projects online. 
+                Not only that, but students found it more difficult to work as a team online due to lack of communication.
+            </p>
+            <p>Our research also indicated how students like to do brainstorming before starting a project. 21 Students said their favourite way to further define an idea is through Mind Maps. 
+            </p>
+            <p>In summation, we discovered that students were having problems communicating and brainstorming as a group remotely. 
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-research.png" width=400px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>The Solution</h1>
+            <p>Noggn is a collaborative web-based brainstorming application that helps students work together more efficiently. </p>
+            <p>Noggn's main goal is to foster a collaborative online environment for students and their teams to encourage creativity and idea development. 
+            </p>
+            <p>Using themes from my research, I developed numerous user stories to help further understand the problem and how to solve it.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-epics.png" width=400px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text-smaller">
+            <h1>Persona</h1>
+            <p>Meet Emily, one of the personas I created based on my research and user stories. </p>
+            <p>Emily's story is one a lot of students can relate to. She's hardworking and wants to do her best, but online school has caused some challenges. 
+            </p>
+            <p>I used Emily's story to design a product that could help students and ease their stresses about online school.
+            </p>
+        </div>
+        <div class="section-image-larger">
+            <img src="../img/noggn-persona.png" class="persona-img">
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Wireframes</h1>
+            <p>Initial design exploration consisted of mapping out where UI elements and key noggn features would live. </p>
+            <p>Using Emily's identity and story, I decided on two main features that would take up the majority of noggn's UI real estate: The Canvas, and the Chat Widget.
+            </p>
+            <p>The canvas is the main area where users will create the mind maps with their teams. There is a tool bar that will contain multiple options to customize their mind maps to suit their projects. I wanted users to have as much creative freedom as possible. 
+            </p>
+            <p>The chat widget serves as a quick way to discuss important details with your teammates. Users can collaboarate in real time without having to meet up in person or hop on a video call.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-wireframe.png" width=450px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text-full">
+            <h1>High Fidelity UI</h1>
+            <p>The initial wireframes were adjusted based on continuous user feedback which found that users preferred the chat widget to the left of the canvas. I added the ability to expand and collapse the chat as well so users can get a full-screen effect of the canvas.</p>
+            <p>The brand colours were inserted as well as the logo which gives a consistent feeling and experience of modern, friendly, and quirky.
+            </p>
+            <p>Mind maps have the ability to be customized by changing colour, arrangement, adding photos and hyperlinks to nodes, and changing the text of the nodes. This gives users unlimited options to play around and have fun.
+            </p>
+            <p>I also added a simple Dashboard that the user will land on after each login. The dashboard shows all active teams that the user is part of so they can quickly and easily view all current projects.
+            </p>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-image-full">
+            <img src="../img/noggndesktop.png" width=1000px;>
+        </div>
+        </div>
     
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Branding</h1>
+            <p>Starting with the name, I wanted the experience from start to finish to be upbeat and fun. The word 'noggn' is a silly synonym for head or brain.</p>
+            <p>I used a simple san-serif font for the main typography for easy reading and simplicity. 
+            </p>
+            <p>For the icon, I designed a combination of a cloud and a brain to represent the digital brainstorming part of noggn's identity. Our logo signifies our achievement of creating group brainstorming on the cloud. 
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-logo.png" width=400px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Colours</h1>
+            <p>Noggn's brand colours are so important to the identity. We want to be modern, yet friendly. Productive, yet quirky. </p>
+            <p>We achieved this by carefully selecting bright colours that are reminiscent of technology; the bright colours of LED and multicolored wires. 
+            </p>
+            <p>Primary and Secondary colours can be seen in noggn's logo and throughout the platform. The text colour is a staple for all text used throughout noggn's branding and UI.
+            </p>
+            <p>Accent colours are used in branding, social media, and on variations of the UI.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-colours.png" width=400px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Social Media</h1>
+            <p>This is a sample instagram stragegy for noggn's social media page. This strategy is so fun because it combines all of noggn's brand elements to create a solid identity.</p>
+            <p>Noggn's target market is mainly High School and University students. The overall design of this marketing appeals to that age group.
+            </p>
+            <p>The quirkiness of the brand comes through with the use of memes and jokes, which appeals to younger users.
+            </p>
+            <p>The use of bright colours and consistent messaging allows for a welcoming feel.
+            </p>
+            <p>This strategy could be easily translated to other social media platforms such as Facebook, LinkedIn, or Twitter, however Instagram is the most useful for the target audience.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-social.png" width=400px;>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="section-text">
+            <h1>Key Learnings</h1>
+            <p>I learned a lot from this project. Not only did it take a lot of planning, organizing, and time-management, but it also took a lot of thinking, brainstorming, and trying to understand problems.</p>
+            <p>For me, design is all about solving problems for people. It's about finding the things in everyday life that could be improved, and making them into amazing experiences that people will love.
+            </p>
+            <p>I know my job is done when users feel less stressed or even excited about tasks that once caused them discomfort.
+            </p>
+        </div>
+        <div class="section-image">
+            <img src="../img/noggn-final.png" width=400px;>
+        </div>
+    </div>
+    <div class="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+</div>
 </div>	
 
-
-<!-- End of Features Section--></div>
 <footer class="mastfoot my-3">
     <div class="inner container">
          <div class="row">
