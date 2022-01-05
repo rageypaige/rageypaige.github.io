@@ -148,6 +148,9 @@ box-shadow: 0px 4px 21px -11px rgba(89,89,89,0.48);
   .projects-page{
     padding-top: 150px;
     padding-bottom: 100px;
+    display:flex;
+    justify-content: center;
+    min-height:100vh;
   }
   .jumbotron:before {
     position: absolute;
@@ -179,7 +182,6 @@ box-shadow: 0px 4px 21px -11px rgba(89,89,89,0.48);
   font-size: 3rem !important; }
   .figure {
     position: relative;
-    max-width: 100%;
     margin-top:0px;
 }
 .figure img.image-hover{
@@ -191,8 +193,10 @@ box-shadow: 0px 4px 21px -11px rgba(89,89,89,0.48);
       object-fit: contain;
       opacity: 0;
       transition: opacity .5s;
+      min-width: 400px;
 }
 .figure img.logo-main{
+      min-width: 400px;
       opacity: 1;
       transition: opacity .5s;
 }
@@ -276,8 +280,8 @@ box-shadow: 0px 4px 21px -11px rgba(89,89,89,0.48);
 .project-page-full{
   display: flex;
   flex-direction: column;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
   justify-content: left;
 }
 
@@ -342,16 +346,32 @@ width:40%;
   width:90%;
   justify-content: center;
 }
-
+.about-page-full{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: left;
+}
 .back-to-top{
   display:flex;
   justify-content: center;
-  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+  margin-top: 0px;
+  background-color: #0F77E5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+  border-radius: 8px;
 } 
 .back-to-top a{
-  font-weight: bold;
-  font-size: 22px;
+  color: #ffffff;
+  font-weight: medium;
+  font-size: 16px;
 }
+
 
 /*==============================
 =         About Me Page       =
@@ -794,6 +814,16 @@ width:40%;
   }
   .projects-list {
     margin-top:50px;
-  }}
+  }
+  .figure img.image-hover{
+    position: absolute;
+        min-width: 200px;
+  }
+  .figure img.logo-main{
+        min-width: 200px;
+        
+  }
+
+}
   
 /*=====  End of RESPONSIVE  ======*/
