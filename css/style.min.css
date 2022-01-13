@@ -311,6 +311,13 @@ text-align:center;
 .section-text{
   width: 40%;
 }
+.about-section-text{
+  width: 50%;
+}
+.about-section-text b{
+  color:#0F77E5;
+  font-weight: bold;
+}
 .section-text a {
   font-weight:bold;
   color:#0F77E5
@@ -321,7 +328,7 @@ text-align:center;
 .section-text-full{
   width: 90%;
 }
-.section-text h1, .section-text-smaller h1, .section-text-full h1{
+.section-text h1, .section-text-smaller h1, .section-text-full h1, .about-section-text h1{
   color: #0F77E5;
   font-weight: bold;
   text-align: left;
@@ -368,7 +375,7 @@ width:40%;
   background-color: #0F77E5;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 120px;
+  width: 150px;
   border-radius: 8px;
 } 
 .back-to-top a{
@@ -831,6 +838,9 @@ width:40%;
   .figure img.logo-main{
         min-width: 200px;
         
+  }
+  .about-section-text{
+    width: 90%;
   }
 
 }
