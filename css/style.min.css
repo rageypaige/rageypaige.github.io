@@ -358,6 +358,31 @@ text-align:center;
 .section-image{
 width:40%;
 }
+.section-image-scroll{
+  width: 40%;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 10px;
+  /*-webkit-box-shadow: 0px 0px 14px -1px rgba(144,144,144,0.5); 
+  box-shadow: 0px 0px 14px -1px rgba(144,144,144,0.5);*/
+  border: 1px solid rgb(228, 222, 222);
+}
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: #CFCFCF;
+  border-radius: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: #B3AFB3;
+  }
+  ::-webkit-scrollbar-track{
+  background: #EDEDED;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+  }
 .section-image-larger{
   width:55%;
   }
