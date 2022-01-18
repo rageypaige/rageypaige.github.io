@@ -841,6 +841,10 @@ width:40%;
       margin-top:20px;
       margin-bottom:20px;
     }
+    .section-image-scroll{
+      width: 100%;
+      margin-bottom: 20px;
+    }
     .persona-img{
       width: 400px;
     }
