@@ -12,7 +12,7 @@ a {
   transition: all .3s ease-in-out; }
 
   p{
-    font-size: 15px;
+    font-size: 0.9em;
     line-height: 180%;
   }
 
@@ -219,6 +219,7 @@ section {
   font-size: 1.2em;
   font-weight: bold;
   color: #333333;
+  margin-bottom: 10px;
 }
 
 .work-subtitle{
@@ -272,6 +273,7 @@ text-align:center;
   color: #3D3DC4;
   font-weight: bold;
   font-size: 44px;
+  padding-bottom: 10px;
 }
 .project-title h3{
   color: #073464;
@@ -334,7 +336,6 @@ text-align:center;
 }
 
 .section-text p{
-  font-size: 15px;
   color: #333333;
 }
 .section-image{
@@ -344,10 +345,9 @@ width:40%;
   width: 40%;
   max-height: 400px;
   overflow-y: scroll;
-  padding: 10px;
-  /*-webkit-box-shadow: 0px 0px 14px -1px rgba(144,144,144,0.5); 
-  box-shadow: 0px 0px 14px -1px rgba(144,144,144,0.5);*/
-  border: 1px solid rgb(228, 222, 222);
+  padding: 0px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 ::-webkit-scrollbar{
   width: 7px;
