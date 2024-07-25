@@ -370,7 +370,7 @@ width:40%;
   }
 .section-image-full{
   display:flex;
-  width:90%;
+  width:100%;
   justify-content: center;
   flex-direction: column;
 }
