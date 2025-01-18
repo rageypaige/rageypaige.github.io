@@ -100,6 +100,7 @@ ul li a:hover {
     font-weight: 300;
     background: linear-gradient(to right, #758F89, #2A76AC, #745C91, #B1936E);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
 }
