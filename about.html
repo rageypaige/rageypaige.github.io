@@ -3,15 +3,20 @@
 
 <head>
 
-    <title>About me</title>
-    <meta name="description" content="Paige">
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>About — Paige Latimer</title>
+    <meta name="description" content="About Paige Latimer, a product designer in Calgary: what she does, how she works, and what she shoots on film.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -21,146 +26,134 @@
 
 </head>
 
-<body>
+<body class="redesign">
 
     <!-- BODY WRAPPER -->
     <div class="body-wrapper">
 
-        <!-- HEADER WRAPPER 
-        <div class="header"> -->
-            
-            <!-- NAV BAR -->
-            <div class="nav">
-            
-                <a class="logo" href="index.html">
-                    <img src="img/logo.svg" width="40px">
-                </a>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><b>About</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing"target="_blank">Resume <img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.latimer@hotmail.com">Contact</a>
+        </nav>
+
+        <main class="rd-about">
+
+            <!-- One screen: portrait | who I am, in short rows | details and links -->
+            <figure class="rd-about__portrait rd-anim" style="--rd-delay: 120ms">
+                <img src="img/Paige.png" alt="Portrait of Paige Latimer" width="662" height="662">
+                <figcaption>Paige Latimer, product designer.</figcaption>
+            </figure>
+
+            <div class="rd-about__main rd-anim" style="--rd-delay: 180ms">
+                <p class="rd-about__kicker">About</p>
+                <h1 class="rd-about__title">Product designer, film shooter, <em>cat person.</em></h1>
+                <p class="rd-about__intro">I&rsquo;m Paige, a product designer in Calgary. I&rsquo;m fascinated by human psychology, and for three years I&rsquo;ve put it to work on the Petro-Canada app at Suncor.</p>
+
+                <dl class="rd-about__rows">
+                    <div>
+                        <dt>What I do</dt>
+                        <dd>Design and ship features for the Petro-Canada app, from first sketch to release.</dd>
+                    </div>
+                    <div>
+                        <dt>How I work</dt>
+                        <dd>Iteration over perfection. Empathy first. Always one more question.</dd>
+                    </div>
+                    <div>
+                        <dt>Proud of</dt>
+                        <dd><a href="duet-booth.html">Duet Booth</a>: built in a day, won at the Figma Make&#8209;a&#8209;thon.</dd>
+                    </div>
+                    <div>
+                        <dt>Off the clock</dt>
+                        <dd>Shooting <a href="film.html">35mm film</a>, pilates, peppermint tea.</dd>
+                    </div>
+                    <div>
+                        <dt>Cats or dogs</dt>
+                        <dd>Cats, obviously. Feed this one: <span class="rd-cat rd-cat--inline" style="--cat-color:#1a1a18"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span></dd>
+                    </div>
+                    <div>
+                        <dt>Looking for</dt>
+                        <dd>[The role, team or problem you want next.]</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <aside class="rd-about__side rd-anim" style="--rd-delay: 240ms" aria-label="Details and links">
+                <dl class="rd-about__facts">
+                    <div><dt>Based in</dt><dd>Calgary, Alberta</dd></div>
+                    <div><dt>Currently</dt><dd>Suncor</dd></div>
+                    <div><dt>Before</dt><dd>Trip Ninja</dd></div>
+                    <div><dt>Studied</dt><dd>UBC</dd></div>
+                </dl>
+                <ul class="rd-about__links">
+                    <li><a href="mailto:paige.latimer@hotmail.com">Email</a></li>
+                    <li><a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing" target="_blank" rel="noopener">Resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/paigelatimer/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/ragey.jpg/" target="_blank" rel="noopener">Instagram</a></li>
                 </ul>
-            </div>
+            </aside>
 
-            <!-- GREETING -->
-            <div class="greeting">
-                <div class="title">
-                    <h1>Nice to <div class="name">meet</div> you</h1>
-                </div>
-            </div>
-
-        <!-- ABOUT ME -->
-        <div class="about">
-            <div class ="quick-intro">
-                <div class="summary">
-                    <h2>Me in 15 seconds</h2>
-                    <ul class ="about-list">
-                        <li>28 years</li>
-                        <li>Multi-faceted Product Designer</li>
-                        <li>Living in Calgary, Alberta</li>
-                        <li>UBC Alumni</li>
-                        <li>Innovating at one of Canada's largest companies</li>
-                    </ul>
-                </div>
-                    <div class="me">
-                        <img src="img/Paige.png" width="175px">
-                        <!-- <p>Kelowna, BC</p> -->
-                </div>
-            </div>
-
-            <div class="values">
-                <h2>My values</h2>
-                <div class="value">
-                    <h3>&#x1F680; Iteration over Perfection</h3>
-                    <p>Getting it right is better than getting it perfect. Great design evolves through feedback and iteration. I embrace progress over perfection, continually refining ideas to deliver meaningful results.</p>
-                </div>
-                <div class="value">
-                    <h3>&#x1F49B; Empathy Champion</h3>
-                    <p>Empathy is at the heart of my design process. I strive to understand user needs deeply, ensuring every solution is crafted with compassion and care.</p>
-                </div>
-                <div class="value">
-                    <h3>&#x1F30D; Curious Explorer</h3>
-                    <p>I believe curiosity fuels creativity. I love diving into the unknown, asking the right questions, and uncovering hidden insights that drive impactful design.</p>
-                </div>
-            </div>
-
-            <div class="play">
-                <div class ="values">
-                    <h2>Photography</h2>
-                    <p>When I'm not designing or coding, I recharge my mind with other creative outlets. Photography is one of them.</p>
-                    <p>Currently shooting: 35mm</p>
-                    <p>Find me on instagram: <b>@ragey.jpg</b></p>
-                </div>
-
-                <!-- START PHOTO GRID -->
-                <div class="photo-row">
-                    <div class="column">
-                        <img src="img/photography/1.png">
-                        <img src="img/photography/2.png">
-                    </div>
-                    <div class="column">
-                        <img src="img/photography/3.png">
-                        <img src="img/photography/4.png">
-                        <img src="img/photography/5.png">
-                    </div>
-                    <div class="column">
-                        <img src="img/photography/6.png">
-                        <img src="img/photography/7.png">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    
-        <hr class="hr1" />
+        </main>
 
         <!-- FOOTER -->
-        <div class="footer">
-            <div class="callout">
-                <img src="img/logo.svg" width="35px">
-                <p>Psst! I also designed and built this website. <span class="callout-link"><a href="portfolio-study.html">Learn about my process ></a></span></p>
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
             </div>
 
-            <div class="footer-links">
-                <ul class="footer-list">
-                    <li class="footer-link">
-                        <a href="more.html">More</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing"target="_blank">Resume<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                <h4>2025 Paige Latimer</h4>
-                <div class="salutations">
-                    <p>Made with love and peppermint tea (oak milk & honey)</p>
-                    <p>Last updated January 2025</p>
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.latimer@hotmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="portfolio-study.html">This site's process</a>
                 </div>
             </div>
 
-        </div>
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2025 Paige Latimer</span>
+                <span>Last updated January 2025</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
 
 </body>
-
-
-
-
 
 </html>

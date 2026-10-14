@@ -1,0 +1,251 @@
+/* ============================================
+   Footer — shared across redesigned pages.
+   Cats lounge on the footer's own text: perched on lines,
+   lying beside links, asleep on the divider.
+   ============================================ */
+
+:root {
+    --rd-footer-bg: #141412;
+    --rd-footer-text: #f1f1f1;
+    --rd-footer-muted: #9a9a95;
+    --rd-footer-line: #2a2a27;
+}
+
+.rd-footer {
+    position: relative;
+    background: var(--rd-footer-bg);
+    color: var(--rd-footer-text);
+    padding-top: 120px;
+    overflow: hidden;
+}
+
+.rd-footer__top {
+    max-width: 640px;
+    margin: 0;
+    padding: 0 var(--rd-gutter);
+    text-align: left;
+}
+
+.rd-footer__note {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rd-footer-muted);
+    margin: 0;
+}
+
+.rd-footer__links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 96px;
+    margin-top: 64px;
+    padding: 0 var(--rd-gutter);
+}
+
+.rd-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+}
+
+.rd-footer__col-title {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--rd-footer-text);
+    margin-bottom: 4px;
+}
+
+.rd-footer__col a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--rd-footer-muted);
+    text-decoration: none;
+}
+
+.rd-footer__col a:hover {
+    color: var(--rd-footer-text);
+}
+
+.rd-footer__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rd-footer__hint {
+    width: fit-content;
+    margin: 56px 0 0;
+    padding: 0 var(--rd-gutter);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--rd-footer-muted);
+}
+
+.rd-footer__hint span {
+    color: var(--rd-footer-text);
+}
+
+.rd-footer__counter {
+    width: fit-content;
+    margin: 6px 0 0;
+    padding: 0 var(--rd-gutter);
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: var(--rd-footer-muted);
+}
+
+.rd-footer__bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 96px 0 0;
+    padding: 24px var(--rd-gutter) 40px;
+    border-top: 1px solid var(--rd-footer-line);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--rd-footer-muted);
+}
+
+/* LOUNGING CATS */
+
+.rd-cat {
+    position: absolute;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+/* sits on top of the element it's placed in */
+.rd-cat--on-top {
+    bottom: 100%;
+    margin-bottom: 6px;
+}
+
+/* lies on the footer's divider line */
+.rd-cat--on-line {
+    bottom: 100%;
+    right: var(--rd-gutter);
+    margin-bottom: 1px;
+}
+
+/* peeks down from the top corner */
+.rd-cat--peek {
+    top: 28px;
+    right: var(--rd-gutter);
+}
+
+/* lies in the text flow, beside a word */
+.rd-cat--inline {
+    position: relative;
+}
+
+/* the cat above the homepage intro, on the light background */
+.rd-cat--hero .rd-cat__inner {
+    font-size: 16px;
+}
+
+.rd-cat--hero .rd-cat__treat {
+    color: #c98a2b;
+}
+
+.rd-cat__inner {
+    display: inline-block;
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--cat-color, var(--rd-cursor));
+    transform-origin: bottom center;
+    animation: rd-cat-bob 1.6s steps(1, jump-start) infinite;
+    animation-delay: var(--bob-delay, 0s);
+    cursor: pointer;
+}
+
+@keyframes rd-cat-bob {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
+
+.rd-cat__inner.is-fed {
+    animation: none;
+    transform: translateY(-4px) scale(1.15);
+}
+
+.rd-cat__zz {
+    position: absolute;
+    left: 100%;
+    bottom: 60%;
+    margin-left: 3px;
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 11px;
+    color: var(--rd-footer-muted);
+    pointer-events: none;
+    animation: rd-cat-zz 2.4s steps(1, jump-start) infinite;
+}
+
+@keyframes rd-cat-zz {
+    0%   { opacity: 0; transform: translate(0, 0); }
+    33%  { opacity: 1; transform: translate(0, 0); }
+    66%  { opacity: 1; transform: translate(3px, -4px); }
+    100% { opacity: 0; transform: translate(6px, -8px); }
+}
+
+.rd-cat.is-feeding .rd-cat__zz {
+    visibility: hidden;
+}
+
+/* fish pop when a cat is fed */
+
+.rd-cat__treat {
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: #ffd27a;
+    pointer-events: none;
+    animation: rd-cat-treat-pop 0.7s steps(5, end) forwards;
+}
+
+@keyframes rd-cat-treat-pop {
+    0%   { transform: translate(-50%, 0) scale(1); opacity: 1; }
+    60%  { transform: translate(-50%, -26px) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -34px) scale(0.8); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-cat__inner,
+    .rd-cat__zz {
+        animation: none;
+    }
+    .rd-cat__treat {
+        animation: none;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .rd-footer {
+        padding-top: 96px;
+    }
+    .rd-footer__links {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .rd-footer__bottom {
+        flex-direction: column;
+    }
+}

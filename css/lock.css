@@ -1,0 +1,140 @@
+/* ============================================
+   Lock screen for password-protected case studies.
+   Built by tools/lock_page.py; unlocked by js/lock.js.
+   ============================================ */
+
+/* The old stylesheet paints html near-black; this page is short, so it would show below. */
+html {
+    background: var(--rd-bg);
+}
+
+.rd-lock {
+    max-width: 30em;
+    margin: 0 auto;
+    padding: 18vh 24px 120px;
+    text-align: center;
+}
+
+.rd-lock__cat {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 16px;
+    color: var(--rd-text);
+}
+
+/* the cat shakes its head at a wrong password, in stop-motion */
+.rd-lock.is-wrong .rd-lock__cat {
+    animation: rd-lock-no 0.48s steps(1, jump-start);
+}
+
+@keyframes rd-lock-no {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-4px); }
+    50%  { transform: translateX(4px); }
+    75%  { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+.rd-lock__title {
+    margin: 0;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    line-height: 1.45;
+    color: var(--rd-text);
+}
+
+.rd-lock__note {
+    margin: 8px 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #8a8a86;
+}
+
+.rd-lock__note a {
+    font-weight: 400;
+    color: var(--rd-text);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+.rd-lock__form {
+    max-width: 320px;
+    margin: 48px auto 0;
+    text-align: left;
+}
+
+.rd-lock__label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #8a8a86;
+}
+
+.rd-lock__row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    border-bottom: 1px solid var(--rd-text);
+}
+
+.rd-lock__input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 8px 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--rd-text);
+}
+
+.rd-lock__row:focus-within {
+    border-bottom-width: 2px;
+    margin-bottom: -1px;
+}
+
+.rd-lock__button {
+    flex: none;
+    padding: 8px 0;
+    background: none;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--rd-text);
+    cursor: pointer;
+}
+
+.rd-lock__button:hover {
+    opacity: 0.6;
+}
+
+.rd-lock__button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.rd-lock__message {
+    min-height: 1.5em;
+    margin: 10px 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #8a8a86;
+}
+
+.rd-lock.is-wrong .rd-lock__message {
+    color: #c4492f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-lock.is-wrong .rd-lock__cat {
+        animation: none;
+    }
+}

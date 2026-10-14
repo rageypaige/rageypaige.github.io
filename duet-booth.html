@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>Duet Booth — Paige Latimer</title>
+    <meta name="description" content="Duet Booth: a photobooth for two people in different places. Figma Make-a-thon winner, by Paige Latimer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<body class="redesign">
+
+    <!-- BODY WRAPPER -->
+    <div class="body-wrapper">
+
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.latimer@hotmail.com">Contact</a>
+        </nav>
+
+        <!-- CASE STUDY: section list on the left, reading column on the right.
+             Copy in [square brackets] is a prompt to replace with the real story. -->
+        <div class="rd-cs">
+
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="index.html">&larr; Back</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#idea">The idea</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#build">Building it</a></li>
+                    <li><a href="#try">Try it</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ol>
+            </aside>
+
+            <main class="rd-cs-main">
+
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">02 &mdash; Duet Booth &mdash; Figma Make-a-thon winner</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">A photobooth for two people in different places</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">Take photos together, <em>even when you&rsquo;re not.</em> Snap four, send a link, and your friend fills in the other half of the strip.</p>
+                    <figure class="rd-cs-media rd-video rd-anim" style="--rd-delay: 260ms">
+                        <video src="img/duet/duet-demo.mp4" data-speed="2" width="1200" height="904" autoplay muted loop playsinline controls aria-label="Duet Booth demo video"></video>
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Solo: design &amp; build</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>1 day &middot; March 2026</dd>
+                        </div>
+                        <div>
+                            <dt>Event</dt>
+                            <dd>Figma Make-a-thon<br>with Contra</dd>
+                        </div>
+                        <div>
+                            <dt>Award</dt>
+                            <dd>Reimagining Iconic Interactions</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>A one-day build that won at the Figma Make-a-thon.</h2>
+                    <p>I designed and built Duet Booth on my own, in Figma Make, for the Figma Make-a-thon with Contra. Two people take photos remotely, at different times, and the booth stitches them into one strip as if they&rsquo;d been sitting side by side.</p>
+                    <div class="rd-cs-cards rd-cs-cards--2">
+                        <div>
+                            <h3>The brief</h3>
+                            <p>Imagine the next wave of software interactions, or push a familiar one somewhere unexpected.</p>
+                        </div>
+                        <div>
+                            <h3>The result</h3>
+                            <p>The Reimagining Iconic Interactions award, a feature on <a class="rd-cs-link" href="https://www.figma.com/blog/6-designs-that-reimagine-how-we-interact-with-software/" target="_blank" rel="noopener">Figma&rsquo;s blog</a>, and an app anyone can use.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- THE IDEA -->
+                <section id="idea" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">The idea</p>
+                    <h2>Vintage photobooths are having a moment. But the booth isn&rsquo;t always nearby, and sometimes the person isn&rsquo;t either.</h2>
+                    <p>Honestly, I made it because I wanted it. My feed was full of girlies with their photobooth strips, the FOMO was real, and I wanted cute ones with my sister.</p>
+                    <p>The photobooth has barely changed since the 1920s. It&rsquo;s still a box you both have to squeeze into at the same time. Photobooths turned photography into something more accessible, immediate and shared; Duet Booth keeps the shared part and drops the box.</p>
+                    <p class="rd-cs-question">What if a photobooth could hold two people in two places?</p>
+                </section>
+
+                <!-- HOW IT WORKS -->
+                <section id="how" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">How it works</p>
+                    <h2>Four steps, one strip.</h2>
+                    <ol class="rd-cs-steps">
+                        <li>
+                            <span class="rd-cs-steps__no">1</span>
+                            <h3>Snap four pics</h3>
+                            <p>You take your half of the strip, with a little hype from the booth after every shot.</p>
+                        </li>
+                        <li>
+                            <span class="rd-cs-steps__no">2</span>
+                            <h3>Send a link</h3>
+                            <p>One link to the person you&rsquo;re missing. They can open it whenever suits them.</p>
+                        </li>
+                        <li>
+                            <span class="rd-cs-steps__no">3</span>
+                            <h3>Your friend steps in</h3>
+                            <p>They see a faint ghost of you in the frame, so they can pose right beside you.</p>
+                        </li>
+                        <li>
+                            <span class="rd-cs-steps__no">4</span>
+                            <h3>Get one strip</h3>
+                            <p>The booth cuts you both out, layers you side by side, and prints one gritty, vintage strip. Tape it to your wall like it&rsquo;s 2007.</p>
+                        </li>
+                    </ol>
+                    <div class="rd-cs-grid">
+                        <figure class="rd-cs-media">
+                            <img src="img/duet/duet-taking.jpg" width="1200" height="904" loading="lazy" alt="Taking your four: a countdown on screen, with two of four shots already in the strip">
+                        </figure>
+                        <figure class="rd-cs-media">
+                            <img src="img/duet/duet-strips.jpg" width="996" height="1100" loading="lazy" alt="Three finished Duet Booth strips: black-and-white photos of pairs posing together, laid on a white sheet">
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- DESIGN -->
+                <section id="design" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Design</p>
+                    <h2>A booth with a personality, not just a camera with a filter.</h2>
+                    <p>Everything leans into the feel of a real booth: typewriter type, a warm off-white, a strip tilted like it&rsquo;s been tossed on a table, and gritty black-and-white prints. The details carry the rest.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/duet/duet-strip-ready.jpg" width="1200" height="904" loading="lazy" alt="A finished duet strip, tilted on the page, with a handwritten note: certified power couple">
+                    </figure>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <h3>The ghost</h3>
+                            <p>The second person poses against a faint outline of the first, so the two halves line up like they shared one booth.</p>
+                        </div>
+                        <div>
+                            <h3>The hype</h3>
+                            <p>After every shot the booth says something nice: &ldquo;oh, hello gorgeous,&rdquo; &ldquo;okay, you ate that.&rdquo; Duos get &ldquo;certified power couple.&rdquo;</p>
+                        </div>
+                        <div>
+                            <h3>The darkroom</h3>
+                            <p>The wait is part of the ritual: &ldquo;mixing the chemicals,&rdquo; &ldquo;hanging photos to dry,&rdquo; then &ldquo;your duet strip is ready.&rdquo;</p>
+                        </div>
+                    </div>
+                    <div class="rd-cs-decision">
+                        <div>
+                            <h3>Taken at different times, not live</h3>
+                            <p>The booth never asks both people to be free at once. One sends a link; the other steps in whenever they can.</p>
+                        </div>
+                        <div>
+                            <h3>Because&hellip;</h3>
+                            <p>Distance usually means time zones and busy schedules too. Dropping the &ldquo;together right now&rdquo; requirement is what makes it work for the people who need it most.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BUILDING IT -->
+                <section id="build" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Building it</p>
+                    <h2>Built in a day, in Figma Make, by keeping my focus on the experience.</h2>
+                    <p>Under the hood, it&rsquo;s a lot: live camera feeds, cutting two people out of their backgrounds and compositing them into one frame, and keeping two sessions in sync through a shared link. Figma Make handled the engineering, which kept me iterating on how it felt.</p>
+                    <p class="rd-cs-question">&ldquo;It let me stay in a creative flow and iterate quickly, which felt really important for something this interaction-driven.&rdquo;</p>
+                    <p class="rd-cs-cite">Me, in <a class="rd-cs-link" href="https://www.figma.com/blog/6-designs-that-reimagine-how-we-interact-with-software/" target="_blank" rel="noopener">Figma&rsquo;s write-up of the winners</a></p>
+                    <figure class="rd-cs-media">
+                        <img src="img/duet/duet-ghost.jpg" width="1200" height="904" loading="lazy" alt="Mid-shoot: the first person, cut out and faded, beside the second person posing live">
+                        <figcaption>The cut-out at work: the first person, outlined and faded, for the second to pose beside.</figcaption>
+                    </figure>
+                </section>
+
+                <!-- TRY IT -->
+                <section id="try" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Try it</p>
+                    <h2>It&rsquo;s live. Grab a friend.</h2>
+                    <p>Take a strip below, or open <a class="rd-cs-link" href="https://duet-booth.figma.site/" target="_blank" rel="noopener">duet-booth.figma.site</a> on its own.</p>
+                    <div class="rd-cs-embed">
+                        <iframe src="https://duet-booth.figma.site/" title="Duet Booth, live" loading="lazy" allow="camera; clipboard-write"></iframe>
+                    </div>
+                </section>
+
+                <!-- REFLECTION -->
+                <section id="reflection" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Reflection</p>
+                    <h2>What I learned</h2>
+                    <div class="rd-cs-cards rd-cs-cards--2">
+                        <div>
+                            <h3>Solve a real gap.</h3>
+                            <p>Duet Booth started as something I wanted that didn&rsquo;t exist. It helps when you&rsquo;re solving a real-life problem, not an imagined one: you already know who it&rsquo;s for and what it should feel like.</p>
+                        </div>
+                        <div>
+                            <h3>[Lesson two.]</h3>
+                            <p>[A sentence or two on what you&rsquo;d add next.]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">Next project</p>
+                    <a href="trip-ninja.html">Trip Ninja &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.latimer@hotmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="https://drive.google.com/file/d/18AG9aqlYRB-wjRqhtF9TIkS5aSgQzihe/view?usp=sharing" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="portfolio-study.html">This site's process</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2025 Paige Latimer</span>
+                <span>Last updated January 2025</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
+</body>
+
+</html>
