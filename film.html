@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>Film — Paige Latimer</title>
+    <meta name="description" content="35mm film photography by Paige Latimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/film.html">
+    <meta property="og:title" content="Film — Paige Latimer">
+    <meta property="og:description" content="35mm film photography by Paige Latimer.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;500;600&family=Inter+Tight:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/film.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<body class="redesign">
+
+    <!-- TOP BAR: nav + title, on a solid background so prints slide under it -->
+    <div class="rd-film-top">
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
+
+        <header class="rd-film-header rd-anim" style="--rd-delay: 120ms">
+            <div class="rd-film-header__title">
+                <p class="rd-film-eyebrow">Film · 35mm</p>
+                <h1 class="rd-film-title">My life in little rectangles</h1>
+            </div>
+            <div class="rd-film-header__tools">
+                <p class="rd-film-hint">Drag or scroll to look around</p>
+                <button type="button" class="rd-film-organize" aria-pressed="false" hidden>Organize</button>
+            </div>
+        </header>
+    </div>
+
+    <!-- PHOTOS: rendered by js/film.js from js/film-photos.js -->
+    <main class="rd-canvas rd-anim" style="--rd-delay: 200ms" id="film-canvas" aria-label="Photos"></main>
+
+    <!-- LIGHTBOX -->
+    <div class="rd-lightbox" id="film-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+        <span class="rd-lightbox__count rd-film-type"></span>
+        <button type="button" class="rd-lightbox__close">close</button>
+        <button type="button" class="rd-lightbox__nav rd-lightbox__prev" aria-label="Previous photo">‹</button>
+        <figure class="rd-lightbox__figure">
+            <div class="rd-lightbox__frame"></div>
+            <figcaption class="rd-lightbox__caption rd-film-type"></figcaption>
+        </figure>
+        <button type="button" class="rd-lightbox__nav rd-lightbox__next" aria-label="Next photo">›</button>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/film-photos.js" defer></script>
+    <script src="js/film-hidden.js" defer></script>
+    <script src="js/film.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+
+</body>
+
+</html>

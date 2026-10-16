@@ -3,8 +3,18 @@
 
 <head>
 
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
     <title>Paige Latimer</title>
-    <meta name="description" content="Paige">
+    <meta name="description" content="Paige Latimer is a product designer passionate about human psychology, currently shaping the Petro-Canada app at Suncor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/">
+    <meta property="og:title" content="Paige Latimer">
+    <meta property="og:description" content="Paige Latimer is a product designer passionate about human psychology, currently shaping the Petro-Canada app at Suncor.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
@@ -12,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -21,129 +34,127 @@
 
 </head>
 
-<body>
+<body class="redesign">
 
     <!-- BODY WRAPPER -->
     <div class="body-wrapper">
 
-        <!-- HEADER WRAPPER 
-        <div class="header"> -->
-            
-            <!-- NAV BAR -->
-            <div class="nav">
-            
-                <a class="logo" href="index.html">
-                    <img src="img/logo.svg" width="40px">
-                </a>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><b>Work</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.pdf"target="_blank">Resume <img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
+
+        <!-- FIRST SCREEN: the intro, then the projects as full-bleed rectangles side by
+             side, together filling the screen. The earlier collage layout is saved in git
+             under the tag home-collage. -->
+        <div class="rd-first-screen">
+
+        <!-- HERO -->
+        <section class="rd-hero">
+
+            <div class="rd-hero__intro rd-anim" style="--rd-delay: 120ms">
+                <span class="kaomoji"><span class="rd-cat rd-cat--inline rd-cat--hero" style="--cat-color:#191d27"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span></span>
+                <p>Paige is a product designer<br>
+                    passionate about<br>
+                    <em>human psychology,</em><br>
+                    currently shaping the <em>Petro-Canada app</em><br>
+                    at Suncor.</p>
             </div>
 
-            <!-- GREETING -->
-            <div class="greeting">
-                <div class="title">
-                    <h1>Hey, I'm <div class="name">Paige</div> </h1>
-                    <h1>A digital product designer</h1>
-                </div>
-                <p>Passionate about human psychology. Currently innovating the oil & gas industry at Suncor. UBCO Alum</p>
-            </div>
+        </section>
 
-        <!-- WORK -->
-        <div class="work">
+        <!-- WORK: full-bleed rectangles, edge to edge, one per project, in one row.
+             Thumbnails are still images until the gifs are ready: swap each img src
+             for the gif. -->
+        <section class="rd-work rd-work--two" aria-label="Work">
 
-            <!-- PETRO -->
-            <a href="petro-protected.html">
-                <div class="projects">
-                    <img src="img/petro.png" width="100%">
-                    <div class="project-title">
-                        <h3>Petro-Canada</h3>
-                        <p>Mobile app design. June 2023 - Present</p>
-                    </div>
-                </div>
-            </a>
-            
-            <!-- TRIP NINJA -->
-            <a href="trip-ninja.html">
-                <div class="projects">
-                    <img src="img/trip-ninja.png" width="100%">
-                    <div class="project-title">
-                        <h3>Trip Ninja</h3>
-                        <p>Responsive web design. April 2022 - June 2023</p>
-                    </div>
-                </div>
+            <a class="rd-work__item rd-work__item--fit rd-work__item--crop-narrow rd-reveal" href="petro-protected.html" style="--tile:#dcdfe5">
+                <img src="img/petro-app.jpg" alt="Three Petro-Canada app screens: buying a car wash, the offer hub, and fuelling up">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">01 — Petro-Canada app</span>
+                    <span class="rd-work__note">Product design · 3 years</span>
+                </span>
             </a>
 
-            <!-- SIMPLY BENEFITS -->
-            <a href="simply-benefits.html">
-                <div class="projects">
-                    <img src="img/simply.png" width="100%">
-                    <div class="project-title">
-                        <h3>Simply Benefits</h3>
-                        <p>Native mobile app design and responsive web design. April 2021 - April 2022</p>
-                    </div>
-                </div>
+            <a class="rd-work__item rd-work__item--fit rd-reveal" href="duet-booth.html" style="--tile:#fcf5ed">
+                <img src="img/duet/duet-strip-ready.jpg" alt="A finished Duet Booth photo strip">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">02 — Duet Booth</span>
+                    <span class="rd-work__note">Figma Make-a-thon winner</span>
+                </span>
             </a>
 
-            <!-- SHOPHOPPER -->
-            <a href="shophopper.html">
-                <div class="projects">
-                    <img src="img/shophopper.png" width="100%">
-                    <div class="project-title">
-                        <h3>ShopHopper</h3>
-                        <p>Native mobile app design. April 2022 - April 2023</p>
-                    </div>
-                </div>
-            </a>
+            <!-- Earlier work: hidden until Trip Ninja, Simply Benefits and ShopHopper are
+                 rebuilt in the new design. To bring it back, uncomment this and remove the
+                 .rd-work--two class above (css/redesign.css).
+            <nav class="rd-earlier rd-reveal" aria-label="Earlier work">
+                <span class="rd-earlier__label">Earlier work</span>
+                <a href="trip-ninja.html">03 — Trip Ninja</a>
+                <a href="simply-benefits.html">04 — Simply Benefits</a>
+                <a href="shophopper.html">05 — ShopHopper</a>
+            </nav>
+            -->
+
+        </section>
 
         </div>
-    
-        <hr class="hr1" />
 
         <!-- FOOTER -->
-        <div class="footer">
-            <div class="callout">
-                <img src="img/logo.svg" width="35px">
-                <p>Psst! I also designed and built this website. <span class="callout-link"><a href="portfolio-study.html">Learn about my process ></a></span></p>
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
             </div>
 
-            <div class="footer-links">
-                <ul class="footer-list">
-                    <li class="footer-link">
-                        <a href="more.html">More</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="resume.pdf"target="_blank">Resume<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                <h4>2025 Paige Latimer</h4>
-                <div class="salutations">
-                    <p>Made with love and peppermint tea (oak milk & honey)</p>
-                    <p>Last updated January 2025</p>
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
                 </div>
             </div>
 
-        </div>
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
 
 </body>
 

@@ -1,0 +1,175 @@
+/* ============================================
+   About — everything on one screen, quick to scan: portrait on the left,
+   who I am in short labelled rows in the middle, details and links on the right.
+   ============================================ */
+
+.rd-about {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) minmax(0, 540px) 200px;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    column-gap: 56px;
+    min-height: calc(100svh - 41px);
+    padding: 32px var(--rd-gutter) 48px;
+    color: var(--rd-text);
+}
+
+/* PORTRAIT */
+
+.rd-about__portrait {
+    margin: 0;
+}
+
+.rd-about__portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) contrast(1.05);
+}
+
+.rd-about__portrait figcaption {
+    margin-top: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #838b99;
+}
+
+/* WHO I AM */
+
+.rd-about__kicker {
+    margin: 0 0 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #838b99;
+}
+
+/* same heading font as the case-study titles */
+.rd-about__title {
+    margin: 0;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(26px, 2.4vw, 32px);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.rd-about__title em {
+    font-style: italic;
+}
+
+/* the home page's light voice */
+.rd-about__intro {
+    margin: 14px 0 0;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    line-height: 1.45;
+}
+
+/* label | answer rows, with hairlines between */
+.rd-about__rows {
+    margin: 28px 0 0;
+}
+
+.rd-about__rows > div {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 16px;
+    padding: 10px 0;
+    border-top: 1px solid #d1d5dd;
+}
+
+.rd-about__rows > div:last-child {
+    border-bottom: 1px solid #d1d5dd;
+}
+
+.rd-about__rows dt,
+.rd-about__facts dt {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #838b99;
+}
+
+.rd-about__rows dd,
+.rd-about__facts dd {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rd-about a {
+    font-weight: 400;
+    color: var(--rd-text);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+/* DETAILS AND LINKS */
+
+.rd-about__side {
+    padding-top: 27px; /* lines up with the title, under the kicker */
+}
+
+.rd-about__facts {
+    margin: 0;
+}
+
+.rd-about__facts > div {
+    padding: 8px 0;
+    border-top: 1px solid #d1d5dd;
+}
+
+.rd-about__facts > div:last-child {
+    border-bottom: 1px solid #d1d5dd;
+}
+
+.rd-about__facts dd {
+    margin-top: 1px;
+}
+
+.rd-about__links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rd-about__links li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* RESPONSIVE: below 1000px the details join the middle column; phones stack */
+
+@media (max-width: 1000px) {
+    .rd-about {
+        grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+    }
+    .rd-about__side {
+        grid-column: 2;
+        padding-top: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .rd-about {
+        display: block;
+        min-height: 0;
+        padding-top: 40px;
+    }
+    .rd-about__portrait {
+        max-width: 240px;
+        margin-bottom: 32px;
+    }
+    .rd-about__rows > div {
+        grid-template-columns: 96px minmax(0, 1fr);
+    }
+}

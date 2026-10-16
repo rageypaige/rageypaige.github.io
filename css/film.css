@@ -1,0 +1,313 @@
+/* ============================================
+   Film page — an endless canvas of photos you drag
+   around, plus a lightbox. Only loaded on film.html.
+   ============================================ */
+
+/* The top bar and the canvas fill the window, so the page itself never scrolls. */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body.redesign {
+    display: flex;
+    flex-direction: column;
+}
+
+.rd-film-type {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+/* Top bar: nav, then the title row. Solid, so the canvas never shows through. */
+.rd-film-top {
+    position: relative;
+    z-index: 10;
+    flex: none;
+    background: var(--rd-bg);
+    border-bottom: 1px solid #d1d5dd;
+}
+
+/* One small centred line, so it reads as a caption rather than more nav. */
+.rd-film-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px 16px;
+    padding: 20px var(--rd-gutter) 12px;
+    text-align: center;
+}
+
+.rd-film-header__title,
+.rd-film-header__tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px 16px;
+}
+
+.rd-film-header .rd-film-eyebrow,
+.rd-film-title,
+.rd-film-hint,
+.rd-film-organize {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: normal;
+    text-transform: none;
+    line-height: 1.4;
+    color: #838b99;
+}
+
+.rd-film-organize {
+    padding: 0;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+}
+
+.rd-film-organize:hover {
+    color: var(--rd-text);
+}
+
+.rd-film-organize[hidden] {
+    display: none;
+}
+
+/* CANVAS */
+
+.rd-canvas {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    z-index: 0;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
+}
+
+.rd-canvas.is-dragging {
+    cursor: grabbing;
+}
+
+html.rd-has-custom-cursor .rd-canvas {
+    cursor: none;
+}
+
+.rd-canvas__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    will-change: transform;
+}
+
+/* Organize / Scatter: prints hop to their new spots in stop-motion frames */
+.rd-canvas.is-arranging .rd-canvas__item {
+    transition: transform 0.8s steps(8, end);
+}
+
+.rd-canvas__group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.rd-canvas.is-organized .rd-canvas__group {
+    opacity: 1;
+    transition: opacity 0.2s steps(2, end) 0.6s;
+}
+
+.rd-canvas__group-name {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--rd-text);
+}
+
+.rd-canvas__group-count {
+    font-size: 12px;
+    color: #949ba9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-canvas.is-arranging .rd-canvas__item,
+    .rd-canvas.is-organized .rd-canvas__group {
+        transition: none;
+    }
+}
+
+.rd-canvas__print {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.rd-canvas__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+/* div.* so it outranks the display:block on .rd-canvas__img / .rd-lightbox__img */
+div.rd-film-ph {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d9dce2;
+    color: #a2a8b4;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+/* One line only: the layout leaves room for exactly one, so a long caption can't
+   grow a print into its neighbour. */
+.rd-canvas__caption {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #525a68;
+}
+
+/* Easter egg: the little cat lounging on the top edge of one print */
+.rd-film-cat {
+    right: 8px;
+    margin-bottom: 1px;
+    --cat-color: var(--rd-text);
+}
+
+.rd-film-cat .rd-cat__inner {
+    font-size: 11px;
+}
+
+.rd-film-cat .rd-cat__treat {
+    color: #c98a2b;
+}
+
+.rd-frame-no {
+    color: #949ba9;
+}
+
+/* LIGHTBOX */
+
+.rd-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 96px;
+    background: rgba(15, 18, 23, 0.96);
+}
+
+.rd-lightbox[hidden] {
+    display: none;
+}
+
+.rd-lightbox__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+.rd-lightbox__img {
+    display: block;
+    max-width: min(1100px, 100%);
+    max-height: calc(100vh - 200px);
+    width: auto;
+    height: auto;
+}
+
+.rd-lightbox div.rd-film-ph {
+    background: #222936;
+    color: #596170;
+}
+
+.rd-lightbox__caption {
+    min-height: 1.4em;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #ccd0d8;
+}
+
+.rd-lightbox__count {
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #838b99;
+}
+
+.rd-lightbox__close {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    padding: 4px;
+    background: none;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #838b99;
+    cursor: pointer;
+}
+
+.rd-lightbox__nav {
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    background: none;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    color: #838b99;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.rd-lightbox__prev { left: 24px; }
+.rd-lightbox__next { right: 24px; }
+
+.rd-lightbox__close:hover,
+.rd-lightbox__nav:hover {
+    color: #eef0f4;
+}
+
+@media (max-width: 760px) {
+    .rd-lightbox {
+        padding: 56px 12px 80px;
+    }
+    .rd-lightbox__nav {
+        top: auto;
+        bottom: 16px;
+        transform: none;
+    }
+}
