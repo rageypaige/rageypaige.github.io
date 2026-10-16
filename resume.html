@@ -61,8 +61,8 @@
             background: #fff;
             color: var(--text);
             font-family: 'Inter Resume', 'Inter', sans-serif;
-            font-size: 9.5pt;
-            line-height: 1.4;
+            font-size: 9pt;
+            line-height: 1.45;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -70,6 +70,10 @@
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        .nowrap {
+            white-space: nowrap;
         }
 
         b {
@@ -89,7 +93,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr auto;
             column-gap: 24px;
-            margin-bottom: 22px;
+            margin-bottom: 28px;
         }
 
         header p {
@@ -118,7 +122,7 @@
             display: grid;
             grid-template-columns: 1.05in 1.7in 1fr;
             column-gap: 16px;
-            margin-top: 22px;
+            margin-top: 30px;
         }
 
         .label {
@@ -133,7 +137,7 @@
         }
 
         .entry + .entry > * {
-            margin-top: 13px;
+            margin-top: 22px;
         }
 
         .who {
@@ -247,9 +251,9 @@
                 <span class="dates">June 2023 &ndash; Present</span>
             </p>
             <ul class="what">
-                <li>Lead end-to-end design for revenue-driving features in the Petro-Canada iOS and Android app, used by <b>2.4M</b> people a year.</li>
+                <li>Lead end-to-end design for revenue-driving features in the <span class="nowrap">Petro-Canada</span> iOS and Android app, used by <b>2.4M</b> people a year.</li>
                 <li>Designed the Petro-Points offer hub, a net-new, app-exclusive feature: <b>1.1M</b> members added <b>29M</b> offers in 2026, up <b>179%</b> YoY.</li>
-                <li>Expanded the hub with litre-tracking and activity offers, plus a new-offer badge on the Rewards tab that drew <b>9.3M</b> taps.</li>
+                <li>Expanded the hub with litre-tracking and activity offers, plus a <span class="nowrap">new-offer</span> badge on the Rewards tab that drew <b>9.3M</b> taps.</li>
                 <li>Designed in-app car wash purchases, which sold <b>$19K</b> in their first two weeks, nearly a third of the website&rsquo;s yearly sales.</li>
                 <li>Brought SuperPass fleet cards into the app, opening it to business drivers: SuperPass fuel-ups up <b>176%</b> YoY, with drivers fuelling up <b>2&times;</b> as often.</li>
                 <li>Redesigned the whole app and design system to WCAG&nbsp;AAA.</li>
