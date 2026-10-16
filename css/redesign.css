@@ -217,9 +217,9 @@ body.redesign::after {
     --subject-bottom: -24%;
 }
 
-/* Duet Booth: the browser window, sized by width, on a warm oat a shade deeper than the booth's cream */
+/* Duet Booth: the browser window, sized by width, on a soft sage (the rose's complement) */
 .rd-work__item--duet {
-    --tile-bg: #e8e0d4;
+    --tile-bg: #dde4da;
     --subject-width: 80%;
     --subject-bottom: -12%;
 }
