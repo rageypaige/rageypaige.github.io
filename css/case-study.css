@@ -110,7 +110,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-cs-title {
@@ -145,7 +145,7 @@
 /* a hairline round screenshots, so pale screens don't melt into the page */
 .rd-cs-media img {
     box-sizing: border-box;
-    border: 1px solid #dcd9d2;
+    border: 1px solid #d1d5dd;
 }
 
 /* Video in a hairline frame, with small round controls that appear on hover
@@ -153,8 +153,8 @@
 .rd-video {
     position: relative;
     overflow: hidden;
-    border: 1px solid #dcd9d2;
-    background: #e8e5de;
+    border: 1px solid #d1d5dd;
+    background: #dfe2e7;
 }
 
 .rd-video video {
@@ -201,7 +201,7 @@ html:not(.js) .rd-video video {
     border: 0;
     border-radius: 50%;
     /* dark enough to read on your cream screens, not just on dark footage */
-    background: rgba(26, 26, 24, 0.65);
+    background: rgba(25, 29, 39, 0.65);
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     color: #fff;
@@ -210,7 +210,7 @@ html:not(.js) .rd-video video {
 }
 
 .rd-video__button:hover {
-    background: rgba(26, 26, 24, 0.9);
+    background: rgba(25, 29, 39, 0.9);
 }
 
 /* in the two-up grid, real images fill the same 4:5 frame as the placeholders,
@@ -229,7 +229,7 @@ html:not(.js) .rd-video video {
     margin-top: 12px;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 /* Role / timeline / team / skills */
@@ -239,14 +239,14 @@ html:not(.js) .rd-video video {
     gap: 24px;
     margin: 48px 0 0;
     padding-top: 24px;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-cs-meta dt {
     margin-bottom: 6px;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-cs-meta dd {
@@ -286,7 +286,7 @@ html:not(.js) .rd-video video {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.65;
-    color: #5a5853;
+    color: #525a68;
 }
 
 .rd-cs-section p {
@@ -316,7 +316,7 @@ html:not(.js) .rd-video video {
 
 .rd-cs-cards > div {
     padding-top: 16px;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-cs-cards p {
@@ -373,7 +373,7 @@ html:not(.js) .rd-video video {
 
 .rd-cs-steps li {
     padding-top: 16px;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-cs-steps__no {
@@ -399,7 +399,7 @@ html:not(.js) .rd-video video {
     position: relative;
     margin-top: 40px;
     overflow: hidden;
-    border: 1px solid #dcd9d2;
+    border: 1px solid #d1d5dd;
     background: #faf7f2;
     aspect-ratio: var(--embed-w, 1200) / var(--embed-h, 860);
 }
@@ -436,7 +436,7 @@ html:not(.js) .rd-cs-embed iframe {
     gap: 32px;
     margin-top: 40px;
     padding-top: 16px;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-cs-decision p {
@@ -448,7 +448,7 @@ html:not(.js) .rd-cs-embed iframe {
 .rd-cs-main .rd-cs-cite {
     margin: 10px 0 0 21px;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 /* A pull-quote style line for the one big question */
@@ -469,21 +469,21 @@ html:not(.js) .rd-cs-embed iframe {
     width: 100%;
     aspect-ratio: 16 / 10;
     background: #ffffff;
-    border: 1px dashed #d4d4d0;
+    border: 1px dashed #ccd0d8;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 24px;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #b3b3ae;
+    color: #a8aeb9;
     text-align: center;
 }
 
 .rd-cs-next {
     margin: 160px 0 0;
     padding: 24px 0 160px;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-cs-next a {

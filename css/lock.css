@@ -51,7 +51,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-lock__note a {
@@ -72,7 +72,7 @@ html {
     margin-bottom: 6px;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-lock__row {
@@ -126,7 +126,7 @@ html {
     margin: 10px 0 0;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-lock.is-wrong .rd-lock__message {

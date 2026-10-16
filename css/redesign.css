@@ -4,9 +4,9 @@
    ============================================ */
 
 :root {
-    --rd-bg: #f1f1f1;
-    --rd-text: #1a1a18;
-    --rd-section-alt: #d9d9d9;
+    --rd-bg: #eef0f4;
+    --rd-text: #191d27;
+    --rd-section-alt: #d4d7de;
     --rd-cursor: #ff6b4a;
     --rd-gutter: 20px;
 }
@@ -16,6 +16,29 @@ body.redesign {
     background: var(--rd-bg);
     color: var(--rd-text);
     font-family: 'Inter', sans-serif;
+}
+
+/* FILM GRAIN: a fine, still noise over every page, a nod to shooting 35mm.
+   Drawn by the browser from an SVG filter, so there's no image to download.
+   It sits above the page (and the photo viewer) but under the custom cursor,
+   and never catches clicks. */
+
+body.redesign::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9500;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1.6 0 0 0 -0.3 1.6 0 0 0 -0.3 1.6 0 0 0 -0.3 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+    mix-blend-mode: overlay;
+    opacity: var(--rd-grain, 0.3);
+}
+
+@media print {
+    body.redesign::after {
+        display: none;
+    }
 }
 
 /* NAV */
@@ -139,10 +162,10 @@ body.redesign {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--tile, #e4e2dd);
+    background: var(--tile, #dcdfe5);
     font-family: 'Inter', sans-serif;
     font-size: 12px;
-    color: rgba(26, 26, 24, 0.35);
+    color: rgba(25, 29, 39, 0.35);
 }
 
 /* Earlier work: the same tile as the cards, its list sitting where their labels do */
@@ -152,7 +175,7 @@ body.redesign {
     justify-content: flex-end;
     gap: 6px;
     padding: var(--rd-gutter);
-    background: var(--tile, #e4e2dd);
+    background: var(--tile, #dcdfe5);
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.4;
@@ -160,7 +183,7 @@ body.redesign {
 
 .rd-earlier__label {
     margin-bottom: 4px;
-    color: rgba(26, 26, 24, 0.55);
+    color: rgba(25, 29, 39, 0.55);
 }
 
 .rd-earlier a {

@@ -25,7 +25,7 @@ body.redesign {
     z-index: 10;
     flex: none;
     background: var(--rd-bg);
-    border-bottom: 1px solid #dcd9d2;
+    border-bottom: 1px solid #d1d5dd;
 }
 
 /* One small centred line, so it reads as a caption rather than more nav. */
@@ -59,7 +59,7 @@ body.redesign {
     letter-spacing: normal;
     text-transform: none;
     line-height: 1.4;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-film-organize {
@@ -140,7 +140,7 @@ html.rd-has-custom-cursor .rd-canvas {
 
 .rd-canvas__group-count {
     font-size: 12px;
-    color: #a3a09a;
+    color: #949ba9;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -172,8 +172,8 @@ div.rd-film-ph {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e4e0d7;
-    color: #b3aea3;
+    background: #d9dce2;
+    color: #a2a8b4;
     font-family: 'Courier Prime', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 0.1em;
@@ -190,7 +190,7 @@ div.rd-film-ph {
     margin-top: 8px;
     font-size: 12px;
     line-height: 1.4;
-    color: #5a5853;
+    color: #525a68;
 }
 
 /* Easter egg: the little cat lounging on the top edge of one print */
@@ -209,7 +209,7 @@ div.rd-film-ph {
 }
 
 .rd-frame-no {
-    color: #a3a09a;
+    color: #949ba9;
 }
 
 /* LIGHTBOX */
@@ -222,7 +222,7 @@ div.rd-film-ph {
     align-items: center;
     justify-content: center;
     padding: 64px 96px;
-    background: rgba(20, 20, 18, 0.96);
+    background: rgba(15, 18, 23, 0.96);
 }
 
 .rd-lightbox[hidden] {
@@ -246,15 +246,15 @@ div.rd-film-ph {
 }
 
 .rd-lightbox div.rd-film-ph {
-    background: #2f2d29;
-    color: #6b675e;
+    background: #222936;
+    color: #596170;
 }
 
 .rd-lightbox__caption {
     min-height: 1.4em;
     margin-top: 14px;
     font-size: 13px;
-    color: #d8d4cc;
+    color: #ccd0d8;
 }
 
 .rd-lightbox__count {
@@ -263,7 +263,7 @@ div.rd-film-ph {
     left: 32px;
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-lightbox__close {
@@ -275,7 +275,7 @@ div.rd-film-ph {
     border: 0;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
     cursor: pointer;
 }
 
@@ -288,7 +288,7 @@ div.rd-film-ph {
     font-family: 'Inter', sans-serif;
     font-size: 28px;
     line-height: 1;
-    color: #8a8a86;
+    color: #838b99;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -298,7 +298,7 @@ div.rd-film-ph {
 
 .rd-lightbox__close:hover,
 .rd-lightbox__nav:hover {
-    color: #f1f1f1;
+    color: #eef0f4;
 }
 
 @media (max-width: 760px) {

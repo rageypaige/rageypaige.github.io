@@ -33,7 +33,7 @@
     margin-top: 8px;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 /* WHO I AM */
@@ -42,7 +42,7 @@
     margin: 0 0 10px;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 /* same heading font as the case-study titles */
@@ -79,11 +79,11 @@
     grid-template-columns: 112px minmax(0, 1fr);
     column-gap: 16px;
     padding: 10px 0;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-about__rows > div:last-child {
-    border-bottom: 1px solid #dcd9d2;
+    border-bottom: 1px solid #d1d5dd;
 }
 
 .rd-about__rows dt,
@@ -91,7 +91,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     line-height: 1.5;
-    color: #8a8a86;
+    color: #838b99;
 }
 
 .rd-about__rows dd,
@@ -121,11 +121,11 @@
 
 .rd-about__facts > div {
     padding: 8px 0;
-    border-top: 1px solid #dcd9d2;
+    border-top: 1px solid #d1d5dd;
 }
 
 .rd-about__facts > div:last-child {
-    border-bottom: 1px solid #dcd9d2;
+    border-bottom: 1px solid #d1d5dd;
 }
 
 .rd-about__facts dd {

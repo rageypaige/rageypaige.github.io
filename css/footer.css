@@ -5,10 +5,10 @@
    ============================================ */
 
 :root {
-    --rd-footer-bg: #141412;
-    --rd-footer-text: #f1f1f1;
-    --rd-footer-muted: #9a9a95;
-    --rd-footer-line: #2a2a27;
+    --rd-footer-bg: #0f1217;
+    --rd-footer-text: #eef0f4;
+    --rd-footer-muted: #8c94a3;
+    --rd-footer-line: #202631;
 }
 
 .rd-footer {
