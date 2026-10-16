@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Resume — Paige Latimer</title>
+    <meta name="description" content="Resume of Paige Latimer, product designer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- The source of resume.pdf. To update the PDF, edit this page and print it
+         from Chrome to PDF (Letter, no margins, no headers and footers). -->
+
+    <!-- Inter comes from the computer's own install, so print this from a machine
+         that has Inter (the site's font) installed. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        :root {
+            --text: #1a1a18;
+            --body: #5a5853;
+            --muted: #8a8a86;
+        }
+
+        html {
+            background: #fff;
+        }
+
+        body {
+            box-sizing: border-box;
+            width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            padding: 0.6in 0.65in;
+            background: #fff;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        b {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .mono {
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* HEADER: name and title | links | email */
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            column-gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        .name {
+            font-size: 10pt;
+            font-weight: 500;
+        }
+
+        .title {
+            font-size: 9pt;
+            color: var(--muted);
+        }
+
+        header a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 0.5px;
+        }
+
+        /* SECTIONS: label | who, role and dates | what I did */
+
+        section {
+            display: grid;
+            grid-template-columns: 1.15in 1.95in 1fr;
+            column-gap: 16px;
+            margin-top: 32px;
+        }
+
+        .label {
+            grid-column: 1;
+            margin: 0;
+            font-size: 8.5pt;
+            color: var(--muted);
+        }
+
+        .entry {
+            display: contents;
+        }
+
+        .entry + .entry > * {
+            margin-top: 18px;
+        }
+
+        .who {
+            grid-column: 2;
+            margin: 0;
+        }
+
+        .who span {
+            display: block;
+        }
+
+        .who .org {
+            font-weight: 500;
+        }
+
+        .who .dates {
+            color: var(--muted);
+        }
+
+        .what {
+            grid-column: 3;
+            margin: 0;
+            color: var(--body);
+        }
+
+        .what p {
+            margin: 0;
+        }
+
+        .what p + p {
+            margin-top: 4px;
+        }
+
+        /* one-line rows, e.g. skills */
+        .row {
+            display: contents;
+        }
+
+        .row + .row > * {
+            margin-top: 6px;
+        }
+
+        @media screen {
+            html {
+                background: #e8e5de;
+            }
+            body {
+                margin: 32px auto;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+            }
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <p class="name mono">Paige Latimer</p>
+            <p class="title mono">Product Designer</p>
+        </div>
+        <div>
+            <p><a href="https://paigelatimer.ca">paigelatimer.ca</a></p>
+            <p><a href="https://www.linkedin.com/in/paigelatimer/">linkedin.com/in/paigelatimer</a></p>
+        </div>
+        <div>
+            <p><a href="mailto:paige.a.latimer@outlook.com">paige.a.latimer@outlook.com</a></p>
+        </div>
+    </header>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <p class="label mono">Experience</p>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">Suncor / Petro-Canada</span>
+                <span>UX Designer</span>
+                <span class="dates">June 2023 &ndash; Present</span>
+            </p>
+            <div class="what">
+                <p>Lead design for revenue-driving features in the Petro-Canada app, including the Petro-Points offer hub, the most engaging feature I&rsquo;ve shipped, and the in-app WestJet partnership experience.</p>
+                <p>Ran usability studies that drove a <b>34%</b> increase in app ratings, and made the design system more accessible: colour contrast, dark mode, responsive layouts and screen reader support.</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">Trip Ninja</span>
+                <span>Product Designer</span>
+                <span class="dates">April 2022 &ndash; June 2023</span>
+            </p>
+            <div class="what">
+                <p>Led design of a B2B sign-up and dashboard, and a redesign of the B2C web app that increased engagement and retention.</p>
+                <p>Designed the public site redesign, which increased demo bookings and site traffic, and built the design system and brand to WCAG AAA.</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">Simply Benefits</span>
+                <span>UX Design Specialist</span>
+                <span class="dates">April 2021 &ndash; April 2022</span>
+            </p>
+            <div class="what">
+                <p>Led the mobile app redesign, tested with 30 users: downloads up <b>163%</b> and app updates up <b>20%</b>.</p>
+                <p>Simplified sign-up for a <b>20%</b> lift in sign-ups, and designed a voluntary benefits purchase flow that scored <b>6/7</b> in usability testing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS & AWARDS -->
+    <section>
+        <p class="label mono">Awards</p>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">Figma Make-a-thon</span>
+                <span>Winner, Reimagining Iconic Interactions</span>
+                <span class="dates">March 2026</span>
+            </p>
+            <div class="what">
+                <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>: a photobooth for two people in different places. Designed and built solo in one day in Figma Make; featured on Figma&rsquo;s blog.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <p class="label mono">Education</p>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">University of British Columbia</span>
+                <span class="dates">2017 &ndash; 2021</span>
+            </p>
+            <div class="what">
+                <p><b>Bachelor of Media Studies</b></p>
+                <p>Minor in Computer Science</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <p class="label mono">Skills</p>
+
+        <div class="row">
+            <p class="who"><span class="org">Design</span></p>
+            <p class="what">User experience &amp; interface design, usability research &amp; testing, design systems, accessibility (WCAG)</p>
+        </div>
+        <div class="row">
+            <p class="who"><span class="org">Tools &amp; code</span></p>
+            <p class="what">Figma, Figma Make, HTML &amp; CSS, React</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
