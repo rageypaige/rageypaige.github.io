@@ -190,7 +190,7 @@ body.redesign::after {
     flex: 1 1 auto;
     min-height: 0;
     overflow: hidden;
-    background: #e3e6ec;
+    background: var(--tile-bg, #e3e6ec);
 }
 
 .rd-work__item.rd-work__item--glow img.rd-work__subject {
@@ -210,14 +210,16 @@ body.redesign::after {
     transform: translateX(-50%) translateY(-14px);
 }
 
-/* Petro-Canada: the phone, sized by height */
+/* Petro-Canada: the phone, sized by height, on a dusty rose (Petro red, nearly all the colour taken out) */
 .rd-work__item--petro {
+    --tile-bg: #ecdedd;
     --subject-height: 104%;
     --subject-bottom: -24%;
 }
 
-/* Duet Booth: the browser window, sized by width */
+/* Duet Booth: the browser window, sized by width, on a warm oat a shade deeper than the booth's cream */
 .rd-work__item--duet {
+    --tile-bg: #e8e0d4;
     --subject-width: 80%;
     --subject-bottom: -12%;
 }
