@@ -11,13 +11,32 @@
     <!-- The source of resume.pdf. To update the PDF, edit this page and print it
          from Chrome to PDF (Letter, no margins, no headers and footers). -->
 
-    <!-- Inter comes from the computer's own install, so print this from a machine
-         that has Inter (the site's font) installed. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* Static TrueType Inter from fonts/, so the PDF embeds it as a standard font
+           that applicant tracking systems can read (variable or system copies print
+           as Type 3, which some can't). */
+        @font-face {
+            font-family: 'Inter Resume';
+            src: url('fonts/Inter-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'Inter Resume';
+            src: url('fonts/Inter-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'Inter Resume';
+            src: url('fonts/Inter-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+        }
+
         @page {
             size: letter;
             margin: 0;
@@ -41,7 +60,7 @@
             padding: 0.45in 0.6in;
             background: #fff;
             color: var(--text);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter Resume', 'Inter', sans-serif;
             font-size: 9.5pt;
             line-height: 1.4;
             -webkit-print-color-adjust: exact;
@@ -228,7 +247,7 @@
                 <span class="dates">June 2023 &ndash; Present</span>
             </p>
             <ul class="what">
-                <li>Lead design for revenue-driving features in the Petro-Canada app, used by <b>2.4M</b> people a year.</li>
+                <li>Lead end-to-end design for revenue-driving features in the Petro-Canada iOS and Android app, used by <b>2.4M</b> people a year.</li>
                 <li>Designed the Petro-Points offer hub, a net-new, app-exclusive feature: <b>1.1M</b> members added <b>29M</b> offers in 2026, up <b>179%</b> YoY.</li>
                 <li>Grew it with new offer types, like litre tracking and activity offers, and a new-offer badge on the Rewards tab that drew <b>9.3M</b> taps.</li>
                 <li>Designed in-app car wash purchases, which sold <b>$19K</b> in their first two weeks, nearly a third of the website&rsquo;s yearly sales.</li>
@@ -267,9 +286,9 @@
         </div>
     </section>
 
-    <!-- AWARDS & PROJECTS -->
+    <!-- AWARDS -->
     <section>
-        <p class="label mono">Awards &amp; Projects</p>
+        <p class="label mono">Awards</p>
 
         <div class="entry">
             <p class="who">
@@ -279,17 +298,6 @@
             </p>
             <div class="what">
                 <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>: a photobooth for two people in different places. Designed and built solo in one day in Figma Make, and featured on Figma&rsquo;s blog.</p>
-            </div>
-        </div>
-
-        <div class="entry">
-            <p class="who">
-                <span class="org">paigelatimer.ca</span>
-                <span>Designer &amp; developer</span>
-                <span class="dates">2025 &ndash; Present</span>
-            </p>
-            <div class="what">
-                <p>Designed and hand-built my portfolio in HTML and CSS, from the logo to an explorable archive of my 35mm film.</p>
             </div>
         </div>
     </section>
@@ -315,8 +323,16 @@
         <p class="label mono">Skills</p>
 
         <div class="row">
-            <p class="who"><span class="org">Design &amp; research</span></p>
-            <p class="what">User research, usability testing, user flows, wireframing, prototyping, UI design, design systems, accessibility (WCAG)</p>
+            <p class="who"><span class="org">Design</span></p>
+            <p class="what">Product design, UX/UI design, interaction design, user flows, information architecture, wireframing, prototyping, design systems</p>
+        </div>
+        <div class="row">
+            <p class="who"><span class="org">Research &amp; data</span></p>
+            <p class="what">User research, usability testing, accessibility (WCAG), Google Analytics</p>
+        </div>
+        <div class="row">
+            <p class="who"><span class="org">Platforms</span></p>
+            <p class="what">iOS and Android apps, responsive web, B2B and B2C products</p>
         </div>
         <div class="row">
             <p class="who"><span class="org">Tools &amp; code</span></p>
