@@ -1,3 +1,4 @@
+
 /* ============================================
    Portfolio redesign — shared styles: nav, home page, cursor
    Source: Figma "Untitled" — node 26:179
@@ -9,6 +10,8 @@
     --rd-section-alt: #d4d7de;
     --rd-cursor: #ff6b4a;
     --rd-gutter: 20px;
+    /* the small voice: nav links, intro facts, project labels */
+    --rd-small-font: 'Inter', sans-serif;
 }
 
 body.redesign {
@@ -41,46 +44,41 @@ body.redesign::after {
     }
 }
 
-/* NAV */
+/* NAV: your name on the left in the display face; the links on the right in the
+   small voice, the same as the project labels and the facts. */
 
 .rd-nav {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
     align-items: baseline;
-    padding: 20px var(--rd-gutter) 0;
+    gap: 28px;
+    padding: 22px var(--rd-gutter) 0;
 }
 
 .rd-nav__logo {
-    justify-self: start;
-    font-family: 'Inter', sans-serif;
+    margin-right: auto;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 17px;
-    letter-spacing: -0.01em;
+    font-size: 18px;
+    letter-spacing: -0.02em;
     color: var(--rd-text);
     text-decoration: none;
 }
 
-/* Equal-width columns so About sits dead centre, whatever the word lengths. */
 .rd-nav__links {
-    display: grid;
-    grid-template-columns: repeat(3, 118px);
+    display: flex;
+    gap: 28px;
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 .rd-nav__links a,
 .rd-nav__contact {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--rd-small-font);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--rd-text);
     text-decoration: none;
-}
-
-.rd-nav__contact {
-    justify-self: end;
 }
 
 .rd-nav__links a:hover,
@@ -100,28 +98,53 @@ body.redesign::after {
 
 .rd-hero {
     flex: none;
-    padding: clamp(40px, 10vh, 120px) 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 24px 64px;
+    padding: clamp(40px, 10vh, 112px) var(--rd-gutter) clamp(36px, 7vh, 72px);
 }
 
-/* Lines are broken by hand in the markup; the max-width only stops runaway lines. */
-.rd-hero__intro {
-    max-width: 30em;
-    margin: 0 auto;
-    text-align: center;
+/* the one loud thing on the page */
+.rd-hero__title {
+    max-width: 13em;
+    margin: 0;
     font-family: 'Inter Tight', 'Inter', sans-serif;
-    font-size: 19px;
     font-weight: 300;
-    letter-spacing: -0.02em;
-    line-height: 1.4;
+    font-size: clamp(34px, 4.4vw, 64px);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
     color: var(--rd-text);
 }
 
-.rd-hero__intro .kaomoji {
-    display: block;
-    margin-bottom: 4px;
+.rd-hero__title em {
+    font-style: italic;
 }
 
-.rd-hero__intro p {
+/* the short facts, in the small voice */
+.rd-hero__facts {
+    margin: 0;
+    font-family: var(--rd-small-font);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.rd-hero__facts > div {
+    display: grid;
+    grid-template-columns: 64px auto;
+    gap: 12px;
+}
+
+.rd-hero__facts > div + div {
+    margin-top: 4px;
+}
+
+.rd-hero__facts dt {
+    color: var(--rd-text);
+    opacity: 0.5;
+}
+
+.rd-hero__facts dd {
     margin: 0;
 }
 
@@ -153,6 +176,87 @@ body.redesign::after {
 @media (max-width: 760px) {
     .rd-work__item.rd-work__item--crop-narrow img {
         object-fit: cover;
+    }
+}
+
+/* WORK TILES: a flat, gallery-like colour with the work shown the way it's used
+   (a phone for the app, a browser window for the web app), bleeding off the
+   bottom edge. The name and a short note sit inside the frame, top left.
+   On hover the work lifts. */
+
+.rd-work__item.rd-work__item--glow {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.rd-work__item--glow .rd-work__text {
+    top: 20px;
+    left: 22px;
+    right: 22px;
+    bottom: auto;
+    z-index: 1;
+    gap: 1px;
+    font-family: var(--rd-small-font);
+    font-size: 13px;
+    line-height: 1.45;
+    letter-spacing: 0;
+}
+
+.rd-work__item--glow .rd-work__note {
+    opacity: 0.55;
+}
+
+.rd-work__media {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    background: var(--tile-bg, #e3e6ec);
+}
+
+.rd-work__item.rd-work__item--glow img.rd-work__subject {
+    inset: auto;
+    left: 50%;
+    bottom: var(--subject-bottom, -16%);
+    width: var(--subject-width, auto);
+    height: var(--subject-height, auto);
+    max-width: none;
+    object-fit: contain;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 16px 28px rgba(25, 29, 39, 0.12)) drop-shadow(0 2px 6px rgba(25, 29, 39, 0.08));
+    transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-work__item--glow:hover img.rd-work__subject {
+    transform: translateX(-50%) translateY(-14px);
+}
+
+/* Petro-Canada: the phone, sized by height, on a dusty rose (Petro red, nearly all the colour taken out) */
+.rd-work__item--petro {
+    --tile-bg: #ecdedd;
+    --subject-height: 104%;
+    --subject-bottom: -24%;
+}
+
+/* Duet Booth: the browser window, sized by width, on a soft sage (the rose's complement) */
+.rd-work__item--duet {
+    --tile-bg: #dde4da;
+    --subject-width: 80%;
+    --subject-bottom: -12%;
+}
+
+@media (max-width: 760px) {
+    /* the tile turns tall: crop in to the camera in the middle of the window */
+    .rd-work__item--duet {
+        --subject-width: 150%;
+        --subject-bottom: -10%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-work__item.rd-work__item--glow img.rd-work__subject {
+        transition: none;
     }
 }
 
@@ -370,18 +474,21 @@ html.js .rd-reveal.is-visible {
     :root {
         --rd-gutter: 16px;
     }
+    .rd-hero {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+    /* phones: name on its own line, the links in a row beneath it */
     .rd-nav {
-        grid-template-columns: 1fr auto;
-        row-gap: 16px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 22px;
         padding-top: 16px;
     }
-    .rd-nav__links {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        justify-self: center;
-        grid-template-columns: repeat(3, 84px);
+    .rd-nav__logo {
+        flex-basis: 100%;
     }
-    .rd-hero__intro {
-        padding: 0 24px;
+    .rd-nav__links {
+        gap: 22px;
     }
 }

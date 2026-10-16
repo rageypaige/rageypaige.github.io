@@ -190,15 +190,6 @@
     position: relative;
 }
 
-/* the cat above the homepage intro, on the light background */
-.rd-cat--hero .rd-cat__inner {
-    font-size: 16px;
-}
-
-.rd-cat--hero .rd-cat__treat {
-    color: #c98a2b;
-}
-
 .rd-cat__inner {
     display: inline-block;
     font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;

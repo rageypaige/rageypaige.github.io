@@ -30,6 +30,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="manifest" href="favicon/site.webmanifest">
 
 </head>
@@ -55,17 +56,15 @@
              under the tag home-collage. -->
         <div class="rd-first-screen">
 
-        <!-- HERO -->
+        <!-- HERO: one big statement on the left, the short facts on the right -->
         <section class="rd-hero">
 
-            <div class="rd-hero__intro rd-anim" style="--rd-delay: 120ms">
-                <span class="kaomoji"><span class="rd-cat rd-cat--inline rd-cat--hero" style="--cat-color:#191d27"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span></span>
-                <p>Paige is a product designer<br>
-                    passionate about<br>
-                    <em>human psychology,</em><br>
-                    currently shaping the <em>Petro-Canada app</em><br>
-                    at Suncor.</p>
-            </div>
+            <h1 class="rd-hero__title rd-anim" style="--rd-delay: 120ms">I design for the way people <em>actually think.</em></h1>
+
+            <dl class="rd-hero__facts rd-anim" style="--rd-delay: 200ms">
+                <div><dt>Now</dt><dd>Shaping the Petro-Canada app at Suncor</dd></div>
+                <div><dt>Based</dt><dd>Calgary, Alberta</dd></div>
+            </dl>
 
         </section>
 
@@ -74,19 +73,23 @@
              for the gif. -->
         <section class="rd-work rd-work--two" aria-label="Work">
 
-            <a class="rd-work__item rd-work__item--fit rd-work__item--crop-narrow rd-reveal" href="petro-protected.html" style="--tile:#dcdfe5">
-                <img src="img/petro-app.jpg" alt="Three Petro-Canada app screens: buying a car wash, the offer hub, and fuelling up">
+            <a class="rd-work__item rd-work__item--glow rd-work__item--petro rd-reveal" href="petro-protected.html">
                 <span class="rd-work__text">
-                    <span class="rd-work__label">01 — Petro-Canada app</span>
+                    <span class="rd-work__label">Petro-Canada app</span>
                     <span class="rd-work__note">Product design · 3 years</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/home/petro-phone.webp" width="656" height="1400" alt="The Petro-Canada app's offer hub, a list of Petro-Points offers to add">
                 </span>
             </a>
 
-            <a class="rd-work__item rd-work__item--fit rd-reveal" href="duet-booth.html" style="--tile:#fcf5ed">
-                <img src="img/duet/duet-strip-ready.jpg" alt="A finished Duet Booth photo strip">
+            <a class="rd-work__item rd-work__item--glow rd-work__item--duet rd-reveal" href="duet-booth.html">
                 <span class="rd-work__text">
-                    <span class="rd-work__label">02 — Duet Booth</span>
+                    <span class="rd-work__label">Duet Booth</span>
                     <span class="rd-work__note">Figma Make-a-thon winner</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/home/duet-window.webp" width="1800" height="1209" alt="Duet Booth in a browser: the live camera counting down, with two of four shots taken">
                 </span>
             </a>
 
