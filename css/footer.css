@@ -116,6 +116,44 @@
     color: var(--rd-footer-muted);
 }
 
+/* Wider screens: the links on the left, the cat-feeding hint and counter on the
+   right, lined up with the bottom of the links. Phones keep the stacked layout. */
+
+@media (min-width: 641px) {
+    .rd-footer {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        /* note | links (with empty space above the hint) | hint | counter | bottom bar */
+        grid-template-rows: auto 1fr auto auto auto;
+    }
+    .rd-footer__top {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+    .rd-footer__bottom {
+        grid-column: 1 / -1;
+        grid-row: 5;
+    }
+    .rd-footer__links {
+        grid-column: 1;
+        grid-row: 2 / span 3;
+    }
+    .rd-footer__hint,
+    .rd-footer__counter {
+        grid-column: 2;
+        justify-self: end;
+        align-self: end;
+        text-align: right;
+    }
+    .rd-footer__hint {
+        grid-row: 3;
+        margin: 0;
+    }
+    .rd-footer__counter {
+        grid-row: 4;
+    }
+}
+
 /* LOUNGING CATS */
 
 .rd-cat {
