@@ -156,10 +156,10 @@ body.redesign::after {
     }
 }
 
-/* GLOW TILES: the label sits above the picture in a typewriter face; the picture
-   is the site's cool grey with one soft glow in the project's own colour, and one
-   big subject (a phone, the photo strips) bleeding off the bottom edge. On hover
-   the subject lifts and the glow drifts. */
+/* WORK TILES: the label sits above the picture in a typewriter face; the picture
+   is a flat, gallery-like grey with the work shown the way it's used (a phone for
+   the app, a browser window for the web app), bleeding off the bottom edge.
+   On hover the work lifts. */
 
 .rd-work__item.rd-work__item--glow {
     display: flex;
@@ -190,59 +190,44 @@ body.redesign::after {
     flex: 1 1 auto;
     min-height: 0;
     overflow: hidden;
-    isolation: isolate;
     background: #e3e6ec;
-}
-
-.rd-work__media::before {
-    content: '';
-    position: absolute;
-    inset: -20%;
-    z-index: -1;
-    background: var(--glow);
-    filter: blur(56px);
-    transition: transform 1.2s cubic-bezier(0.16, 0.8, 0.3, 1);
-}
-
-.rd-work__item--glow:hover .rd-work__media::before {
-    transform: translate(2%, -3%) scale(1.06);
 }
 
 .rd-work__item.rd-work__item--glow img.rd-work__subject {
     inset: auto;
     left: 50%;
     bottom: var(--subject-bottom, -16%);
-    width: auto;
-    height: var(--subject-height, 100%);
+    width: var(--subject-width, auto);
+    height: var(--subject-height, auto);
     max-width: none;
     object-fit: contain;
-    transform: translateX(-50%) rotate(var(--subject-tilt, 0deg));
-    transform-origin: 50% 100%;
-    filter: drop-shadow(0 24px 40px rgba(25, 29, 39, 0.22)) drop-shadow(0 4px 10px rgba(25, 29, 39, 0.14));
+    transform: translateX(-50%);
+    filter: drop-shadow(0 16px 28px rgba(25, 29, 39, 0.12)) drop-shadow(0 2px 6px rgba(25, 29, 39, 0.08));
     transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
 .rd-work__item--glow:hover img.rd-work__subject {
-    transform: translateX(-50%) translateY(-14px) rotate(var(--subject-tilt, 0deg));
+    transform: translateX(-50%) translateY(-14px);
 }
 
-/* Petro-Canada: a soft glow of Petro red behind the phone, like light off the screen */
+/* Petro-Canada: the phone, sized by height */
 .rd-work__item--petro {
-    --glow:
-        radial-gradient(42% 50% at 50% 78%, rgba(218, 41, 28, 0.55) 0%, rgba(218, 41, 28, 0) 100%),
-        radial-gradient(30% 36% at 22% 20%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
     --subject-height: 104%;
     --subject-bottom: -24%;
 }
 
-/* Duet Booth: the warm sepia of the prints */
+/* Duet Booth: the browser window, sized by width */
 .rd-work__item--duet {
-    --glow:
-        radial-gradient(46% 52% at 50% 76%, rgba(176, 138, 96, 0.62) 0%, rgba(176, 138, 96, 0) 100%),
-        radial-gradient(30% 36% at 80% 18%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-    --subject-height: 96%;
-    --subject-bottom: -20%;
-    --subject-tilt: -3deg;
+    --subject-width: 80%;
+    --subject-bottom: -12%;
+}
+
+@media (max-width: 760px) {
+    /* the tile turns tall: crop in to the camera in the middle of the window */
+    .rd-work__item--duet {
+        --subject-width: 150%;
+        --subject-bottom: -10%;
+    }
 }
 
 /* small screens: the detail goes under the project name, the same on every tile */
@@ -253,7 +238,6 @@ body.redesign::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rd-work__media::before,
     .rd-work__item.rd-work__item--glow img.rd-work__subject {
         transition: none;
     }
