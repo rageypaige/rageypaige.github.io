@@ -156,6 +156,94 @@ body.redesign::after {
     }
 }
 
+/* GLOW TILES: a soft, blurred mesh gradient in each project's own colours, one big
+   subject (a phone, the photo strips) bleeding off the bottom edge, and a frosted
+   label. On hover the subject lifts and the colours drift. */
+
+.rd-work__item--glow {
+    isolation: isolate;
+    background: var(--glow-base);
+}
+
+.rd-work__item--glow::before {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    z-index: -1;
+    background: var(--glow);
+    filter: blur(48px);
+    transition: transform 1.2s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-work__item--glow:hover::before {
+    transform: translate(3%, -2%) rotate(6deg) scale(1.05);
+}
+
+.rd-work__item.rd-work__item--glow img.rd-work__subject {
+    inset: auto;
+    left: 50%;
+    bottom: var(--subject-bottom, -16%);
+    width: auto;
+    height: var(--subject-height, 100%);
+    max-width: none;
+    object-fit: contain;
+    transform: translateX(-50%) rotate(var(--subject-tilt, 0deg));
+    transform-origin: 50% 100%;
+    filter: drop-shadow(0 24px 40px rgba(25, 29, 39, 0.28)) drop-shadow(0 4px 10px rgba(25, 29, 39, 0.16));
+    transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-work__item--glow:hover img.rd-work__subject {
+    transform: translateX(-50%) translateY(-14px) rotate(var(--subject-tilt, 0deg));
+}
+
+/* the label sits on frosted glass, so it reads over any colour or image */
+.rd-work__item--glow .rd-work__text {
+    right: auto;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 6px 20px rgba(25, 29, 39, 0.08);
+}
+
+.rd-work__item--glow .rd-work__note {
+    opacity: 0.7;
+}
+
+/* Petro-Canada: its red, a warm coral, and a cool lilac from the site's palette */
+.rd-work__item--petro {
+    --glow-base: #f3dde3;
+    --glow:
+        radial-gradient(38% 46% at 22% 26%, #e4002b 0%, rgba(228, 0, 43, 0) 100%),
+        radial-gradient(34% 40% at 82% 22%, #ff8a6b 0%, rgba(255, 138, 107, 0) 100%),
+        radial-gradient(46% 52% at 74% 86%, #aeb9f2 0%, rgba(174, 185, 242, 0) 100%),
+        radial-gradient(40% 44% at 18% 88%, #f7c7d3 0%, rgba(247, 199, 211, 0) 100%);
+    --subject-height: 104%;
+    --subject-bottom: -24%;
+}
+
+/* Duet Booth: cream, peach and dusty rose, the warm sepia of the prints */
+.rd-work__item--duet {
+    --glow-base: #f6ece3;
+    --glow:
+        radial-gradient(40% 48% at 20% 24%, #f2b48f 0%, rgba(242, 180, 143, 0) 100%),
+        radial-gradient(36% 44% at 84% 30%, #e3a1b6 0%, rgba(227, 161, 182, 0) 100%),
+        radial-gradient(48% 50% at 70% 92%, #c9bde6 0%, rgba(201, 189, 230, 0) 100%),
+        radial-gradient(42% 46% at 16% 90%, #f5dcc4 0%, rgba(245, 220, 196, 0) 100%);
+    --subject-height: 96%;
+    --subject-bottom: -20%;
+    --subject-tilt: -3deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-work__item--glow::before,
+    .rd-work__item.rd-work__item--glow img.rd-work__subject {
+        transition: none;
+    }
+}
+
 /* while the earlier-work tile is hidden: just the two headline projects */
 .rd-work--two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
