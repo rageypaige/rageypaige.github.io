@@ -1,5 +1,7 @@
 (function () {
-    var photos = window.FILM_PHOTOS || [];
+    // Skip photos that aren't uploaded yet (js/film-hidden.js).
+    var hidden = window.FILM_HIDDEN || [];
+    var photos = (window.FILM_PHOTOS || []).filter(function (p) { return hidden.indexOf(p.src) === -1; });
     var canvas = document.getElementById('film-canvas');
     var lightbox = document.getElementById('film-lightbox');
     if (!photos.length || !canvas || !lightbox) return;

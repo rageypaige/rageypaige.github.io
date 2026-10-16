@@ -138,6 +138,21 @@ body.redesign::after {
     padding: 0 var(--work-gap) var(--work-gap);
 }
 
+/* a tile whose image has a plain background: show all of it, on that colour
+   (set with --tile), so the label below sits on clear space */
+.rd-work__item--fit {
+    background: var(--tile, #dcdfe5);
+}
+
+.rd-work__item.rd-work__item--fit img {
+    object-fit: contain;
+}
+
+/* while the earlier-work tile is hidden: just the two headline projects */
+.rd-work--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .rd-work__item {
     position: relative;
     display: block;

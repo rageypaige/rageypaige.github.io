@@ -7,6 +7,14 @@
     <meta charset="UTF-8">
     <title>Paige Latimer</title>
     <meta name="description" content="Paige Latimer is a product designer passionate about human psychology, currently shaping the Petro-Canada app at Suncor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/">
+    <meta property="og:title" content="Paige Latimer">
+    <meta property="og:description" content="Paige Latimer is a product designer passionate about human psychology, currently shaping the Petro-Canada app at Suncor.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
@@ -62,33 +70,36 @@
         </section>
 
         <!-- WORK: full-bleed rectangles, edge to edge, one per project, in one row.
-             Thumbnails are placeholders until the gifs are ready: swap each
-             <div class="rd-thumb"> for <img src="img/....gif" alt="..."> -->
-        <section class="rd-work" aria-label="Work">
+             Thumbnails are still images until the gifs are ready: swap each img src
+             for the gif. -->
+        <section class="rd-work rd-work--two" aria-label="Work">
 
-            <a class="rd-work__item rd-reveal" href="petro-protected.html">
-                <div class="rd-thumb" role="img" aria-label="Petro-Canada app">gif</div>
+            <a class="rd-work__item rd-work__item--fit rd-reveal" href="petro-protected.html" style="--tile:#f5aebc">
+                <img src="img/petro.png" alt="Petro-Canada app screens on a pink background">
                 <span class="rd-work__text">
                     <span class="rd-work__label">01 — Petro-Canada app</span>
                     <span class="rd-work__note">Product design · 3 years</span>
                 </span>
             </a>
 
-            <a class="rd-work__item rd-reveal" href="duet-booth.html">
-                <div class="rd-thumb" role="img" aria-label="Duet Booth">gif</div>
+            <a class="rd-work__item rd-work__item--fit rd-reveal" href="duet-booth.html" style="--tile:#fcf5ed">
+                <img src="img/duet/duet-strip-ready.jpg" alt="A finished Duet Booth photo strip">
                 <span class="rd-work__text">
                     <span class="rd-work__label">02 — Duet Booth</span>
                     <span class="rd-work__note">Figma Make-a-thon winner</span>
                 </span>
             </a>
 
-            <!-- Earlier work: a slim third tile; the numbering carries on from the cards -->
+            <!-- Earlier work: hidden until Trip Ninja, Simply Benefits and ShopHopper are
+                 rebuilt in the new design. To bring it back, uncomment this and remove the
+                 .rd-work--two class above (css/redesign.css).
             <nav class="rd-earlier rd-reveal" aria-label="Earlier work">
                 <span class="rd-earlier__label">Earlier work</span>
                 <a href="trip-ninja.html">03 — Trip Ninja</a>
                 <a href="simply-benefits.html">04 — Simply Benefits</a>
                 <a href="shophopper.html">05 — ShopHopper</a>
             </nav>
+            -->
 
         </section>
 
@@ -118,7 +129,6 @@
                     <a href="index.html">Work</a>
                     <a href="about.html">About</a>
                     <a href="film.html">Film</a>
-                    <a href="portfolio-study.html">This site's process</a>
                 </div>
             </div>
 
