@@ -148,6 +148,14 @@ body.redesign::after {
     object-fit: contain;
 }
 
+/* on narrow screens the tile turns tall: crop in to the middle of a wide image
+   (e.g. the centre phone) instead of shrinking the whole thing */
+@media (max-width: 760px) {
+    .rd-work__item.rd-work__item--crop-narrow img {
+        object-fit: cover;
+    }
+}
+
 /* while the earlier-work tile is hidden: just the two headline projects */
 .rd-work--two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
