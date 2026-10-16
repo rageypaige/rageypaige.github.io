@@ -184,9 +184,9 @@ body.redesign::after {
     }
 }
 
-/* WORK TILES: the label sits above the picture in the small voice; the picture
-   is a flat, gallery-like grey with the work shown the way it's used (a phone for
-   the app, a browser window for the web app), bleeding off the bottom edge.
+/* WORK TILES: a flat, gallery-like colour with the work shown the way it's used
+   (a phone for the app, a browser window for the web app), bleeding off the
+   bottom edge. The name and a short note sit inside the frame, top left.
    On hover the work lifts. */
 
 .rd-work__item.rd-work__item--glow {
@@ -196,16 +196,15 @@ body.redesign::after {
 }
 
 .rd-work__item--glow .rd-work__text {
-    position: static;
-    flex: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 2px 16px;
-    padding: 0 2px 10px;
+    top: 20px;
+    left: 22px;
+    right: 22px;
+    bottom: auto;
+    z-index: 1;
+    gap: 1px;
     font-family: var(--rd-small-font);
     font-size: 13px;
+    line-height: 1.45;
     letter-spacing: 0;
 }
 
@@ -257,13 +256,6 @@ body.redesign::after {
     .rd-work__item--duet {
         --subject-width: 150%;
         --subject-bottom: -10%;
-    }
-}
-
-/* small screens: the detail goes under the project name, the same on every tile */
-@media (max-width: 640px) {
-    .rd-work__item--glow .rd-work__text {
-        flex-direction: column;
     }
 }
 
