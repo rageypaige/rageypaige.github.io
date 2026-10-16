@@ -38,12 +38,12 @@
             width: 8.5in;
             min-height: 11in;
             margin: 0 auto;
-            padding: 0.6in 0.65in;
+            padding: 0.45in 0.6in;
             background: #fff;
             color: var(--text);
             font-family: 'Inter', sans-serif;
-            font-size: 10pt;
-            line-height: 1.5;
+            font-size: 9.5pt;
+            line-height: 1.4;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -70,7 +70,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr auto;
             column-gap: 24px;
-            margin-bottom: 30px;
+            margin-bottom: 22px;
         }
 
         header p {
@@ -97,9 +97,9 @@
 
         section {
             display: grid;
-            grid-template-columns: 1.15in 1.95in 1fr;
+            grid-template-columns: 1.05in 1.7in 1fr;
             column-gap: 16px;
-            margin-top: 32px;
+            margin-top: 22px;
         }
 
         .label {
@@ -114,7 +114,7 @@
         }
 
         .entry + .entry > * {
-            margin-top: 18px;
+            margin-top: 13px;
         }
 
         .who {
@@ -146,6 +146,31 @@
 
         .what p + p {
             margin-top: 4px;
+        }
+
+        /* lists: a short dash hanging in the margin, like the site's hairlines */
+        ul.what {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.what li {
+            position: relative;
+            padding-left: 12px;
+        }
+
+        ul.what li + li {
+            margin-top: 2px;
+        }
+
+        ul.what li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75em;
+            width: 5px;
+            height: 1px;
+            background: var(--muted);
         }
 
         /* one-line rows, e.g. skills */
@@ -202,10 +227,12 @@
                 <span>UX Designer</span>
                 <span class="dates">June 2023 &ndash; Present</span>
             </p>
-            <div class="what">
-                <p>Lead design for revenue-driving features in the Petro-Canada app, including the Petro-Points offer hub, the most engaging feature I&rsquo;ve shipped, and the in-app WestJet partnership experience.</p>
-                <p>Ran usability studies that drove a <b>34%</b> increase in app ratings, and made the design system more accessible: colour contrast, dark mode, responsive layouts and screen reader support.</p>
-            </div>
+            <ul class="what">
+                <li>Lead design for revenue-driving features in the Petro-Canada app, from research and user flows to usability testing and release.</li>
+                <li>Designed the Petro-Points offer hub, the most engaging feature I&rsquo;ve shipped, and the in-app experience for the WestJet partnership.</li>
+                <li>Ran usability studies to find and fix UX issues across the app, driving a <b>34%</b> increase in app ratings.</li>
+                <li>Made the design system more accessible: colour contrast, dark mode, responsive layouts and screen reader support.</li>
+            </ul>
         </div>
 
         <div class="entry">
@@ -214,10 +241,12 @@
                 <span>Product Designer</span>
                 <span class="dates">April 2022 &ndash; June 2023</span>
             </p>
-            <div class="what">
-                <p>Led design of a B2B sign-up and dashboard, and a redesign of the B2C web app that increased engagement and retention.</p>
-                <p>Designed the public site redesign, which increased demo bookings and site traffic, and built the design system and brand to WCAG AAA.</p>
-            </div>
+            <ul class="what">
+                <li>Led design of the B2B sign-up and admin dashboard for QuickTrip, the travel-agent platform, backed by user research and testing.</li>
+                <li>Led the redesign of the B2C web app, increasing engagement and retention.</li>
+                <li>Designed a 7-page public site redesign with the CEO and Sales Director, increasing demo bookings and site traffic.</li>
+                <li>Led the company rebrand and built its design system to WCAG&nbsp;AAA.</li>
+            </ul>
         </div>
 
         <div class="entry">
@@ -226,16 +255,18 @@
                 <span>UX Design Specialist</span>
                 <span class="dates">April 2021 &ndash; April 2022</span>
             </p>
-            <div class="what">
-                <p>Led the mobile app redesign, tested with 30 users: downloads up <b>163%</b> and app updates up <b>20%</b>.</p>
-                <p>Simplified sign-up for a <b>20%</b> lift in sign-ups, and designed a voluntary benefits purchase flow that scored <b>6/7</b> in usability testing.</p>
-            </div>
+            <ul class="what">
+                <li>Sole designer on the team, owning every product from research to release.</li>
+                <li>Led the mobile app redesign, tested with 30 users: downloads up <b>163%</b> and app updates up <b>20%</b>.</li>
+                <li>Simplified sign-up for a <b>20%</b> lift in sign-ups, and designed a voluntary benefits purchase flow that scored <b>6/7</b> in usability testing.</li>
+                <li>Redesigned the public site and built its front end in React: bounce rate down <b>8%</b>, session length up <b>12%</b>.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- PROJECTS & AWARDS -->
+    <!-- AWARDS & PROJECTS -->
     <section>
-        <p class="label mono">Awards</p>
+        <p class="label mono">Awards &amp; Projects</p>
 
         <div class="entry">
             <p class="who">
@@ -244,7 +275,18 @@
                 <span class="dates">March 2026</span>
             </p>
             <div class="what">
-                <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>: a photobooth for two people in different places. Designed and built solo in one day in Figma Make; featured on Figma&rsquo;s blog.</p>
+                <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>: a photobooth for two people in different places. Designed and built solo in one day in Figma Make, and featured on Figma&rsquo;s blog.</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <p class="who">
+                <span class="org">paigelatimer.ca</span>
+                <span>Designer &amp; developer</span>
+                <span class="dates">2025 &ndash; Present</span>
+            </p>
+            <div class="what">
+                <p>Designed and hand-built my portfolio in HTML and CSS, from the logo to an explorable archive of my 35mm film.</p>
             </div>
         </div>
     </section>
@@ -256,6 +298,7 @@
         <div class="entry">
             <p class="who">
                 <span class="org">University of British Columbia</span>
+                <span>Okanagan campus</span>
                 <span class="dates">2017 &ndash; 2021</span>
             </p>
             <div class="what">
@@ -270,12 +313,16 @@
         <p class="label mono">Skills</p>
 
         <div class="row">
-            <p class="who"><span class="org">Design</span></p>
-            <p class="what">User experience &amp; interface design, usability research &amp; testing, design systems, accessibility (WCAG)</p>
+            <p class="who"><span class="org">Design &amp; research</span></p>
+            <p class="what">User research, usability testing, user flows, wireframing, prototyping, UI design, design systems, accessibility (WCAG)</p>
         </div>
         <div class="row">
             <p class="who"><span class="org">Tools &amp; code</span></p>
-            <p class="what">Figma, Figma Make, HTML &amp; CSS, React</p>
+            <p class="what">Figma, Figma Make, HTML, CSS, React</p>
+        </div>
+        <div class="row">
+            <p class="who"><span class="org">Off the clock</span></p>
+            <p class="what">35mm film photography, pilates, peppermint tea</p>
         </div>
     </section>
 
