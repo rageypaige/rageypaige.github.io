@@ -165,8 +165,12 @@ body.redesign::after {
     display: block;
 }
 
+/* The image fills the tile but never sets its size, so the intro and the tiles
+   together always fit the first screen, whatever its height. */
 .rd-work__item .rd-thumb,
 .rd-work__item img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
