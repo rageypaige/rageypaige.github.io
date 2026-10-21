@@ -440,7 +440,7 @@ body.redesign::after {
 /* ARCHIVE PAGE: a short header, then the list */
 
 .rd-archive {
-    padding: clamp(48px, 12vh, 128px) var(--rd-gutter) clamp(72px, 12vh, 140px);
+    padding: clamp(48px, 12vh, 128px) var(--rd-gutter) 0;
 }
 
 .rd-archive__title {
@@ -461,6 +461,76 @@ body.redesign::after {
     font-size: 16px;
     line-height: 1.55;
     color: #525a68;
+}
+
+/* ARCHIVE TILES: the homepage tiles again, two to a row at a fixed shape */
+
+.rd-work--archive {
+    flex: none;
+    min-height: 0;
+    padding-bottom: clamp(72px, 12vh, 140px);
+}
+
+.rd-work--archive .rd-work__item {
+    aspect-ratio: 4 / 3;
+}
+
+/* ShopHopper: the curated home screen in the minimal phone, on a soft peach */
+.rd-work__item--shophopper {
+    --tile-bg: #f0e3da;
+    --subject-height: 104%;
+    --subject-bottom: -26%;
+}
+
+/* noggn: the canvas and chat in the minimal browser, on a pale lavender */
+.rd-work__item--noggn {
+    --tile-bg: #e3e2ef;
+    --subject-width: 80%;
+    --subject-bottom: -14%;
+}
+
+/* COVID-19: the drawing itself, printed onto a warm stone */
+.rd-work__item--covid {
+    --tile-bg: #ebe8e2;
+    --subject-width: 52%;
+    --subject-bottom: 6%;
+}
+
+.rd-work__item.rd-work__item--covid img.rd-work__subject {
+    mix-blend-mode: multiply;
+    filter: none;
+}
+
+/* Data Body: numbers falling down a dark wall (js/data-rain.js) */
+.rd-work__item--databody {
+    --tile-bg: #191d27;
+}
+
+.rd-work__item--databody .rd-work__text {
+    color: #eef0f4;
+}
+
+.rd-data-rain {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* phones: the tiles stack, a little taller than wide */
+@media (max-width: 760px) {
+    .rd-work--archive .rd-work__item {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+    .rd-work__item--noggn {
+        --subject-width: 125%;
+        --subject-bottom: -10%;
+    }
+    .rd-work__item--covid {
+        --subject-width: 86%;
+        --subject-bottom: 8%;
+    }
 }
 
 /* CUSTOM CURSOR */

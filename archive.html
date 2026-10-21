@@ -58,42 +58,52 @@
             <h1 class="rd-archive__title rd-anim" style="--rd-delay: 120ms">Early work, school projects &amp; <em>experiments.</em></h1>
             <p class="rd-archive__intro rd-anim" style="--rd-delay: 180ms">Where a lot of how I work started: research-heavy UX, building what I design, and a long-running interest in data and the people behind it.</p>
 
-            <ul class="rd-list rd-anim" style="--rd-delay: 240ms">
-                <li>
-                    <a href="shophopper.html">
-                        <span class="rd-list__name">ShopHopper</span>
-                        <span class="rd-list__desc">An app for finding outfits from local shops. I led product design for its launch.</span>
-                        <span class="rd-list__when">2022&ndash;23</span>
-                        <span class="rd-list__arrow" aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="noggn.html">
-                        <span class="rd-list__name">noggn</span>
-                        <span class="rd-list__desc">Our capstone: a brainstorming app for students. Research, brand, UI and the React front end.</span>
-                        <span class="rd-list__when">2020&ndash;21</span>
-                        <span class="rd-list__arrow" aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="covid-visualization.html">
-                        <span class="rd-list__name">COVID-19, one day at a time</span>
-                        <span class="rd-list__desc">An interactive data visualization of the pandemic in Canada, made in p5.js.</span>
-                        <span class="rd-list__when">2020</span>
-                        <span class="rd-list__arrow" aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="data-body.html">
-                        <span class="rd-list__name">Data Body</span>
-                        <span class="rd-list__desc">A touchable gallery installation about the data we can&rsquo;t see.</span>
-                        <span class="rd-list__when">UBC Okanagan</span>
-                        <span class="rd-list__arrow" aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-            </ul>
-
         </main>
+
+        <!-- The projects as tiles, like the homepage: a flat colour each, the work in a minimal frame -->
+        <section class="rd-work rd-work--two rd-work--archive" aria-label="Archive projects">
+
+            <a class="rd-work__item rd-work__item--glow rd-work__item--shophopper rd-reveal" href="shophopper.html">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">ShopHopper</span>
+                    <span class="rd-work__note">Product design &middot; 2022&ndash;23</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/archive/thumbs/shophopper-phone.webp" width="766" height="1366" loading="lazy" alt="ShopHopper&rsquo;s home screen: a curated selection of outfits from local boutiques">
+                </span>
+            </a>
+
+            <a class="rd-work__item rd-work__item--glow rd-work__item--noggn rd-reveal" href="noggn.html">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">noggn</span>
+                    <span class="rd-work__note">Capstone &middot; 2020&ndash;21</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/archive/thumbs/noggn-window.webp" width="1800" height="1195" loading="lazy" alt="noggn in a browser: a team chat beside a colourful mind map">
+                </span>
+            </a>
+
+            <a class="rd-work__item rd-work__item--glow rd-work__item--covid rd-reveal" href="covid-visualization.html">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">COVID-19, one day at a time</span>
+                    <span class="rd-work__note">Data visualization &middot; 2020</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/archive/covid.webp" width="1200" height="1186" loading="lazy" alt="A circular visualization of COVID-19 cases and deaths in Canada, one line per day">
+                </span>
+            </a>
+
+            <a class="rd-work__item rd-work__item--glow rd-work__item--databody rd-reveal" href="data-body.html">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">Data Body</span>
+                    <span class="rd-work__note">Interactive installation &middot; 2019</span>
+                </span>
+                <span class="rd-work__media">
+                    <canvas class="rd-data-rain" aria-hidden="true"></canvas>
+                </span>
+            </a>
+
+        </section>
 
         <!-- FOOTER -->
         <footer class="rd-footer">
@@ -147,6 +157,7 @@
     </script>
     <script src="js/reveal.js" defer></script>
     <script src="js/cursor.js" defer></script>
+    <script src="js/data-rain.js" defer></script>
     <script src="js/cat-garden.js" defer></script>
 
 </body>
