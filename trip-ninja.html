@@ -3,8 +3,18 @@
 
 <head>
 
-    <title>Projects | Trip Ninja</title>
-    <meta name="description" content="Paige">
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>Trip Ninja — Paige Latimer</title>
+    <meta name="description" content="Trip Ninja: design lead on a B2B travel-tech platform, a rebrand and a new marketing site, by Paige Latimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/trip-ninja.html">
+    <meta property="og:title" content="Trip Ninja — Paige Latimer">
+    <meta property="og:description" content="Trip Ninja: design lead on a B2B travel-tech platform, a rebrand and a new marketing site, by Paige Latimer.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
@@ -12,6 +22,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -22,182 +36,194 @@
 
 </head>
 
-<body>
+<body class="redesign">
 
     <!-- BODY WRAPPER -->
     <div class="body-wrapper">
 
-        <!-- HEADER WRAPPER 
-        <div class="header"> -->
-            
-            <!-- NAV BAR -->
-            <div class="nav">
-            
-                <a class="logo" href="index.html">
-                    <img src="img/logo.svg" width="40px">
-                </a>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><b>Work</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.pdf"target="_blank">Resume <img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
 
-            <!-- HEADER -->
-            <div class="greeting">
-                <div class="title">
-                    <h1>Trip Ninja</h1>
-                    <div class="project-details">
-                        <p>User research, usability testing, UI Design</p>
-                        <p>April 2022 - June 2023</p>
-                    </div>
-                </div>
+        <!-- CASE STUDY: Trip Ninja. Rebuilt from the old page in this layout. -->
+        <div class="rd-cs">
 
-                <div class="directory">
-                    <ul class="directory-links">
-                        <li class="directory-link">
-                            <a href="#quicktrip">QuickTrip</a>
-                        </li>
-                        <li>|</li>
-                        <li class="directory-link">
-                            <a href="#webdesign">Web Design</a>
-                        </li>
-                        <li>|</li>
-                        <li class="directory-link">
-                            <a href="#branding">Branding</a>
-                        </li>
-                    </ul>
-                </div>
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="index.html">&larr; Back</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#quicktrip">QuickTrip</a></li>
+                    <li><a href="#brand">Rebrand</a></li>
+                    <li><a href="#site">Website</a></li>
+                </ol>
+            </aside>
 
-            </div>
+            <main class="rd-cs-main">
 
-            <!-- DETAILS -->
-            <div class="project">
-                <div class="project-image">
-                    <img src="img/trip-ninja.png">
-                </div>
-                
-                <div class="section">
-                    <div class="section-title">
-                        <h2>Introduction</h2>
-                        <div class="section-description">
-                            <p>Trip Ninja is a travel technology company who offers a sophisticated API and front-end platform to help travel agencies make the most out of their flights conent. I was responsible for user research, future product ideation, user interface design, and product marketing.</p>
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">Trip Ninja &mdash; B2B travel SaaS</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">Design lead at a travel-tech startup, from the product to the brand</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">I set up how design worked at Trip Ninja, then <em>led it end to end:</em> a booking platform for travel agencies, a rebrand and design system, and a new marketing site.</p>
+                    <figure class="rd-cs-media rd-anim" style="--rd-delay: 260ms">
+                        <img src="img/tn/tn-hero.webp" width="1800" height="1100" alt="QuickTrip in a browser: the user management settings for a travel agency">
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Product designer, design lead</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>April 2022 &ndash; June 2023</dd>
+                        </div>
+                        <div>
+                            <dt>Worked with</dt>
+                            <dd>Product, engineering, sales &amp; the CEO</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Research, UX/UI, brand &amp; marketing</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>Travel technology that helps agencies get more out of their flights content.</h2>
+                    <p>Trip Ninja offers a sophisticated API and a front-end platform for travel agencies. As the design lead, I established the design practice and owned design end to end: user research, future product ideas and roadmap planning with product and engineering, interface design, and product marketing.</p>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <h3>QuickTrip</h3>
+                            <p>A booking platform for agencies that want the technology without integrating the API.</p>
+                        </div>
+                        <div>
+                            <h3>Rebrand</h3>
+                            <p>A refreshed identity and a WCAG&nbsp;AAA design system across every touchpoint.</p>
+                        </div>
+                        <div>
+                            <h3>Website</h3>
+                            <p>A marketing site, designed with the CEO and Sales Director, that grew demo bookings.</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="quicktrip">QuickTrip</h2>
-                        <div class="section-description">
-                            <p>A lot of the work that I did for Trip Ninja was for their travel agent facing platform, QuickTrip. QuickTrip is for travel agents who want to use our technology but don't want to integrate an API.</p>
-                            <p>As the product designer, I collaborated with developers and product managers to assess project outcomes and prioritize future features. I also designed user flows, wireframes, and conducted usability testing for those features.</p>
-                            <p>The following designs are from the larger projects I worked on.</p>
+                <!-- QUICKTRIP -->
+                <section id="quicktrip" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">QuickTrip</p>
+                    <h2>A one-stop shop for travel agents, and a way to grow their business.</h2>
+                    <p>Most of my work was on QuickTrip, our agent-facing platform. Agents can do everything they traditionally do, like searching and booking flights for their clients, plus a set of features we designed to help them grow.</p>
+                    <p>I worked with developers and product managers to assess outcomes and prioritize what came next, designed the user flows and wireframes, and ran usability testing on the features before they shipped.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/tn/tn-settings.webp" width="2000" height="1448" loading="lazy" alt="Four QuickTrip settings screens: profile, agency details, adding a new user with their data sources, and the list of users">
+                        <figcaption>The admin panel: profile and agency settings, user management, and adding an agent with their data sources and features.</figcaption>
+                    </figure>
+                    <div class="rd-cs-cards rd-cs-cards--2">
+                        <div>
+                            <h3>Self-serve sign-up</h3>
+                            <p>Agencies can sign up and get started on their own.</p>
+                        </div>
+                        <div>
+                            <h3>The admin panel</h3>
+                            <p>Agents manage their business, customize their search results and track their progress. I took it from user research to flows, wireframes and final UI.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="section">
-                    <img src="img/tn/tn-admin.png">
-                </div>
+                </section>
 
-                <div class="section">
-                    <div class="section-description">
-                        <p>QuickTrip is designed to be the one-stop-shop for travel agents. They can do all of the traditional activities of travel agents such as search and book flights for their clients, but we have designed many additional features that help them grow their travel business.</p>
-                        <p>The admin panel allows travel agents to manage their business, customize their search results, and track their progress. I created the user flows from user research, designed wireframes, and designed final UI designs for this project.</p>
-                    </div>
-                </div>
+                <!-- REBRAND -->
+                <section id="brand" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Rebrand</p>
+                    <h2>A brand that says what Trip Ninja stands for: authenticity, innovation and connection.</h2>
+                    <p>I led a rebrand to bring Trip Ninja&rsquo;s visual and verbal communication in line with its values. We introduced a refined colour palette, modern typography and a clean, WCAG&nbsp;AAA design system, so every touchpoint felt consistent and intentional.</p>
+                    <p>Collaboration made it work. I brought stakeholders in early and listened to customer feedback, so the new brand landed with our own teams and with our customers.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/tn/tn-brand.webp" width="2000" height="1171" loading="lazy" alt="Pages from the Trip Ninja brand guidelines: logos, colours, typography, graphics, photography and social media">
+                    </figure>
+                </section>
 
-                <hr class="hr1" />
+                <!-- WEBSITE -->
+                <section id="site" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Website</p>
+                    <h2>A fresh, modern site that put the technology first, and grew demo bookings.</h2>
+                    <p>Product and sales teamed up to redesign the website, with a new approach that highlighted our technology and helped us stand out. I worked closely with the Sales Director and the CEO, and we designed seven pages in total.</p>
+                    <p>After the launch, booked demos and overall site traffic both went up.</p>
+                    <figure class="rd-cs-media rd-cs-media--medium">
+                        <img src="img/tn/tn-site.webp" width="1800" height="1854" loading="lazy" alt="The top of the new Trip Ninja homepage: We make your flights content work harder">
+                    </figure>
+                </section>
 
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="webdesign">Web Design</h2>
-                        <div class="section-description">
-                            <p>The product and sales team collaborated on a redesign of the website. We wanted to take a new approach to highlight our technology and stand out.</p>
-                            <p>I worked closely with the Sales Director and CEO to create a fresh and modern design.</p>
-                            <p>This is a sample of the Homepage that we designed. In total, we designed a total of 7 pages.</p>
-                            <p>Once we launched the redesign of the site, we saw an increase of booked demos and overall site traffic.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section-scroll">
-                    <img src="img/tn/tn-homepage.png">
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">Next project</p>
+                    <a href="simply-benefits.html">Simply Benefits &rarr;</a>
                 </div>
 
-                <hr class="hr1" />
-
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="branding">Branding</h2>
-                        <div class="section-description">
-                            <p>I also led a rebrand of Trip Ninja. The goal was to align our visual and verbal communication with the core values that drive Trip Ninja: authenticity, innovation, and connection.</p>
-                            <p>We introduced a refined color palette, modern typography, and a clean design system to create consistency and establish a memorable impression across all touchpoints. This wasn&apos;t just about aesthetics but about ensuring that every interaction felt intentional and cohesive.</p>
-                            <p>A crucial part of this journey was collaboration. By engaging stakeholders and listening to customer feedback, I ensured the rebrand resonated with both internal teams and our audience. The result? A brand that not only looks fresh but also resonates on a deeper level, embodying who Trip Ninja is and where they are headed.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <img src="img/tn/brand-guidelines.png">
-                </div>
-
-                <div class="back-home">
-                    <a href="index.html">Back home</a>
-                </div>
-
-            </div>
-    
-        <hr class="hr1" />
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <div class="callout">
-                <img src="img/logo.svg" width="35px">
-                <p>Psst! I also designed and built this website. <span class="callout-link"><a href="portfolio-study.html">Learn about my process ></a></span></p>
-            </div>
-
-            <div class="footer-links">
-                <ul class="footer-list">
-                    <li class="footer-link">
-                        <a href="more.html">More</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="resume.pdf"target="_blank">Resume<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                <h4>2025 Paige Latimer</h4>
-                <div class="salutations">
-                    <p>Made with love and peppermint tea (oak milk & honey)</p>
-                    <p>Last updated January 2025</p>
-                </div>
-            </div>
-
+            </main>
         </div>
 
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="archive.html">Archive</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
 </body>
-
-
-
-
 
 </html>

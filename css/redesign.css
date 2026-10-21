@@ -86,6 +86,14 @@ body.redesign::after {
     opacity: 0.6;
 }
 
+/* The old stylesheet (style.min.css) turns every link in a list white and
+   underlined on hover, for the old dark pages. On these pages links keep
+   their colour; each component sets its own hover. */
+body.redesign ul li a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* HOME: the intro, then one edge-to-edge rectangle per project, side by side
    with no gaps. Together they fill the first screen under the nav.
    (The earlier collage layout is saved in git under the tag home-collage.) */
@@ -347,6 +355,171 @@ body.redesign::after {
 
 .rd-work__note {
     opacity: 0.55;
+}
+
+/* MORE WORK: a small index under the tiles, in the same voice as the tile
+   labels (a name, with a quiet note under it). The archive page's kicker
+   borrows .rd-more__label. */
+
+.rd-more {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 24px 64px;
+    padding: 28px calc(var(--rd-gutter) + 2px) clamp(64px, 10vh, 112px);
+}
+
+.rd-more__label {
+    margin: 0 0 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #838b99;
+}
+
+.rd-more .rd-more__label {
+    margin: 0;
+}
+
+.rd-more__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rd-more__list a {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--rd-text);
+    text-decoration: none;
+}
+
+.rd-more__name {
+    border-bottom: 1px solid transparent;
+    align-self: flex-start;
+    transition: border-color 0.2s ease;
+}
+
+.rd-more__list a:hover .rd-more__name {
+    border-color: currentColor;
+}
+
+.rd-more__note {
+    color: #838b99;
+}
+
+@media (max-width: 640px) {
+    .rd-more {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+    .rd-more__list {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
+/* ARCHIVE PAGE: a short header, then the list */
+
+.rd-archive {
+    padding: clamp(48px, 12vh, 128px) var(--rd-gutter) 0;
+}
+
+.rd-archive__title {
+    max-width: 14em;
+    margin: 0;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(34px, 4.4vw, 64px);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    color: var(--rd-text);
+}
+
+.rd-archive__intro {
+    max-width: 34em;
+    margin: 20px 0 clamp(48px, 8vh, 88px);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #525a68;
+}
+
+/* ARCHIVE TILES: the homepage tiles again, two to a row at a fixed shape */
+
+.rd-work--archive {
+    flex: none;
+    min-height: 0;
+    padding-bottom: clamp(72px, 12vh, 140px);
+}
+
+.rd-work--archive .rd-work__item {
+    aspect-ratio: 4 / 3;
+}
+
+/* ShopHopper: the curated home screen in the minimal phone, on a soft peach */
+.rd-work__item--shophopper {
+    --tile-bg: #f0e3da;
+    --subject-height: 104%;
+    --subject-bottom: -26%;
+}
+
+/* noggn: the canvas and chat in the minimal browser, on a pale lavender */
+.rd-work__item--noggn {
+    --tile-bg: #e3e2ef;
+    --subject-width: 80%;
+    --subject-bottom: -14%;
+}
+
+/* COVID-19: the drawing itself, printed onto a warm stone */
+.rd-work__item--covid {
+    --tile-bg: #ebe8e2;
+    --subject-width: 52%;
+    --subject-bottom: 6%;
+}
+
+.rd-work__item.rd-work__item--covid img.rd-work__subject {
+    mix-blend-mode: multiply;
+    filter: none;
+}
+
+/* Data Body: numbers falling down a dark wall (js/data-rain.js) */
+.rd-work__item--databody {
+    --tile-bg: #191d27;
+}
+
+.rd-work__item--databody .rd-work__text {
+    color: #eef0f4;
+}
+
+.rd-data-rain {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* phones: the tiles stack, a little taller than wide */
+@media (max-width: 760px) {
+    .rd-work--archive .rd-work__item {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+    .rd-work__item--noggn {
+        --subject-width: 125%;
+        --subject-bottom: -10%;
+    }
+    .rd-work__item--covid {
+        --subject-width: 86%;
+        --subject-bottom: 8%;
+    }
 }
 
 /* CUSTOM CURSOR */
