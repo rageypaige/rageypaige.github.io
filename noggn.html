@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>noggn — Paige Latimer</title>
+    <meta name="description" content="noggn: a brainstorming app for students, designed and built by Paige Latimer for her UBC Okanagan capstone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/noggn.html">
+    <meta property="og:title" content="noggn — Paige Latimer">
+    <meta property="og:description" content="noggn: a brainstorming app for students, designed and built by Paige Latimer for her UBC Okanagan capstone.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<body class="redesign">
+
+    <!-- BODY WRAPPER -->
+    <div class="body-wrapper">
+
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
+
+        <!-- CASE STUDY (archive): noggn, a capstone project from UBC Okanagan.
+             Restored from the old site and rewritten lightly for this layout. -->
+        <div class="rd-cs">
+
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="archive.html">&larr; Archive</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#solution">The solution</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#build">Building it</a></li>
+                    <li><a href="#brand">Brand</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ol>
+            </aside>
+
+            <main class="rd-cs-main">
+
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">Archive &mdash; noggn &mdash; Capstone, UBC Okanagan</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">A brainstorming app for students, by students</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">When university went online, group projects got harder. noggn gave teams one place to <em>map ideas and talk them through,</em> together.</p>
+                    <figure class="rd-cs-media rd-anim" style="--rd-delay: 260ms">
+                        <img src="img/archive/noggn/hero.webp" width="1800" height="1014" alt="noggn on a laptop: a team chat on the left and a colourful mind map on the canvas">
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Branding, UX &amp; UI design, front-end development</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>8 months &middot; 2020&ndash;21</dd>
+                        </div>
+                        <div>
+                            <dt>Team</dt>
+                            <dd>With <a class="rd-cs-link" href="https://www.linkedin.com/in/nick-hemingway-a848b61ab/" target="_blank" rel="noopener">Nick Hemingway</a></dd>
+                        </div>
+                        <div>
+                            <dt>Built with</dt>
+                            <dd>React, Material UI, Firebase</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>Our fourth-year capstone, built for the year school moved online.</h2>
+                    <p>During the 2020/21 school year, university classes were almost entirely online. That alone was a huge change for students. My classmate Nick Hemingway and I decided to tackle it for our Bachelor of Media Studies capstone project.</p>
+                </section>
+
+                <!-- RESEARCH -->
+                <section id="research" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Research</p>
+                    <h2>Students were struggling to communicate and brainstorm as a group, remotely.</h2>
+                    <p>We surveyed 32 university students. Almost three-quarters had been part of at least one group project online, and most found teamwork harder that way, mainly because of a lack of communication.</p>
+                    <p>The research also showed how students like to start a project: by brainstorming. 21 of them said their favourite way to develop an idea is a mind map.</p>
+                    <div class="rd-cs-grid rd-cs-grid--fit">
+                        <figure class="rd-cs-media">
+                            <img src="img/archive/noggn/research.webp" width="545" height="561" loading="lazy" alt="Survey results: 73% were in at least one group project last semester, 81% said teamwork was harder online, 60% said communication and brainstorming were the hardest part">
+                        </figure>
+                        <figure class="rd-cs-media">
+                            <img src="img/archive/noggn/stories.webp" width="788" height="494" loading="lazy" alt="User stories for working on group projects remotely, such as communicating with teammates in real time and brainstorming ideas as a mind map">
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- THE SOLUTION -->
+                <section id="solution" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">The solution</p>
+                    <h2>A collaborative, web-based brainstorming app.</h2>
+                    <p>noggn helps students work together more efficiently. Its main goal is a collaborative online space where teams can be creative and develop ideas together. I turned the themes from our research into user stories, then into a persona.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/noggn/persona.webp" width="1600" height="974" loading="lazy" alt="Persona: Emily Masters, a high school student who wants to organize group projects and brainstorm with her team">
+                        <figcaption>Meet Emily. She&rsquo;s hardworking and wants to do her best, but online school has made group work stressful.</figcaption>
+                    </figure>
+                </section>
+
+                <!-- DESIGN -->
+                <section id="design" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Design</p>
+                    <h2>Two features take up most of the screen: the canvas and the chat.</h2>
+                    <p>Early wireframes mapped where the key features would live. Using Emily&rsquo;s story, I gave most of the space to two things: the canvas, where teams build mind maps with a toolbar of ways to customize them, and a chat widget for quick conversations without a video call.</p>
+                    <figure class="rd-cs-media rd-cs-media--medium">
+                        <img src="img/archive/noggn/wireframes.webp" width="1400" height="1511" loading="lazy" alt="Wireframes for login, sign-up, the dashboard and the mind map canvas">
+                    </figure>
+                    <div class="rd-cs-decision">
+                        <div>
+                            <h3>Chat on the left, and collapsible</h3>
+                            <p>User feedback showed people preferred the chat to the left of the canvas, so it moved there, and it collapses for a full-screen canvas.</p>
+                        </div>
+                        <div>
+                            <h3>Because&hellip;</h3>
+                            <p>The map is the work and the chat supports it. Students could talk while they mapped, then get the conversation out of the way.</p>
+                        </div>
+                    </div>
+                    <p>Mind maps can be customized with colour, arrangement, photos, links and text, so teams have room to play. A simple dashboard after login shows every active team, so students can jump straight back into their projects.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/noggn/screens.webp" width="2400" height="549" loading="lazy" alt="High-fidelity screens: sign-up, the dashboard of active teams, and the mind map canvas with chat">
+                    </figure>
+                </section>
+
+                <!-- BUILDING IT -->
+                <section id="build" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Building it</p>
+                    <h2>I built the front end myself, in React.</h2>
+                    <p>I had the fun (but tedious) job of bringing the designs to life, using React and Material UI, with Firebase and Node on the back end. This is the high-fidelity prototype we presented to our class.</p>
+                    <figure class="rd-cs-media rd-video">
+                        <video src="img/archive/noggn/noggn-demo.mp4" poster="img/archive/noggn/noggn-demo-poster.jpg" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="noggn demo: creating a team, chatting and building a mind map"></video>
+                    </figure>
+                </section>
+
+                <!-- BRAND -->
+                <section id="brand" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Brand</p>
+                    <h2>Modern but friendly, productive but quirky.</h2>
+                    <p>&ldquo;Noggn&rdquo; is a silly word for head, and I wanted the whole experience to feel that upbeat. The icon combines a cloud and a brain: brainstorming, on the cloud. The colours borrow from technology, like bright LEDs and multicoloured wires.</p>
+                    <div class="rd-cs-grid rd-cs-grid--fit">
+                        <figure class="rd-cs-media">
+                            <img src="img/archive/noggn/logo.webp" width="966" height="512" loading="lazy" alt="The noggn logo: a mint cloud shaped like a brain above the word noggn">
+                        </figure>
+                        <figure class="rd-cs-media">
+                            <img src="img/archive/noggn/colours.webp" width="450" height="376" loading="lazy" alt="noggn colours: Electric blue, Radioactive green, Tangerine, Super Pink and Midnight">
+                        </figure>
+                    </div>
+                    <p>I also planned an Instagram strategy for students: memes, bright colours and consistent messaging that pulled every brand element together.</p>
+                    <figure class="rd-cs-media rd-cs-media--narrow">
+                        <img src="img/archive/noggn/social.webp" width="453" height="604" loading="lazy" alt="A grid of noggn Instagram posts mixing product shots, memes and student photos">
+                    </figure>
+                </section>
+
+                <!-- REFLECTION -->
+                <section id="reflection" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Reflection</p>
+                    <h2>What I learned</h2>
+                    <p>This project took a lot of planning, organizing and time management, and even more thinking about the problem. It&rsquo;s where I learned that, for me, design is about solving problems for people: finding the things in everyday life that could be better, and making them into experiences people love.</p>
+                    <p>I know my job is done when people feel less stressed, or even excited, about something that used to cause them discomfort.</p>
+                </section>
+
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">More from the archive</p>
+                    <a href="data-body.html">Data Body &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="archive.html">Archive</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
+</body>
+
+</html>

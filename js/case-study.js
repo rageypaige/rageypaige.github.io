@@ -47,8 +47,9 @@
         Array.prototype.forEach.call(boxes, function (box) {
             var width = box.clientWidth;
             var phone = width < 600;
-            var w = phone ? 390 : 1200;
-            var h = phone ? 780 : 860;
+            // a fixed-size embed (data-embed-w/h) always renders at that size
+            var w = +box.dataset.embedW || (phone ? 390 : 1200);
+            var h = +box.dataset.embedH || (phone ? 780 : 860);
             box.style.setProperty('--embed-w', w);
             box.style.setProperty('--embed-h', h);
             box.style.setProperty('--embed-scale', width / w);

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>COVID-19, one day at a time — Paige Latimer</title>
+    <meta name="description" content="An interactive data visualization of COVID-19 in Canada, made in p5.js by Paige Latimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/covid-visualization.html">
+    <meta property="og:title" content="COVID-19, one day at a time — Paige Latimer">
+    <meta property="og:description" content="An interactive data visualization of COVID-19 in Canada, made in p5.js by Paige Latimer.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<body class="redesign">
+
+    <!-- BODY WRAPPER -->
+    <div class="body-wrapper">
+
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
+
+        <!-- CASE STUDY (archive): a COVID-19 data visualization made in p5.js.
+             Restored from the old site. -->
+        <div class="rd-cs">
+
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="archive.html">&larr; Archive</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#how">How to read it</a></li>
+                    <li><a href="#try">Try it</a></li>
+                </ol>
+            </aside>
+
+            <main class="rd-cs-main">
+
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">Archive &mdash; Data visualization &mdash; 2020</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">COVID-19, one day at a time</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">Case counts get thrown around without much meaning. This piece draws each day since Canada&rsquo;s first lockdown, so the numbers <em>read as lives.</em></p>
+                    <figure class="rd-cs-media rd-anim" style="--rd-delay: 260ms">
+                        <img src="img/archive/covid.webp" width="1200" height="1186" alt="A circular visualization: one line per day of COVID-19 cases in Canada, spiralling outward, with circles for deaths">
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Solo: concept, data &amp; code</dd>
+                        </div>
+                        <div>
+                            <dt>Built with</dt>
+                            <dd>p5.js</dd>
+                        </div>
+                        <div>
+                            <dt>Data</dt>
+                            <dd>World Health Organization</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>Behind every number is a person.</h2>
+                    <p>I&rsquo;ve been interested in data, and the many ways to visualize it, since I started at UBC. COVID-19 brought a flood of new numbers, and I wanted to make them visual in a way people could easily understand, and that might mean something to them.</p>
+                    <p>At the time I made this, more than 12,000 Canadians had died of COVID-19. I wanted people to step back, see each of them as an individual life, think about their families and everything they lost, and feel compassion.</p>
+                </section>
+
+                <!-- HOW TO READ IT -->
+                <section id="how" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">How to read it</p>
+                    <h2>Each line and circle is one day since March 16, 2020.</h2>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <h3>Lines</h3>
+                            <p>Daily cases. The longer the line, the more cases that day.</p>
+                        </div>
+                        <div>
+                            <h3>Circles</h3>
+                            <p>Daily deaths, sitting above each day&rsquo;s line. Bigger circles mean more deaths.</p>
+                        </div>
+                        <div>
+                            <h3>The squiggle</h3>
+                            <p>The wavering outline around the piece also traces deaths over time.</p>
+                        </div>
+                    </div>
+                    <p>The data is the World Health Organization&rsquo;s daily cases, daily deaths and cumulative deaths for Canada. I converted each date into a count of days since March 16, 2020.</p>
+                </section>
+
+                <!-- TRY IT -->
+                <section id="try" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Try it</p>
+                    <h2>Drag the slider to draw it, day by day.</h2>
+                    <p>Or open it in the <a class="rd-cs-link" href="https://editor.p5js.org/platimer/sketches/EL4vdYi0t" target="_blank" rel="noopener">p5.js editor</a>.</p>
+                    <div class="rd-cs-embed" data-embed-w="1000" data-embed-h="900">
+                        <iframe src="https://editor.p5js.org/platimer/embed/EL4vdYi0t" title="COVID-19 visualization, live" loading="lazy" scrolling="no"></iframe>
+                    </div>
+                </section>
+
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">More from the archive</p>
+                    <a href="noggn.html">noggn &rarr;</a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="archive.html">Archive</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
+</body>
+
+</html>

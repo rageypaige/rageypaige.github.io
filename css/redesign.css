@@ -349,6 +349,120 @@ body.redesign::after {
     opacity: 0.55;
 }
 
+/* MORE WORK + ARCHIVE: a quiet list of projects, one row each, with hairlines
+   between them. Used under the homepage tiles and on the archive page. */
+
+.rd-more {
+    padding: clamp(64px, 10vh, 112px) var(--rd-gutter) clamp(72px, 12vh, 140px);
+}
+
+.rd-more__label {
+    margin: 0 0 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #838b99;
+}
+
+.rd-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #d1d5dd;
+}
+
+.rd-list a {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) 7em 20px;
+    align-items: baseline;
+    column-gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid #d1d5dd;
+    font-weight: 400;
+    color: var(--rd-text);
+    text-decoration: none;
+}
+
+.rd-list__name {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(22px, 2.2vw, 30px);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.rd-list__desc,
+.rd-list__when {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rd-list__when {
+    color: #838b99;
+    text-align: right;
+}
+
+.rd-list__arrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    text-align: right;
+    transition: transform 0.4s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-list a:hover .rd-list__arrow {
+    transform: translateX(6px);
+}
+
+.rd-list a:hover .rd-list__name {
+    font-style: italic;
+}
+
+/* the last row on the homepage points to the archive, a step quieter */
+.rd-list__more .rd-list__name {
+    color: #838b99;
+}
+
+@media (max-width: 760px) {
+    .rd-list a {
+        grid-template-columns: minmax(0, 1fr) 20px;
+        row-gap: 4px;
+    }
+    .rd-list__name { grid-column: 1; grid-row: 1; }
+    .rd-list__arrow { grid-column: 2; grid-row: 1; }
+    .rd-list__desc { grid-column: 1 / -1; }
+    .rd-list__when { grid-column: 1 / -1; text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-list__arrow { transition: none; }
+}
+
+/* ARCHIVE PAGE: a short header, then the list */
+
+.rd-archive {
+    padding: clamp(48px, 12vh, 128px) var(--rd-gutter) clamp(72px, 12vh, 140px);
+}
+
+.rd-archive__title {
+    max-width: 14em;
+    margin: 0;
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(34px, 4.4vw, 64px);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    color: var(--rd-text);
+}
+
+.rd-archive__intro {
+    max-width: 34em;
+    margin: 20px 0 clamp(48px, 8vh, 88px);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #525a68;
+}
+
 /* CUSTOM CURSOR */
 
 html.rd-has-custom-cursor body.redesign,
