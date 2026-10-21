@@ -3,8 +3,18 @@
 
 <head>
 
-    <title>Projects | Simply Benefits</title>
-    <meta name="description" content="Paige">
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>Simply Benefits — Paige Latimer</title>
+    <meta name="description" content="Simply Benefits: sole designer on an HR tech platform, a member app, three web portals and a public site, by Paige Latimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/simply-benefits.html">
+    <meta property="og:title" content="Simply Benefits — Paige Latimer">
+    <meta property="og:description" content="Simply Benefits: sole designer on an HR tech platform, a member app, three web portals and a public site, by Paige Latimer.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
@@ -12,6 +22,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -22,235 +36,228 @@
 
 </head>
 
-<body>
+<body class="redesign">
 
     <!-- BODY WRAPPER -->
     <div class="body-wrapper">
 
-        <!-- HEADER WRAPPER 
-        <div class="header"> -->
-            
-            <!-- NAV BAR -->
-            <div class="nav">
-            
-                <a class="logo" href="index.html">
-                    <img src="img/logo.svg" width="40px">
-                </a>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><b>Work</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.pdf"target="_blank">Resume <img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
 
-            <!-- HEADER -->
-            <div class="greeting">
-                <div class="title">
-                    <h1>Simply Benefits</h1>
-                    <div class="project-details">
-                        <p>User research, usability testing, UI Design</p>
-                        <p>April 2021 - April 2022</p>
-                    </div>
-                </div>
+        <!-- CASE STUDY: Simply Benefits. Rebuilt from the old page in this layout. -->
+        <div class="rd-cs">
 
-                <div class="directory">
-                    <ul class="directory-links">
-                        <li class="directory-link">
-                            <a href="#mobileapp">Mobile App</a>
-                        </li>
-                        <li>|</li>
-                        <li class="directory-link">
-                            <a href="#desktopportal">Desktop Portal</a>
-                        </li>
-                        <li>|</li>
-                        <li class="directory-link">
-                            <a href="#webredesign">Web Design</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="index.html">&larr; Back</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#app">Member app</a></li>
+                    <li><a href="#portals">Web portals</a></li>
+                    <li><a href="#site">Website</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ol>
+            </aside>
 
-            <!-- DETAILS -->
-            <div class="project">
-                <div class="project-image">
-                    <img src="img/simply.png">
-                </div>
-                
-                <div class="section">
-                    <div class="section-title">
-                        <h2>Introduction</h2>
-                        <div class="section-description">
-                            <p>I started full-time as a UX Design Specialist at Simply Benefits in April 2021 after completing a one-year internship. I was the sole designer on the team and in charge of the design of all products from start to finish. The skills I've learned in this role are invaluable; I've become confident in my ability to lead projects, make important product decisions, and deliver polished UI designs.</p>
+            <main class="rd-cs-main">
+
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">Simply Benefits &mdash; HR tech</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">The sole designer on a benefits platform for members, employers and advisors</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">One member app, three web portals and a public site, and <em>one designer.</em> I owned all of it, from the first research to the shipped UI.</p>
+                    <figure class="rd-cs-media rd-anim" style="--rd-delay: 260ms">
+                        <img src="img/simply/sb-hero.webp" width="1800" height="1100" alt="The redesigned Simply Benefits app: a dashboard with quick actions, a usage overview and latest claims">
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>UX design specialist, sole designer</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>April 2021 &ndash; April 2022</dd>
+                        </div>
+                        <div>
+                            <dt>Products</dt>
+                            <dd>Member app, 3 web portals, public site</dd>
+                        </div>
+                        <div>
+                            <dt>Worked with</dt>
+                            <dd>Engineering, product &amp; marketing</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>My first full-time design role, and the whole product to design.</h2>
+                    <p>I joined Simply Benefits full-time in April 2021, after a one-year internship. As the only designer, I established the design practice and was in charge of every product from start to finish. It&rsquo;s where I became confident leading projects, making product decisions and delivering polished UI.</p>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <span class="rd-cs-stat">163%</span>
+                            <p>more member app downloads after the redesign, and 20% more updates.</p>
+                        </div>
+                        <div>
+                            <span class="rd-cs-stat">20%</span>
+                            <p>more sign-ups, after I rebuilt the sign-up flow.</p>
+                        </div>
+                        <div>
+                            <span class="rd-cs-stat">~5 days</span>
+                            <p>to quote a group digitally, down from the industry&rsquo;s 4&ndash;6 weeks.</p>
                         </div>
                     </div>
+                </section>
+
+                <!-- MEMBER APP -->
+                <section id="app" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Member app</p>
+                    <h2>A complete overhaul of an app members rely on, which hadn&rsquo;t been updated in a year or two.</h2>
+                    <p>Members use the app to submit claims, view their usage, look up their coverage and more, so it&rsquo;s central to their experience. It hadn&rsquo;t been updated in a year or two. I led the redesign: research, ideation and UX/UI.</p>
+                    <div class="rd-cs-cards rd-cs-cards--2">
+                        <div>
+                            <h3>Goals</h3>
+                            <p>Make claims faster to submit. Help members understand their coverage. Clearly show what they&rsquo;ve used and what&rsquo;s left. Modernize an outdated UI.</p>
+                        </div>
+                        <div>
+                            <h3>Solutions</h3>
+                            <p>A dashboard that shows what members would otherwise go looking for: latest claims, recent usage, and a plus button to submit a claim. Usage bars on claims and spending accounts show what&rsquo;s spent and what&rsquo;s left.</p>
+                        </div>
+                    </div>
+                    <div class="rd-cs-grid rd-cs-grid--fit">
+                        <figure class="rd-cs-media">
+                            <img src="img/simply/sb-before-after.webp" width="960" height="942" loading="lazy" alt="Before and after: the old app&rsquo;s home screen beside the redesigned dashboard">
+                            <figcaption>Before and after: the home screen.</figcaption>
+                        </figure>
+                        <div>
+                            <h3>The results</h3>
+                            <p>App downloads grew 163% and updates 20%. Members who&rsquo;d never used the app downloaded it, and existing users were excited to update. Our customer success team heard a lot of great feedback about the new design.</p>
+                        </div>
+                    </div>
+                    <figure class="rd-cs-media">
+                        <img src="img/simply/sb-app.webp" width="1936" height="980" loading="lazy" alt="Four screens from the redesigned app: the dashboard, coverage, claims with usage bars, and the benefits card">
+                    </figure>
+                </section>
+
+                <!-- WEB PORTALS -->
+                <section id="portals" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Web portals</p>
+                    <h2>Three web apps for three very different users: advisors, employers and employees.</h2>
+                    <p>As the design lead on the portals, I handled maintenance, optimizations and new features, often in dense, data-heavy workflows.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/simply/sb-portal.webp" width="1800" height="1219" loading="lazy" alt="The advisor portal: a company&rsquo;s census data in a table of employees">
+                    </figure>
+                    <h3 class="rd-cs-sub">Digital advisor quoting</h3>
+                    <p>One of the platform&rsquo;s most impressive features lets advisors quote groups entirely digitally, cutting the industry&rsquo;s usual 4&ndash;6 week turnaround to about 5 days. But the old version was outdated, confusing and clunky, with no clear step-by-step process, so advisors weren&rsquo;t using it.</p>
+                    <p>I helped reorganize the back-end structure and flow, and designed a clear, concise UI to go with it. After launch, digital quote creation went up.</p>
+                    <h3 class="rd-cs-sub">Voluntary Benefits</h3>
+                    <p>Optional, fully digital add-on benefits that employees can buy for themselves. It improves their insurance experience and gives the company a new revenue stream. I designed it from start to finish, from research and wireframes to polished UI, and tested the prototype with users to improve the flow.</p>
+                    <p>It launched in 2024, after I&rsquo;d moved on, and I heard from my old colleagues about how well it was received.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/simply/sb-voluntary.webp" width="1625" height="1243" loading="lazy" alt="Voluntary Benefits screens: choosing optional benefits, confirming the purchase, and the resulting coverage">
+                    </figure>
+                </section>
+
+                <!-- WEBSITE -->
+                <section id="site" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Website</p>
+                    <h2>A redesigned public site that I also built, in React.</h2>
+                    <p>I worked with the Brand and Marketing Manager to redesign the public site around the brand mission, with descriptive visuals and a simple layout. We designed six pages, and then I built the front end in React.</p>
+                    <div class="rd-cs-cards rd-cs-cards--2">
+                        <div>
+                            <span class="rd-cs-stat">8%</span>
+                            <p>lower bounce rate</p>
+                        </div>
+                        <div>
+                            <span class="rd-cs-stat">12%</span>
+                            <p>longer sessions</p>
+                        </div>
+                    </div>
+                    <figure class="rd-cs-media rd-cs-media--medium">
+                        <img src="img/simply/sb-site.webp" width="1800" height="1869" loading="lazy" alt="The top of the redesigned Simply Benefits homepage: Employee benefits, made for the modern workplace">
+                    </figure>
+                </section>
+
+                <!-- REFLECTION -->
+                <section id="reflection" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Reflection</p>
+                    <h2>What I learned</h2>
+                    <p class="rd-cs-question">Leading a redesign of an app so early in my career was intimidating, but rewarding.</p>
+                    <p>Being the only designer meant every decision was mine to make and to defend. That&rsquo;s where I learned to lead projects, not just design them.</p>
+                </section>
+
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">More work</p>
+                    <a href="archive.html">Archive &rarr;</a>
                 </div>
 
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="mobileapp">Mobile App Redesign</h2>
-                        <div class="section-description">
-                            <p>One of the larger projects I worked on at Simply Benefits was a complete overhaul of the Mobile App. I was the lead designer and in charge of research, ideation, and UX/UI.</p>
-                            <p>The app is an extremely important part of the member experience. Users can submit claims, view usage, look up their coverage, and more.</p>
-                            <p>It had been a year or two since the app had any updates or improvements.</p>
-                            <div class="sub-title">
-                                <h3>Goals</h3>
-                                <p>1: Decrease the time it takes to submit a claim.</p>
-                                <p>2: Help members better understand their coverage.</p>
-                                <p>3: Clearly communicate members usage and remaining amounts.</p>
-                                <p>4: Improve and modernize the outdated UI.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="sub-title">
-                        <h3>Solutions</h3>
-                        <div class="section-description">
-                            <p>Starting with the Dashboard/Homepage, I wanted users to be immediately presented with information that they would otherwise go looking for.</p>
-                            <p>Users can see their Latest Claims and Recent Usage, as well as quickly submit a claim by tapping the plus icon.</p>
-                            <p>I also designed usage bars for the Claims and Spending Account Pages to show users how much they've spent and how much they have left.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <img src="img/simply/redesign.png">
-                </div>
-
-                <div class="section">
-                    <div class="sub-title">
-                        <h3>Feedback and Outcomes</h3>
-                        <div class="section-description">
-                            <p>After the designs were launched we saw a large increase in app downloads. Members who had never used the app before were encouraged to download it, and existing app users were excited to update.</p>
-                            <p>Our customer success team also received a lot of great feedback about the new designs.</p>
-                            <p>I loved this project. Leading a redesign of an app so early in my career was intimidating but rewarding. I couldn't be happier with the results.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="hr1" />
-
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="desktopportal">Desktop Portal</h2>
-                        <div class="section-description">
-                            <p>In addition to the mobile app, Simply Benefits has three desktop web applications for three different customers and users; Advisors, Employers, and Employees.</p>
-                            <p>As the design lead, I was in charge of maintenance, optimizations, and new feature development of these web applications.</p>
-                            <p>The following designs are from the larger projects I worked on.</p>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <h3>Voluntary Benefits</h3>
-                            <div class="section-description">
-                                <p>Optional benefits are 100% digital flexible add-on benefits for employees. Employees can purchase benefits individually which both improves their insurance experience and provides a new income stream for the company.</p>
-                                <p>I designed this feature from start to finish, starting with research and wireframes. After polishing the UI, I tested the prototype on different users to improve the flow.</p>
-                                <p>This feature was launched in 2024, and though I'm no longer with the company, I heard about the great receiption of the feature through my old collegues.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <img src="img/simply/optionalbenefits.png">
-                    </div>
-
-                    <hr class="hr1" />
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <h3 id="quoting">Digital Advisor Quoting</h3>
-                            <div class="section-description">
-                                <p>One of the most impressive Simply Benefits features for advisors is the digital quoting tool that allows them to quote groups 100% digitally. The industry standard turnaround time for quotes is about 4-6 weeks, and this feature takes that time down to about 5 days.</p>
-                                <p>The old version of this feature was outdated, confusing, and clunky. It didn't have a clear step-by-step process, and as a result, it wasn't being used.</p>
-                                <p>I helped reorganize the back-end structure and flow and was in charge of designing the UI to go along with it. The updated UI is clear, concise, and clean. Since it has been launched, we've seen an increase in digital quote creation.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="hr1" />
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <h3 id="webredesign">Website Redesign</h3>
-                            <div class="section-description">
-                                <p>During my time at Simply Benefits, I worked with the Brand and Marketing Manager to redesign the public site.</p>
-                                <p>We worked together to highlight our brand mission with descriptive visuals and a simple layout.</p>
-                                <p>This is a sample of the Homepage that we designed. In total, we designed a total of 6 pages.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section-scroll">
-                        <img src="img/simply/simply-homepage.png">
-                    </div>
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <div class="section-description">
-                                <p>Once the redesign was finished, I was in charge of the front-end development using React.js.</p>
-                                <p>The redesign of the website decreased the bounce rate by 8% and increased session length by 12%.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="back-home">
-                        <a href="index.html">Back home</a>
-                    </div>
-
-            </div>
-    
-        <hr class="hr1" />
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <div class="callout">
-                <img src="img/logo.svg" width="35px">
-                <p>Psst! I also designed and built this website. <span class="callout-link"><a href="portfolio-study.html">Learn about my process ></a></span></p>
-            </div>
-
-            <div class="footer-links">
-                <ul class="footer-list">
-                    <li class="footer-link">
-                        <a href="more.html">More</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="resume.pdf"target="_blank">Resume<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                <h4>2025 Paige Latimer</h4>
-                <div class="salutations">
-                    <p>Made with love and peppermint tea (oak milk & honey)</p>
-                    <p>Last updated January 2025</p>
-                </div>
-            </div>
-
+            </main>
         </div>
 
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="index.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="archive.html">Archive</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
 </body>
-
-
-
-
 
 </html>

@@ -585,3 +585,8 @@ html:not(.js) .rd-cs-embed iframe {
 .rd-cs-section .rd-cs-decision + p {
     margin-top: 32px;
 }
+
+/* a sub-heading after media needs the same room as a new thought */
+.rd-cs-section h3.rd-cs-sub {
+    margin-top: 56px;
+}
