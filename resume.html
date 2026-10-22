@@ -57,7 +57,7 @@
             width: 8.5in;
             min-height: 11in;
             margin: 0 auto;
-            padding: 0.36in 0.6in;
+            padding: 0.34in 0.6in;
             background: #fff;
             color: var(--text);
             font-family: 'Inter Resume', 'Inter', sans-serif;
@@ -87,13 +87,24 @@
             letter-spacing: 0.04em;
         }
 
-        /* HEADER: name and title | links | email */
+        /* HEADER: name and title on the left, contact details on the right,
+           two lines each so the two sides balance */
 
         header {
-            display: grid;
-            grid-template-columns: 1fr 1fr auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
             column-gap: 24px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
+        }
+
+        header .contact {
+            text-align: right;
+        }
+
+        .sep {
+            margin: 0 6px;
+            color: var(--muted);
         }
 
         header p {
@@ -110,24 +121,26 @@
             color: var(--muted);
         }
 
-        header a {
+        header a,
+        a.inline-link {
             text-decoration: underline;
             text-underline-offset: 2px;
             text-decoration-thickness: 0.5px;
         }
 
-        /* SECTIONS: label | who, role and dates | what I did */
+        /* SECTIONS: a small heading, then who, role and dates |
+           what I did */
 
         section {
             display: grid;
-            grid-template-columns: 1.05in 1.7in 1fr;
-            column-gap: 16px;
-            margin-top: 30px;
+            grid-template-columns: 1.7in 1fr;
+            column-gap: 20px;
+            margin-top: 24px;
         }
 
         .label {
-            grid-column: 1;
-            margin: 0;
+            grid-column: 1 / -1;
+            margin: 0 0 10px;
             font-size: 8.5pt;
             color: var(--muted);
         }
@@ -137,11 +150,11 @@
         }
 
         .entry + .entry > * {
-            margin-top: 27px;
+            margin-top: 24px;
         }
 
         .who {
-            grid-column: 2;
+            grid-column: 1;
             margin: 0;
         }
 
@@ -155,6 +168,7 @@
 
         .who .dates {
             color: var(--muted);
+            white-space: nowrap;
         }
 
         /* an earlier title at the same company */
@@ -162,8 +176,18 @@
             margin-top: 6px;
         }
 
+        /* a quiet note under the dates, e.g. an announced promotion */
+        .who .note {
+            margin-top: 6px;
+            padding-right: 8px;
+            font-size: 8.5pt;
+            line-height: 1.4;
+            color: var(--muted);
+        }
+
+
         .what {
-            grid-column: 3;
+            grid-column: 2;
             margin: 0;
             color: var(--body);
         }
@@ -236,12 +260,9 @@
             <p class="name mono">Paige Latimer</p>
             <p class="title mono">Senior Product Designer</p>
         </div>
-        <div>
-            <p><a href="https://paigelatimer.ca">paigelatimer.ca</a></p>
-            <p><a href="https://www.linkedin.com/in/paigelatimer/">linkedin.com/in/paigelatimer</a></p>
-        </div>
-        <div>
+        <div class="contact">
             <p><a href="mailto:paige.a.latimer@outlook.com">paige.a.latimer@outlook.com</a></p>
+            <p><a href="https://paigelatimer.ca">paigelatimer.ca</a><span class="sep">&middot;</span><a href="https://www.linkedin.com/in/paigelatimer/">linkedin.com/in/paigelatimer</a></p>
         </div>
     </header>
 
@@ -252,18 +273,17 @@
         <div class="entry">
             <p class="who">
                 <span class="org">Suncor / Petro-Canada</span>
-                <span>Senior Product Designer</span>
-                <span class="dates">November 2026 &ndash; Present</span>
-                <span class="step">UX Designer</span>
-                <span class="dates">June 2023 &ndash; October 2026</span>
+                <span>Product Designer</span>
+                <span class="dates">June 2023 &ndash; Present</span>
+                <span class="note">Promoted to Senior Product Designer, effective November 2026</span>
             </p>
             <ul class="what">
-                <li>Lead end-to-end design for revenue-driving features in the <span class="nowrap">Petro-Canada</span> app (<b>2.4M</b> users a year), partnering with product and engineering to frame problems and shape the roadmap.</li>
-                <li>Designed the Petro-Points offer hub, a net-new, app-exclusive feature validated with customer testing: <b>1.1M</b> members added <b>29M</b> offers in 2026, up <b>179%</b> YoY.</li>
-                <li>Expanded the hub with litre-tracking and activity offers, and refined a <span class="nowrap">new-offer</span> Rewards badge through usability testing: <b>9.3M</b> taps.</li>
+                <li>Lead end-to-end product design for revenue-driving features in the <span class="nowrap">Petro-Canada</span> app (<b>2.4M</b> users annually), partnering with product and engineering to shape the roadmap.</li>
+                <li>Spotted a high volume of password resets in analytics, made the case to prioritize <span class="nowrap">sign-in</span>, and championed passkeys through launch for a faster, more secure <span class="nowrap">sign-in</span>.</li>
+                <li>Designed the Petro-Points offer hub, a new app-exclusive feature validated through testing; <b>1.1M</b> members added <b>29M</b> offers to their accounts in 2026, <span class="nowrap">up <b>179%</b> YoY</span>.</li>
                 <li>Designed in-app car wash purchases and a streamlined checkout: <b>$19K</b> in two weeks, nearly a third of the website&rsquo;s yearly sales.</li>
                 <li>Brought SuperPass fleet cards into the app for business drivers: <span class="nowrap">fuel-ups</span> up <b>176%</b> YoY, with drivers fuelling up <b>2&times;</b> as often.</li>
-                <li>Redesigned the app and design system to WCAG&nbsp;AAA, a scalable foundation for new features.</li>
+                <li>Led an accessibility-focused redesign of the app and designed and launched dark mode to expand customization and improve usability across customer experiences.</li>
             </ul>
         </div>
 
@@ -277,7 +297,7 @@
             <ul class="what">
                 <li>Led design end to end, from user research and roadmap planning with product and engineering to UI and product marketing.</li>
                 <li>Designed QuickTrip, a booking platform for agencies without Trip Ninja&rsquo;s API, with self-serve sign-up and an admin dashboard.</li>
-                <li>Led the rebrand and a WCAG&nbsp;AAA design system, and partnered with the CEO on a marketing site that grew demo bookings.</li>
+                <li>Led a brand refresh and developed a WCAG&nbsp;AAA design system, partnering with the CEO to redesign the marketing site and increase demo bookings.</li>
             </ul>
         </div>
 
@@ -289,7 +309,7 @@
                 <span class="dates">April 2021 &ndash; April 2022</span>
             </p>
             <ul class="what">
-                <li>Led design for the member app and three web portals, working closely with engineering and product.</li>
+                <li>Led design for the member app and three web portals, with engineering and product.</li>
                 <li>Redesigned the member app, growing downloads <b>163%</b> and updates <b>20%</b>, and rebuilt sign-up for <b>20%</b> more sign-ups.</li>
                 <li>Redesigned advisor quoting, cutting turnaround from the industry&rsquo;s 4&ndash;6 weeks to about 5 days, and designed Voluntary Benefits, a new revenue stream.</li>
                 <li>Redesigned the public site and built its front end in React: bounce rate down <b>8%</b>, session length up <b>12%</b>.</li>
@@ -304,11 +324,11 @@
         <div class="entry">
             <p class="who">
                 <span class="org">Figma Make-a-thon</span>
-                <span>Winner, Reimagining Iconic Interactions</span>
+                <span>Winner</span>
                 <span class="dates">March 2026</span>
             </p>
             <div class="what">
-                <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>: a photobooth for two people in different places. Designed and built solo in one day in Figma Make, and featured on Figma&rsquo;s blog.</p>
+                <p><a href="https://duet-booth.figma.site/"><b>Duet Booth</b></a>, winner of Reimagining Iconic Interactions: a photobooth for two people in different places, built solo in one day in Figma Make. Featured on <a class="inline-link nowrap" href="https://www.figma.com/blog/6-designs-that-reimagine-how-we-interact-with-software/">Figma&rsquo;s blog</a>.</p>
             </div>
         </div>
     </section>
@@ -319,7 +339,7 @@
 
         <div class="entry">
             <p class="who">
-                <span class="org">UBC Okanagan</span>
+                <span class="org">UBC</span>
                 <span class="dates">2017 &ndash; 2021</span>
             </p>
             <div class="what">
@@ -335,7 +355,7 @@
 
         <div class="row">
             <p class="who"><span class="org">Design</span></p>
-            <p class="what">Product design, UX/UI design, interaction design, user flows, information architecture, wireframing, prototyping, design systems</p>
+            <p class="what">Product, UX/UI and interaction design, user flows, IA, prototyping, design systems</p>
         </div>
         <div class="row">
             <p class="who"><span class="org">Research &amp; data</span></p>
