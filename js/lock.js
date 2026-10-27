@@ -1,7 +1,9 @@
 (function () {
-    // Unlocks a page built by tools/lock_page.py. The case study is stored encrypted in
-    // #rd-locked: a password-derived key checks the HMAC (so a wrong password is caught
-    // cleanly), then decrypts the HTML, which replaces this lock screen.
+    // Unlocks a page built by tools/lock_page.py. #rd-locked holds the key settings, and
+    // the encrypted case study itself is a separate file (payload.src) that starts
+    // downloading as soon as the lock screen shows. A password-derived key checks the
+    // HMAC (so a wrong password is caught cleanly), then decrypts the HTML, which
+    // replaces this lock screen. Older pages (v1) carry the ciphertext inline instead.
 
     var payloadEl = document.getElementById('rd-locked');
     var lock = document.querySelector('.rd-lock');
@@ -29,7 +31,12 @@
     var salt = bytes(payload.salt);
     var iv = bytes(payload.iv);
     var tag = bytes(payload.tag);
-    var data = bytes(payload.data);
+    var dataReady = payload.src
+        ? fetch(payload.src).then(function (r) {
+            if (!r.ok) throw new Error('could not load the case study');
+            return r.arrayBuffer();
+        }).then(function (buf) { return new Uint8Array(buf); })
+        : Promise.resolve(bytes(payload.data));
 
     // 64 bytes from PBKDF2: the first half decrypts, the second half checks the HMAC.
     function deriveBits(password) {
@@ -42,6 +49,10 @@
 
     // Resolves to the page's HTML, or rejects if the key is wrong.
     function open(bits) {
+        return dataReady.then(function (data) { return decrypt(bits, data); });
+    }
+
+    function decrypt(bits, data) {
         bits = new Uint8Array(bits);
         var signed = new Uint8Array(salt.length + iv.length + data.length);
         signed.set(salt, 0);
