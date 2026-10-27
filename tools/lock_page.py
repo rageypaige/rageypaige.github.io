@@ -5,11 +5,14 @@ Usage:  python3 tools/lock_page.py [SOURCE] [OUTPUT] [TITLE]
         (defaults: private/petro-canada.html  petro-protected.html  Petro-Canada)
 
 Asks for the password twice (it's never shown or saved), encrypts SOURCE, and writes
-OUTPUT from tools/lock-template.html. Visitors type the password on the lock screen
-and js/lock.js decrypts the page in their browser.
+OUTPUT from tools/lock-template.html, plus the encrypted page itself as OUTPUT's name
+with .bin (e.g. petro-protected.bin). Keeping the ciphertext in its own file keeps the
+lock screen tiny, so it shows straight away while the case study downloads behind it.
+Visitors type the password on the lock screen and js/lock.js decrypts the page in
+their browser.
 
 Keep SOURCE in private/, which .gitignore keeps out of the public repo; only the
-encrypted OUTPUT gets committed. Re-run this whenever you edit SOURCE.
+encrypted OUTPUT and its .bin get committed. Re-run this whenever you edit SOURCE.
 
 Encryption: PBKDF2-SHA256 turns the password into two keys; the page is encrypted
 with AES-256-CBC (via the system's openssl) and signed with HMAC-SHA256, so a wrong
@@ -56,15 +59,21 @@ def main():
         input=plain, capture_output=True, check=True).stdout
     tag = hmac.new(mac_key, salt + iv + data, hashlib.sha256).digest()
 
-    payload = json.dumps({'v': 1, 'iter': ITERATIONS, 'salt': b64(salt), 'iv': b64(iv),
-                          'tag': b64(tag), 'data': b64(data)})
+    data_path = os.path.splitext(OUTPUT)[0] + '.bin'
+    with open(data_path, 'wb') as fh:
+        fh.write(data)
+    # the tag changes on every lock, so it busts any cached copy of the old .bin
+    src = os.path.basename(data_path) + '?v=' + tag.hex()[:12]
+    payload = json.dumps({'v': 2, 'iter': ITERATIONS, 'salt': b64(salt), 'iv': b64(iv),
+                          'tag': b64(tag), 'src': src})
     page = (open(TEMPLATE, encoding='utf-8').read()
             .replace('__PAYLOAD__', payload)
             .replace('__TITLE__', TITLE)
             .replace('__SOURCE__', os.path.basename(SOURCE)))
     with open(OUTPUT, 'w', encoding='utf-8') as fh:
         fh.write(page)
-    print(f'Locked {os.path.relpath(SOURCE, ROOT)} -> {os.path.relpath(OUTPUT, ROOT)}')
+    print(f'Locked {os.path.relpath(SOURCE, ROOT)} -> {os.path.relpath(OUTPUT, ROOT)}'
+          f' + {os.path.relpath(data_path, ROOT)}')
 
 
 if __name__ == '__main__':
