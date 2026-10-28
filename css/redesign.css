@@ -223,7 +223,7 @@ body.redesign ul li a:hover {
     background: var(--tile-bg, #e3e6ec);
 }
 
-.rd-work__item.rd-work__item--glow img.rd-work__subject {
+.rd-work__item.rd-work__item--glow .rd-work__subject {
     inset: auto;
     left: 50%;
     bottom: var(--subject-bottom, -16%);
@@ -236,7 +236,7 @@ body.redesign ul li a:hover {
     transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-.rd-work__item--glow:hover img.rd-work__subject {
+.rd-work__item--glow:hover .rd-work__subject {
     transform: translateX(-50%) translateY(-14px);
 }
 
@@ -251,21 +251,47 @@ body.redesign ul li a:hover {
 .rd-work__item--duet {
     --tile-bg: #dde4da;
     --subject-width: 80%;
-    --subject-bottom: -12%;
+    --subject-bottom: -4%;
 }
 
 @media (max-width: 760px) {
     /* the tile turns tall: crop in to the camera in the middle of the window */
     .rd-work__item--duet {
         --subject-width: 150%;
-        --subject-bottom: -10%;
+        --subject-bottom: -4%;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rd-work__item.rd-work__item--glow img.rd-work__subject {
+    .rd-work__item.rd-work__item--glow .rd-work__subject {
         transition: none;
     }
+}
+
+/* A subject that cycles through several frames (js/cycle.js): the frames share one
+   window, stacked, and each new one fades in on top of the last. */
+.rd-work__cycle {
+    position: absolute;
+    display: block;
+    aspect-ratio: var(--cycle-ratio);
+}
+
+.rd-work__cycle img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.rd-work__cycle img:first-child,
+.rd-work__cycle img.is-shown {
+    opacity: 1;
+}
+
+.rd-work__cycle.is-cycling img:first-child:not(.is-shown) {
+    opacity: 0;
 }
 
 /* while the earlier-work tile is hidden: just the two headline projects */
