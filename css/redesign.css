@@ -223,7 +223,7 @@ body.redesign ul li a:hover {
     background: var(--tile-bg, #e3e6ec);
 }
 
-.rd-work__item.rd-work__item--glow .rd-work__subject {
+.rd-work__item.rd-work__item--glow img.rd-work__subject {
     inset: auto;
     left: 50%;
     bottom: var(--subject-bottom, -16%);
@@ -236,7 +236,7 @@ body.redesign ul li a:hover {
     transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-.rd-work__item--glow:hover .rd-work__subject {
+.rd-work__item--glow:hover img.rd-work__subject {
     transform: translateX(-50%) translateY(-14px);
 }
 
@@ -251,75 +251,21 @@ body.redesign ul li a:hover {
 .rd-work__item--duet {
     --tile-bg: #dde4da;
     --subject-width: 80%;
-    --subject-bottom: -4%;
+    --subject-bottom: -12%;
 }
 
 @media (max-width: 760px) {
     /* the tile turns tall: crop in to the camera in the middle of the window */
     .rd-work__item--duet {
         --subject-width: 150%;
-        --subject-bottom: -4%;
+        --subject-bottom: -10%;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rd-work__item.rd-work__item--glow .rd-work__subject {
+    .rd-work__item.rd-work__item--glow img.rd-work__subject {
         transition: none;
     }
-}
-
-/* A browser window drawn in code around a looping screen recording (Duet Booth).
-   Sized in container units, so the bar and its text scale with the window. */
-.rd-work__item .rd-window {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    container-type: inline-size;
-    border-radius: 8px;
-    background: #fcfbf9;
-    box-shadow: 0 0 0 1px rgba(25, 29, 39, 0.1);
-}
-
-.rd-window__bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 0.5cqw;
-    aspect-ratio: 1200 / 46;
-    padding-left: 1.33cqw;
-    border-bottom: 1px solid #e7e2da;
-}
-
-.rd-window__bar i {
-    width: 1cqw;
-    height: 1cqw;
-    border-radius: 50%;
-    background: #ded9d1;
-}
-
-.rd-window__bar span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 25cqw;
-    padding: 0.4cqw 0;
-    border-radius: 0.67cqw;
-    background: #f1ede7;
-    color: #827c74;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.08cqw;
-    line-height: 1.2;
-    text-align: center;
-    transform: translate(-50%, -50%);
-}
-
-.rd-work__item video.rd-window__screen {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1200 / 830;
-    object-fit: cover;
 }
 
 /* while the earlier-work tile is hidden: just the two headline projects */
