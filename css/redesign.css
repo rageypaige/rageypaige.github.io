@@ -357,17 +357,9 @@ body.redesign ul li a:hover {
     opacity: 0.55;
 }
 
-/* MORE WORK: a small index under the tiles, in the same voice as the tile
-   labels (a name, with a quiet note under it). The archive page's kicker
-   borrows .rd-more__label. */
-
-.rd-more {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: start;
-    gap: 24px 64px;
-    padding: 28px calc(var(--rd-gutter) + 2px) clamp(64px, 10vh, 112px);
-}
+/* MORE WORK: three thin tiles under the two big ones, the same gutter and corners,
+   a flat colour each and no image. The side quests page's kicker borrows
+   .rd-more__label. */
 
 .rd-more__label {
     margin: 0 0 14px;
@@ -376,53 +368,68 @@ body.redesign ul li a:hover {
     color: #838b99;
 }
 
-.rd-more .rd-more__label {
-    margin: 0;
+.rd-more-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 12px clamp(72px, 12vh, 140px);
 }
 
-.rd-more__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px 48px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.rd-more__list a {
+.rd-more-tile {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 2px;
+    min-height: 128px;
+    padding: 20px 22px;
+    background: var(--tile-bg);
+    color: var(--rd-text);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.45;
-    color: var(--rd-text);
     text-decoration: none;
+    transition: background-color 0.4s ease;
 }
 
-.rd-more__name {
-    border-bottom: 1px solid transparent;
-    align-self: flex-start;
-    transition: border-color 0.2s ease;
+.rd-more-tile__note {
+    opacity: 0.55;
 }
 
-.rd-more__list a:hover .rd-more__name {
-    border-color: currentColor;
+.rd-more-tile__arrow {
+    position: absolute;
+    right: 22px;
+    bottom: 18px;
+    font-size: 16px;
+    transition: transform 0.5s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-.rd-more__note {
-    color: #838b99;
+.rd-more-tile:hover .rd-more-tile__arrow {
+    transform: translateX(6px);
 }
 
-@media (max-width: 640px) {
-    .rd-more {
+.rd-more-tile:hover {
+    background: var(--tile-bg-hover);
+}
+
+/* quiet colours that sit beside the rose and sage tiles above */
+.rd-more-tile--tn { --tile-bg: #dfe4ee; --tile-bg-hover: #d6dce9; }
+.rd-more-tile--sb { --tile-bg: #dce8e9; --tile-bg-hover: #d1e1e3; }
+.rd-more-tile--sq { --tile-bg: #e6e3ef; --tile-bg-hover: #ddd9ea; }
+
+@media (max-width: 760px) {
+    .rd-more-tiles {
         grid-template-columns: minmax(0, 1fr);
-        gap: 14px;
     }
-    .rd-more__list {
-        flex-direction: column;
-        gap: 14px;
+    .rd-more-tile {
+        min-height: 96px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-more-tile,
+    .rd-more-tile__arrow {
+        transition: none;
     }
 }
 
