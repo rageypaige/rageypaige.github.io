@@ -268,30 +268,58 @@ body.redesign ul li a:hover {
     }
 }
 
-/* A subject that cycles through several frames (js/cycle.js): the frames share one
-   window, stacked, and each new one fades in on top of the last. */
-.rd-work__cycle {
+/* A browser window drawn in code around a looping screen recording (Duet Booth).
+   Sized in container units, so the bar and its text scale with the window. */
+.rd-work__item .rd-window {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    container-type: inline-size;
+    border-radius: 8px;
+    background: #fcfbf9;
+    box-shadow: 0 0 0 1px rgba(25, 29, 39, 0.1);
+}
+
+.rd-window__bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5cqw;
+    aspect-ratio: 1200 / 46;
+    padding-left: 1.33cqw;
+    border-bottom: 1px solid #e7e2da;
+}
+
+.rd-window__bar i {
+    width: 1cqw;
+    height: 1cqw;
+    border-radius: 50%;
+    background: #ded9d1;
+}
+
+.rd-window__bar span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25cqw;
+    padding: 0.4cqw 0;
+    border-radius: 0.67cqw;
+    background: #f1ede7;
+    color: #827c74;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.08cqw;
+    line-height: 1.2;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.rd-work__item video.rd-window__screen {
     display: block;
-    aspect-ratio: var(--cycle-ratio);
-}
-
-.rd-work__cycle img {
-    position: absolute;
-    inset: 0;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.rd-work__cycle img:first-child,
-.rd-work__cycle img.is-shown {
-    opacity: 1;
-}
-
-.rd-work__cycle.is-cycling img:first-child:not(.is-shown) {
-    opacity: 0;
+    height: auto;
+    aspect-ratio: 1200 / 830;
+    object-fit: cover;
 }
 
 /* while the earlier-work tile is hidden: just the two headline projects */
