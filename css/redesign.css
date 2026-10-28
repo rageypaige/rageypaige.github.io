@@ -414,7 +414,7 @@ body.redesign ul li a:hover {
 
 /* quiet colours that sit beside the rose and sage tiles above */
 .rd-more-tile--tn { --tile-bg: #dfe4ee; --tile-bg-hover: #d6dce9; }
-.rd-more-tile--sb { --tile-bg: #cfe5e4; --tile-bg-hover: #c2dddc; }
+.rd-more-tile--sb { --tile-bg: #d6eaf0; --tile-bg-hover: #c9e3eb; } /* Simply Benefits blue (#54bcd8), lightened */
 .rd-more-tile--sq { --tile-bg: #e6e3ef; --tile-bg-hover: #ddd9ea; }
 
 @media (max-width: 760px) {
