@@ -142,18 +142,10 @@
     height: auto;
 }
 
-/* a hairline round screenshots, so pale screens don't melt into the page */
-.rd-cs-media img {
-    box-sizing: border-box;
-    border: 1px solid #d1d5dd;
-}
-
-/* Video in a hairline frame, with small round controls that appear on hover
-   (added by js/video.js) */
+/* Video, with small round controls that appear on hover (added by js/video.js) */
 .rd-video {
     position: relative;
     overflow: hidden;
-    border: 1px solid #d1d5dd;
     background: #dfe2e7;
 }
 
