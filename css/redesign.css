@@ -658,17 +658,23 @@ html.js .rd-reveal.is-visible {
         grid-template-columns: minmax(0, 1fr);
         align-items: start;
     }
-    /* phones: name on its own line, the links in a row beneath it */
+    /* phones: name and links on one line, a little closer together */
+    .rd-nav {
+        gap: 18px;
+        padding-top: 16px;
+    }
+    .rd-nav__links {
+        gap: 18px;
+    }
+}
+
+/* the narrowest phones: name on its own line, the links in a row beneath it */
+@media (max-width: 330px) {
     .rd-nav {
         flex-wrap: wrap;
         row-gap: 10px;
-        column-gap: 22px;
-        padding-top: 16px;
     }
     .rd-nav__logo {
         flex-basis: 100%;
-    }
-    .rd-nav__links {
-        gap: 22px;
     }
 }
