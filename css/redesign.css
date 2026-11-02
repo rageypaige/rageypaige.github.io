@@ -268,6 +268,335 @@ body.redesign ul li a:hover {
     }
 }
 
+/* MINI COMPONENTS: instead of a full screen, each headline tile plays one small
+   moment from the product on a loop (js/work-cards.js). Everything is drawn on a
+   560px square stage, scaled to fit the tile, so it keeps its proportions. */
+.rd-mini {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-work__item--glow:hover .rd-mini {
+    transform: translateY(-10px);
+}
+
+.rd-mini__stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 560px;
+    height: 560px;
+    transform-origin: 0 0;
+    font-family: 'Inter', sans-serif;
+    color: #1b1c1f;
+    -webkit-font-smoothing: antialiased;
+}
+
+.rd-mini__stage span {
+    display: block;
+}
+
+/* Petro: an offer from the hub, added with a tap */
+.rd-mini-offer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 372px;
+    display: flex !important;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(25, 29, 39, 0.06), 0 18px 40px rgba(120, 40, 40, 0.1), 0 3px 8px rgba(120, 40, 40, 0.06);
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+html.js .rd-mini-offer {
+    opacity: 0;
+}
+
+.rd-mini-offer__ico {
+    flex: none;
+    display: grid !important;
+    place-items: center;
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    background: #f2f2f4;
+}
+
+.rd-mini-offer__body {
+    flex: 1;
+    display: flex !important;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rd-mini-offer__title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.rd-mini-offer__sub {
+    font-size: 13px;
+    line-height: 1.35;
+    color: #6b6f76;
+}
+
+.rd-mini-offer__row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.rd-mini-btn {
+    position: relative;
+    width: 120px;
+    height: 28px;
+}
+
+.rd-mini-btn__add,
+.rd-mini-btn__added {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    height: 28px;
+    padding: 0 11px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.rd-mini-btn__add {
+    background: #e4002b;
+    color: #fff;
+}
+
+.rd-mini-btn__added {
+    background: #fff;
+    box-shadow: inset 0 0 0 1.5px #c9cbd0;
+    opacity: 0;
+    transform: scale(0.92);
+}
+
+.rd-mini-btn.is-added .rd-mini-btn__add {
+    opacity: 0;
+    transform: scale(0.92);
+}
+
+.rd-mini-btn.is-added .rd-mini-btn__added {
+    opacity: 1;
+    transform: none;
+}
+
+.rd-mini-btn.is-pressed .rd-mini-btn__add {
+    transform: scale(0.94);
+}
+
+.rd-mini-btn__added svg path {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+}
+
+.rd-mini-btn.is-added .rd-mini-btn__added svg path {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.35s 0.12s ease-out;
+}
+
+/* a soft fingertip, since it's a phone app */
+.rd-mini-tap {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin: -23px 0 0 -23px;
+    border-radius: 50%;
+    background: rgba(27, 28, 31, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: scale(1.25);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.rd-mini-tap.is-on {
+    opacity: 1;
+    transform: none;
+}
+
+.rd-mini-tap.is-down {
+    transform: scale(0.78);
+    background: rgba(27, 28, 31, 0.26);
+}
+
+.rd-mini-bit {
+    position: absolute;
+    width: 7px;
+    height: 11px;
+    border-radius: 1.5px;
+}
+
+/* Duet Booth: four shots, then one strip */
+.rd-mini-booth {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    width: 330px;
+    height: 196px;
+    border-radius: 16px;
+    background: #faf6f0;
+    box-shadow: 0 0 0 1px rgba(25, 29, 39, 0.06), 0 18px 40px rgba(40, 60, 40, 0.1), 0 3px 8px rgba(40, 60, 40, 0.06);
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+html.js .rd-mini-booth {
+    opacity: 0;
+}
+
+.rd-mini-slot {
+    position: absolute;
+    top: 24px;
+    width: 62px;
+    height: 81px;
+    display: grid !important;
+    place-items: center;
+    border: 1.5px dashed #a29c94;
+    border-radius: 4px;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 12px;
+    color: #8b8680;
+    transition: opacity 0.3s ease;
+}
+
+.rd-mini-shutter {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    padding: 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px #cfc8bf;
+    transition: transform 0.12s ease;
+}
+
+.rd-mini-shutter span {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #c9c3bb;
+}
+
+.rd-mini-shutter.is-down {
+    transform: scale(0.88);
+}
+
+.rd-mini-flash {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: #fff;
+    opacity: 0;
+}
+
+.rd-mini-art {
+    position: absolute;
+    inset: 0;
+}
+
+.rd-mini-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform-origin: 0 0;
+    transition: transform 0.9s cubic-bezier(0.65, 0, 0.25, 1), width 0.9s cubic-bezier(0.65, 0, 0.25, 1), height 0.9s cubic-bezier(0.65, 0, 0.25, 1), opacity 0.3s ease;
+}
+
+.rd-mini-photo.is-in {
+    opacity: 1;
+    animation: rd-mini-drop 0.45s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+@keyframes rd-mini-drop {
+    from { opacity: 0; filter: brightness(2.2); }
+    to { opacity: 1; filter: none; }
+}
+
+.rd-mini-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    background: #f3eee7;
+    box-shadow: 0 0 0 1px #2a2725, 0 18px 36px rgba(40, 60, 40, 0.16);
+    opacity: 0;
+    transform-origin: 0 0;
+    transition: opacity 0.5s ease;
+}
+
+.rd-mini-strip.is-on {
+    opacity: 1;
+}
+
+.rd-mini-note {
+    position: absolute;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0);
+    transform: rotate(-4deg);
+}
+
+.rd-mini-note.is-on {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 1.1s ease-out;
+}
+
+.rd-mini-arrow {
+    position: absolute;
+    opacity: 0;
+}
+
+.rd-mini-arrow.is-on {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+/* a plain arrow cursor, since it's a web app */
+.rd-mini-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    opacity: 0;
+    transition: transform 0.9s cubic-bezier(0.45, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.rd-mini-cursor.is-on {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-mini {
+        transition: none;
+    }
+}
+
 /* while the earlier-work tile is hidden: just the two headline projects */
 .rd-work--two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
