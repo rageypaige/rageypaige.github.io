@@ -47,9 +47,12 @@
        Each print stays inside its own cell, less PRINT_GAP, so no two prints can
        overlap, including across the wrap. */
 
-    var CELL_W = 340;
-    var CELL_H = 410;
-    var PRINT_GAP = 36;
+    // Phones get smaller prints packed closer together, so more of the playground
+    // shows at once. Decided once, when the page loads.
+    var SMALL = window.matchMedia('(max-width: 640px)').matches;
+    var CELL_W = SMALL ? 200 : 340;
+    var CELL_H = SMALL ? 250 : 410;
+    var PRINT_GAP = SMALL ? 18 : 36;
     var CAPTION_H = 28;
     var WRAP_MARGIN = 450;
     var cols = Math.ceil(Math.sqrt(photos.length * 1.2));
@@ -61,7 +64,7 @@
     // Whatever the shape, the print is shrunk to fit the cell less PRINT_GAP, which is
     // what guarantees no two prints can ever touch.
     function place(it, ratio) {
-        var width = Math.round((ratio > 1 ? 200 : 290) * (0.85 + rand(it.index + 1) * 0.3));
+        var width = Math.round((ratio > 1 ? 200 : 290) * (SMALL ? 0.6 : 1) * (0.85 + rand(it.index + 1) * 0.3));
         width = Math.min(width, CELL_W - PRINT_GAP, Math.floor((CELL_H - PRINT_GAP - CAPTION_H) / ratio));
         var height = Math.round(width * ratio) + CAPTION_H;
         var slackX = CELL_W - PRINT_GAP - width;
@@ -131,11 +134,11 @@
 
     /* ORGANIZED: prints sorted into labelled group blocks, on a bounded canvas */
 
-    var GROUP_GAP = 120;
-    var ITEM_GAP = 24;
+    var GROUP_GAP = SMALL ? 64 : 120;
+    var ITEM_GAP = SMALL ? 14 : 24;
     var LABEL_H = 64;
     var TOP_EDGE = 48;
-    var SIDE_EDGE = 60;
+    var SIDE_EDGE = SMALL ? 16 : 60;
     var BOTTOM_EDGE = 200;
     var groupNames = (window.FILM_GROUPS || []).filter(function (g) {
         return items.some(function (it) { return it.group === g; });
