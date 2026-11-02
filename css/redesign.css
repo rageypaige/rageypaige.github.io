@@ -223,21 +223,111 @@ body.redesign ul li a:hover {
     background: var(--tile-bg, #e3e6ec);
 }
 
-.rd-work__item.rd-work__item--glow img.rd-work__subject {
+.rd-work__item.rd-work__item--glow .rd-work__subject {
+    position: absolute;
+    display: block;
     inset: auto;
     left: 50%;
     bottom: var(--subject-bottom, -16%);
     width: var(--subject-width, auto);
     height: var(--subject-height, auto);
     max-width: none;
+    aspect-ratio: var(--subject-ratio, auto);
     object-fit: contain;
     transform: translateX(-50%);
     filter: drop-shadow(0 16px 28px rgba(25, 29, 39, 0.12)) drop-shadow(0 2px 6px rgba(25, 29, 39, 0.08));
     transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-.rd-work__item--glow:hover img.rd-work__subject {
+.rd-work__item--glow:hover .rd-work__subject {
     transform: translateX(-50%) translateY(-14px);
+}
+
+/* Home page: the phone and the window drift gently, out of step with each other.
+   It uses translate, so it stacks with the hover lift above. */
+.rd-work__item--petro .rd-work__subject,
+.rd-work__item--duet .rd-work__subject {
+    animation: rd-drift 7s ease-in-out infinite;
+}
+
+.rd-work__item--duet .rd-work__subject {
+    animation-duration: 8.5s;
+    animation-delay: -3s;
+}
+
+@keyframes rd-drift {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -6px; }
+}
+
+/* One small moment inside each frame, played once when the tile comes into view
+   and again on hover (js/work-moments.js). Positions are percentages of the image. */
+.rd-moment {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+}
+
+/* Petro: tap "Add offer" on the first offer, and it turns into "Offer added" */
+.rd-moment--press {
+    left: 37.2%;
+    top: 40.71%;
+    width: 25.46%;
+    height: 3.29%;
+    border-radius: 12% / 40%;
+    background: rgba(0, 0, 0, 0.18);
+    opacity: 0;
+}
+
+.rd-work__item .rd-moment--added {
+    inset: auto;
+    left: 35.98%;
+    top: 39.71%;
+    width: 33.54%;
+    height: 5.29%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.is-added .rd-moment--added {
+    opacity: 1;
+}
+
+/* a soft fingertip, since it's a phone app */
+.rd-moment--tap {
+    left: 49.85%;
+    top: 42.32%;
+    width: 9%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(27, 28, 31, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.is-tapping .rd-moment--tap {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.is-pressing .rd-moment--tap {
+    transform: translate(-50%, -50%) scale(0.78);
+}
+
+/* Duet Booth: the countdown, the flash and the third shot, from the demo, laid over
+   the camera with soft edges so it blends into the still underneath */
+.rd-moment--clip {
+    left: 34.17%;
+    top: 9.43%;
+    width: 30.5%;
+    height: 71.96%;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent), linear-gradient(to bottom, transparent, #000 2%, #000 98%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent), linear-gradient(to bottom, transparent, #000 2%, #000 98%, transparent);
+    mask-composite: intersect;
 }
 
 /* Petro-Canada: the phone, sized by height, on a dusty rose (Petro red, nearly all the colour taken out) */
@@ -245,6 +335,7 @@ body.redesign ul li a:hover {
     --tile-bg: #ecdedd;
     --subject-height: 104%;
     --subject-bottom: -24%;
+    --subject-ratio: 656 / 1400;
 }
 
 /* Duet Booth: the browser window, sized by width, on a soft sage (the rose's complement) */
@@ -252,6 +343,7 @@ body.redesign ul li a:hover {
     --tile-bg: #dde4da;
     --subject-width: 80%;
     --subject-bottom: -12%;
+    --subject-ratio: 1800 / 1209;
 }
 
 @media (max-width: 760px) {
@@ -263,8 +355,9 @@ body.redesign ul li a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rd-work__item.rd-work__item--glow img.rd-work__subject {
+    .rd-work__item.rd-work__item--glow .rd-work__subject {
         transition: none;
+        animation: none;
     }
 }
 

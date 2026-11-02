@@ -78,7 +78,12 @@
                     <span class="rd-work__note">Product design · 3 years</span>
                 </span>
                 <span class="rd-work__media">
-                    <img class="rd-work__subject" src="img/home/petro-phone.webp" width="656" height="1400" alt="The Petro-Canada app's offer hub, a list of Petro-Points offers to add">
+                    <span class="rd-work__subject" data-moment="petro">
+                        <img src="img/home/petro-phone.webp" width="656" height="1400" alt="The Petro-Canada app's offer hub, a list of Petro-Points offers to add">
+                        <span class="rd-moment rd-moment--press" aria-hidden="true"></span>
+                        <img class="rd-moment rd-moment--added" src="img/home/petro-added.webp" width="220" height="74" alt="" aria-hidden="true">
+                        <span class="rd-moment rd-moment--tap" aria-hidden="true"></span>
+                    </span>
                 </span>
             </a>
 
@@ -88,7 +93,13 @@
                     <span class="rd-work__note">Figma Make-a-thon winner</span>
                 </span>
                 <span class="rd-work__media">
-                    <img class="rd-work__subject" src="img/home/duet-window.webp" width="1800" height="1209" alt="Duet Booth in a browser: the live camera counting down, with two of four shots taken">
+                    <span class="rd-work__subject" data-moment="duet">
+                        <img src="img/home/duet-window.webp" width="1800" height="1209" alt="Duet Booth in a browser: the live camera counting down, with two of four shots taken">
+                        <video class="rd-moment rd-moment--clip" muted playsinline preload="auto" aria-hidden="true">
+                            <source src="img/home/duet-moment.mp4" type="video/mp4">
+                            <source src="img/home/duet-moment.webm" type="video/webm">
+                        </video>
+                    </span>
                 </span>
             </a>
 
@@ -165,6 +176,7 @@
     <script src="js/reveal.js" defer></script>
     <script src="js/cursor.js" defer></script>
     <script src="js/cat-garden.js" defer></script>
+    <script src="js/work-moments.js" defer></script>
 
 </body>
 
