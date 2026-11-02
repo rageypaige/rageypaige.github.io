@@ -30,9 +30,7 @@
     position: relative;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 13px;
     color: var(--rd-footer-muted);
     margin: 0;
 }
