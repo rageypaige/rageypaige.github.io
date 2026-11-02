@@ -78,6 +78,13 @@ body.redesign {
     display: none;
 }
 
+/* phones: no hint, so the photos get the room */
+@media (max-width: 640px) {
+    .rd-film-hint {
+        display: none;
+    }
+}
+
 /* CANVAS */
 
 .rd-canvas {
