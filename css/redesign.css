@@ -497,13 +497,36 @@ body.redesign ul li a:hover {
     filter: none;
 }
 
-/* Data Body: numbers falling down a dark wall (js/data-rain.js) */
+/* Data Body: the installation as an object, like the other tiles: a dark projection
+   of numbers falling around a figure (js/data-rain.js), on a pale slate, placed like
+   the noggn window and lifting on hover the same way */
 .rd-work__item--databody {
-    --tile-bg: #191d27;
+    --tile-bg: #dfe3ea;
 }
 
-.rd-work__item--databody .rd-work__text {
-    color: #eef0f4;
+.rd-databody {
+    position: absolute;
+    left: 50%;
+    bottom: -14%;
+    display: block;
+    width: 64%;
+    aspect-ratio: 8 / 7;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #191d27;
+    box-shadow: 0 16px 28px rgba(25, 29, 39, 0.14), 0 2px 6px rgba(25, 29, 39, 0.08);
+    transform: translateX(-50%);
+    transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
+}
+
+.rd-work__item--glow:hover .rd-databody {
+    transform: translateX(-50%) translateY(-14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-databody {
+        transition: none;
+    }
 }
 
 .rd-data-rain {
@@ -526,6 +549,10 @@ body.redesign ul li a:hover {
     .rd-work__item--covid {
         --subject-width: 86%;
         --subject-bottom: 8%;
+    }
+    .rd-databody {
+        width: 92%;
+        bottom: -10%;
     }
 }
 

@@ -1,7 +1,7 @@
 (function () {
-    // Data Body's tile: numbers falling down a dark wall around a human figure,
-    // like the installation, with a soft glow where the heart and brain were
-    // touch points. Runs only while the tile is on screen; with reduced motion
+    // Data Body's tile: numbers falling down a dark projection around a human
+    // figure, like the installation, with a soft glow where the heart and brain
+    // were touch points. Runs only while the tile is on screen; with reduced motion
     // it draws one still frame.
     var canvases = document.querySelectorAll('canvas.rd-data-rain');
     if (!canvases.length) return;
@@ -22,26 +22,32 @@
             }
         }
 
-        // the figure: a head and shoulders, centred and running off the bottom
+        // the figure: head, neck and shoulders as one outline, centred and running off the bottom
         function figure() {
-            var cx = w / 2, headR = h * 0.085, headY = h * 0.36, top = headY + headR * 1.35, sw = Math.min(w * 0.2, h * 0.26);
+            var cx = w / 2, headR = h * 0.12, headY = h * 0.3;
+            var neck = headR * 0.42, shoulderY = headY + headR * 1.75, sw = Math.min(w * 0.3, h * 0.42);
+            var a = Math.asin(neck / headR), neckTop = headY + headR * Math.cos(a);
             ctx.beginPath();
-            ctx.arc(cx, headY, headR, 0, Math.PI * 2);
-            ctx.moveTo(cx - sw, h + 2);
-            ctx.lineTo(cx - sw, top + sw * 0.55);
-            ctx.quadraticCurveTo(cx - sw, top, cx - sw * 0.45, top);
-            ctx.lineTo(cx + sw * 0.45, top);
-            ctx.quadraticCurveTo(cx + sw, top, cx + sw, top + sw * 0.55);
+            // from where the neck meets the head on the left, over the top, to the right
+            ctx.arc(cx, headY, headR, Math.PI / 2 + a, Math.PI / 2 - a);
+            ctx.lineTo(cx + neck, shoulderY - headR * 0.3);
+            ctx.bezierCurveTo(cx + neck, shoulderY, cx + sw * 0.7, shoulderY, cx + sw * 0.88, shoulderY + headR * 0.25);
+            ctx.bezierCurveTo(cx + sw, shoulderY + headR * 0.4, cx + sw, shoulderY + headR * 0.9, cx + sw, shoulderY + headR * 1.3);
             ctx.lineTo(cx + sw, h + 2);
+            ctx.lineTo(cx - sw, h + 2);
+            ctx.lineTo(cx - sw, shoulderY + headR * 1.3);
+            ctx.bezierCurveTo(cx - sw, shoulderY + headR * 0.9, cx - sw, shoulderY + headR * 0.4, cx - sw * 0.88, shoulderY + headR * 0.25);
+            ctx.bezierCurveTo(cx - sw * 0.7, shoulderY, cx - neck, shoulderY, cx - neck, shoulderY - headR * 0.3);
+            ctx.lineTo(cx - neck, neckTop);
             ctx.closePath();
-            return { cx: cx, headY: headY, heartY: top + sw * 0.75, sw: sw };
+            return { cx: cx, headY: headY, heartY: shoulderY + headR * 1.1, sw: sw };
         }
 
         function draw() {
             ctx.clearRect(0, 0, w, h);
             ctx.font = size + 'px "IBM Plex Mono", ui-monospace, Menlo, monospace';
-            // the label sits top left, so the numbers fade in below it
-            var fade = h * 0.3;
+            // numbers fade in just below the top edge, as if falling into the light
+            var fade = h * 0.12;
             cols.forEach(function (c) {
                 for (var i = 0; i < c.len; i++) {
                     var y = c.y - i * size * 1.3;
