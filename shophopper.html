@@ -3,8 +3,18 @@
 
 <head>
 
-    <title>Projects | ShopHopper</title>
-    <meta name="description" content="Paige">
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>ShopHopper — Paige Latimer</title>
+    <meta name="description" content="ShopHopper: product design for a fashion app that finds your style at local boutiques, from launch to a research-led browsing redesign, by Paige Latimer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paigelatimer.ca/shophopper.html">
+    <meta property="og:title" content="ShopHopper — Paige Latimer">
+    <meta property="og:description" content="ShopHopper: product design for a fashion app that finds your style at local boutiques, from launch to a research-led browsing redesign, by Paige Latimer.">
+    <meta property="og:image" content="https://paigelatimer.ca/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
@@ -12,6 +22,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -22,203 +36,219 @@
 
 </head>
 
-<body>
+<body class="redesign">
 
     <!-- BODY WRAPPER -->
     <div class="body-wrapper">
 
-        <!-- HEADER WRAPPER 
-        <div class="header"> -->
-            
-            <!-- NAV BAR -->
-            <div class="nav">
-            
-                <a class="logo" href="index.html">
-                    <img src="img/logo.svg" width="40px">
-                </a>
-                <ul class="navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><b>Work</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.pdf"target="_blank">Resume <img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
+        <!-- NAV BAR -->
+        <nav class="rd-nav rd-anim" style="--rd-delay: 0ms">
+            <a class="rd-nav__logo" href="index.html">Paige Latimer</a>
+            <ul class="rd-nav__links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+            <a class="rd-nav__contact" href="mailto:paige.a.latimer@outlook.com">Contact</a>
+        </nav>
 
-            <!-- HEADER -->
-            <div class="greeting">
-                <div class="title">
-                    <h1>ShopHopper</h1>
-                    <div class="project-details">
-                        <p>User research, usability testing, UI Design</p>
-                        <p>January 2022 - September 2023</p>
-                    </div>
-                </div>
+        <!-- CASE STUDY: ShopHopper. Rebuilt from the old page in this layout. -->
+        <div class="rd-cs">
 
-                <div class="directory">
-                    <ul class="directory-links">
-                        <li class="directory-link">
-                            <a href="#mobileapplaunch">Mobile App Launch</a>
-                        </li>
-                        <li>|</li>
-                        <li class="directory-link">
-                            <a href="#categories">Categories</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <aside class="rd-cs-toc rd-anim" style="--rd-delay: 60ms" aria-label="Sections">
+                <a class="rd-cs-toc__back" href="side-quests.html">&larr; Side quests</a>
+                <ol>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#curation">Curation</a></li>
+                    <li><a href="#search">Search &amp; filters</a></li>
+                    <li><a href="#launch">Launch</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                </ol>
+            </aside>
 
-            <!-- DETAILS -->
-            <div class="project">
-                <div class="project-image">
-                    <img src="img/shophopper.png">
-                </div>
-                
-                <div class="section">
-                    <div class="section-title">
-                        <h2>Introduction</h2>
-                        <div class="section-description">
-                            <p>ShopHopper is a mobile app that helps shoppers find outfits that match their style and size, all from local small businesses. When I started, ShopHopper was preparing for the launch of their app. I have worked closely with the CEO and developers to lead the Product Design for the app and help the company reach its goals.</p>
+            <main class="rd-cs-main">
+
+                <!-- HEADER -->
+                <header>
+                    <p class="rd-cs-label rd-anim" style="--rd-delay: 120ms">Side quest &mdash; ShopHopper &mdash; Fashion app</p>
+                    <h1 class="rd-cs-title rd-anim" style="--rd-delay: 180ms">A fashion app that finds your style at local boutiques</h1>
+                    <p class="rd-cs-intro rd-anim" style="--rd-delay: 220ms">ShopHopper matches shoppers with outfits in their style and size, all from local small businesses. I volunteered with the startup, led product design for its launch, then used research to <em>fix how people browse.</em></p>
+                    <figure class="rd-cs-media rd-anim" style="--rd-delay: 260ms">
+                        <img src="img/archive/shophopper/hero.webp" width="1800" height="1014" alt="Two ShopHopper screens: a curated selection of local pieces on sale, and the details for a green knit sweater with sizes and delivery options">
+                    </figure>
+                    <dl class="rd-cs-meta rd-anim" style="--rd-delay: 300ms">
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Product design lead, as a volunteer</dd>
+                        </div>
+                        <div>
+                            <dt>Timeline</dt>
+                            <dd>January 2022 &ndash; September 2023</dd>
+                        </div>
+                        <div>
+                            <dt>Worked with</dt>
+                            <dd>The CEO &amp; developers</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>User research, usability testing, UI design</dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Overview</p>
+                    <h2>An app to launch, with limited time and limited development resources.</h2>
+                    <p>ShopHopper is a startup I volunteered my time with, alongside my full-time work. When I joined, it was getting ready to launch its app. I worked closely with the CEO and the developers to lead product design, from user flows to high-fidelity UI.</p>
+                    <p>With so little time and so few developers, I focused on defining and building only the most important features. The CEO and I ran two rounds of user research to decide what they were.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/shophopper/screens.webp" width="1800" height="582" loading="lazy" alt="Seven screens from the launch app: welcome, sign in, the curated home, a product, filters, an empty favourites list, and settings">
+                        <figcaption>The launch app: onboarding, sign in, curation, products, filters, favourites and settings.</figcaption>
+                    </figure>
+                </section>
+
+                <!-- CURATION -->
+                <section id="curation" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Curation</p>
+                    <h2>Tell us your style and size, and we&rsquo;ll find the best local pieces, on sale first.</h2>
+                    <p>Fashion curation is at the centre of ShopHopper&rsquo;s value. Shoppers tell us their favourite styles and their sizes, and we find the best pieces from local shops for them, prioritizing what&rsquo;s on sale. The goal is a relaxed way to shop for people who want to support local businesses.</p>
+                    <p>Behind it is a complex back-end algorithm. The job of the interface was to make it feel simple: saving people time and introducing them to new, unique fashion.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/shophopper/curation.webp" width="1730" height="1468" loading="lazy" alt="The curated home, with local pieces on sale, beside the style profile where shoppers set their sizes and style preferences">
+                        <figcaption>The curated home, and the style profile that powers it.</figcaption>
+                    </figure>
+                </section>
+
+                <!-- SEARCH -->
+                <section id="search" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Search &amp; filters</p>
+                    <h2>For when shoppers want to explore, not just be shown.</h2>
+                    <p>Curation is low effort, but we also wanted people to explore local shops and find other things they might like. Shoppers can search, then narrow the results by price, store, style and more. The final design came out of a few rounds of usability testing.</p>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/shophopper/filters.webp" width="1730" height="1468" loading="lazy" alt="The filter panel with nothing selected, and with the Casual style selected, ready to show results">
+                    </figure>
+                </section>
+
+                <!-- LAUNCH -->
+                <section id="launch" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Launch</p>
+                    <h2>The beta launched in 2022, and people liked what they found.</h2>
+                    <p>We were thrilled with the response: lots of positive feedback on social media and in our usability testing sessions.</p>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <span class="rd-cs-stat">~500</span>
+                            <p>Downloads in the first month</p>
+                        </div>
+                        <div>
+                            <span class="rd-cs-stat">2</span>
+                            <p>Rounds of user research to choose the launch features</p>
+                        </div>
+                        <div>
+                            <span class="rd-cs-stat">~30</span>
+                            <p>People in usability testing after launch</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="mobileapplaunch">ShopHopper App Launch</h2>
-                        <div class="section-description">
-                            <p>ShopHopper officially launched their beta app in 2022. I was responsible for designing the mobile app experience from user flows to high-fidelity designs.</p>
-                            <p>During this time, we had limited time and development resources so I focused on defining and building the most important features. The CEO and I conducted two rounds of user research to determine these features.</p>
-                            <p>The following are the designs for the core features that were present for the app launch.</p>
-                            <div class="sub-title">
-                                <h3>Fashion Curation</h3>
-                                <p>ShopHopper&amp;s fashion curation feature is the at the centre of our value proposition. Users tell us their favourite styles and clothing sizes and we find the best local pieces for them, prioritizing on-sale items. The goal is to create a relaxed shopping experience for people who want to support local business.</p>
-                                <p>This feature combines complex back-end algorithms with an easy-to-understand interface to produce a digital app that saves people time, introduces them to new and unique fashion, all while supporting local.</p>
-                            </div>
+                <!-- CATEGORIES -->
+                <section id="categories" class="rd-cs-section rd-reveal">
+                    <p class="rd-cs-label">Categories</p>
+                    <h2>Testing kept surfacing the same problem: browsing wasn&rsquo;t working.</h2>
+                    <p>After launch, I ran usability testing and research sessions with around 30 people, watching them use the app to find roadblocks. One issue came up in almost every session: browsing. The way the app let people browse just wasn&rsquo;t cutting it.</p>
+                    <p>Fixing it also served the business, because helping people find more products meant more purchases.</p>
+                    <div class="rd-cs-cards">
+                        <div>
+                            <h3>Business driver</h3>
+                            <p>How might we help shoppers find more products, to increase purchases?</p>
+                        </div>
+                        <div>
+                            <h3>Design challenge</h3>
+                            <p>How can we design browsing that&rsquo;s seamless and also familiar?</p>
+                        </div>
+                        <div>
+                            <h3>Constraints</h3>
+                            <p>Back-end database restrictions, and the key steps someone needs to find the right product.</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="section">
-                    <img src="img/shophopper/Curation.png">
-                </div>
-
-                <div class="section">
-                    <div class="sub-title">
-                        <h3>Searching and Filtering</h3>
-                        <div class="section-description">
-                            <p>While curation offers a low-effort shopping experience, we also want to allow users to explore local shops to find other items they might like. This is achieved by an intuitive searching and filtering experience.</p>
-                            <p>Users can search for items they&amp;re interesting in and then refine those searches by inputting preferences for price, store, style, and more. After a few rounds of usability testing, the finalized UI can be seen here.</p>
+                    <div class="rd-cs-decision">
+                        <div>
+                            <h3>Shop by category</h3>
+                            <p>Clear categories on the home screen and their own page: clothing, accessories, shoes, seasonal and influencer picks, new, on sale, and by price.</p>
+                        </div>
+                        <div>
+                            <h3>Because&hellip;</h3>
+                            <p>Categories are how people already browse stores, online and off. I worked closely with the developers on the wireframes, so the new browsing would fit the back-end&rsquo;s categorization system.</p>
                         </div>
                     </div>
+                    <figure class="rd-cs-media">
+                        <img src="img/archive/shophopper/categories.svg" width="865" height="734" loading="lazy" alt="Wireframes: the home screen with Curated for you and Shop by category, and a Categories page of tiles from women&rsquo;s clothing to under $250">
+                        <figcaption>Wireframes for browsing by category.</figcaption>
+                    </figure>
+                </section>
+
+                <div class="rd-cs-next rd-reveal">
+                    <p class="rd-cs-label">More side quests</p>
+                    <a href="noggn.html">noggn &rarr;</a>
                 </div>
 
-                <div class="section">
-                    <img src="img/shophopper/filters.png">
-                </div>
-
-                <div class="section">
-                    <div class="sub-title">
-                        <h3>Feedback and Success</h3>
-                        <div class="section-description">
-                            <p>One month after the launch, the ShopHopper app had be downloaded around 500 times.</p>
-                            <p>We were thrilled to receive lots of positive feedback on social media and during usability testing sessions.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="hr1" />
-
-                <div class="section">
-                    <div class="section-title">
-                        <h2 id="categories">Categories</h2>
-                        <div class="section-description">
-                            <p>I conducted usability testing and user research sessions with around 30 users. During those sessions, my goal was to observe users using the app and discover any roadblocks or areas of improvement.</p>
-                            <p>As the design lead, I was in charge of maintenance, optimizations, and new feature development of these web applications.</p>
-                            <p>There was a common issue that appeared in almost all of the sessions which was the browsing experience. The browsing system in the existing app wasn't cutting it for users, so I began my design process to solve this problem.</p>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <h3>Research</h3>
-                            <div class="section-description">
-                                <p>My research for this project focused on finding ways to improve the browsing experience for the user.</p>
-                                <p>This also aligned with the business goal of increasing app purchases.</p>
-                                <p><b>Business Driver:</b> How might we help users find more products to increase purchases?</p>
-                                <p><b>Design Challenge:</b> How can we design a seamless experience that is also familiar to the user?</p>
-                                <p><b>Design Considerations:</b> With back-end database restrictions, how can we create a seamless experience? What are the key steps the user needs to take to find the right product?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="sub-title">
-                            <h3 id="quoting">Wireframes</h3>
-                            <div class="section-description">
-                                <p>I worked closely with the development team on the wireframes to ensure the back-end categorization system would work together to improve the browsing experience for users.</p>   
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <img src="img/shophopper/categories.svg">
-                    </div>
-
-                    <div class="back-home">
-                        <a href="index.html">Back home</a>
-                    </div>
-                    
-            </div>
-    
-        <hr class="hr1" />
-
-        <!-- FOOTER -->
-        <div class="footer">
-            <div class="callout">
-                <img src="img/logo.svg" width="35px">
-                <p>Psst! I also designed and built this website. <span class="callout-link"><a href="portfolio-study.html">Learn about my process ></a></span></p>
-            </div>
-
-            <div class="footer-links">
-                <ul class="footer-list">
-                    <li class="footer-link">
-                        <a href="more.html">More</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="resume.pdf"target="_blank">Resume<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn<img src="img/arrow.svg" width="16px"></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="copyright">
-                <h4>2025 Paige Latimer</h4>
-                <div class="salutations">
-                    <p>Made with love and peppermint tea (oak milk & honey)</p>
-                    <p>Last updated January 2025</p>
-                </div>
-            </div>
-
+            </main>
         </div>
 
+        <!-- FOOTER -->
+        <footer class="rd-footer">
+
+            <span class="rd-cat rd-cat--peek" style="--cat-color:#e0b355; --bob-delay:.4s"><span class="rd-cat__inner" data-face="ฅ^•ﻌ•^ฅ" data-fed="ฅ^•ω•^ฅ" data-blink="ฅ^-ﻌ-^ฅ">ฅ^•ﻌ•^ฅ</span></span>
+
+            <div class="rd-footer__top rd-reveal">
+                <p class="rd-footer__note"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#ff6b4a"><span class="rd-cat__inner" data-face="ᓚ₍ ^. .^₎" data-fed="ᓚ₍ ^ω^₎" data-blink="ᓚ₍ -. .-₎">ᓚ₍ ^. .^₎</span></span>Made with love, peppermint tea (oat milk &amp; honey) &amp; one very opinionated cat</p>
+            </div>
+
+            <div class="rd-footer__links rd-reveal" style="--rd-delay: 80ms">
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#7ab8c9; --bob-delay:.8s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ nom">ᓚᘏᗢ</span></span>Say hi</span>
+                    <a href="mailto:paige.a.latimer@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/paigelatimer/" target="_blank">LinkedIn</a>
+                    <span class="rd-footer__row">
+                        <a href="resume.pdf" target="_blank">Resume</a>
+                        <span class="rd-cat rd-cat--inline" style="--cat-color:#e493a8; --bob-delay:1.2s"><span class="rd-cat__inner" data-face="ᗢᘏᓗ" data-fed="nom ᗢᘏᓗ">ᗢᘏᓗ</span></span>
+                    </span>
+                </div>
+                <div class="rd-footer__col">
+                    <span class="rd-footer__col-title"><span class="rd-cat rd-cat--on-top" style="left:0; --cat-color:#a597d6; --bob-delay:.2s"><span class="rd-cat__inner" data-face="/ᐠ｡ꞈ｡ᐟ\" data-fed="/ᐠ｡ω｡ᐟ\" data-blink="/ᐠ-ꞈ-ᐟ\">/ᐠ｡ꞈ｡ᐟ\</span></span>Page</span>
+                    <a href="about.html">About</a>
+                    <a href="film.html">Film</a>
+                    <a href="side-quests.html">Side quests</a>
+                </div>
+            </div>
+
+            <p class="rd-footer__hint rd-reveal" style="--rd-delay:120ms">psst — <span>click a cat</span> to feed it a fish</p>
+            <p class="rd-footer__counter"><span id="rd-fish-counter">Cats fed so far: 0</span></p>
+
+            <div class="rd-footer__bottom rd-reveal">
+                <span class="rd-cat rd-cat--on-line" style="--cat-color:#8fae8b; --bob-delay:1s"><span class="rd-cat__inner" data-face="ᓚᘏᗢ" data-fed="ᓚᘏᗢ !">ᓚᘏᗢ</span><span class="rd-cat__zz" aria-hidden="true">zᶻ</span></span>
+                <span>© 2026 Paige Latimer</span>
+                <span>Last updated October 2026</span>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    document.body.classList.add('rd-loaded');
+                });
+            });
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/case-study.js" defer></script>
+    <script src="js/video.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/cat-garden.js" defer></script>
+
 </body>
-
-
-
-
 
 </html>
