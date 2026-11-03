@@ -461,6 +461,15 @@ body.redesign ul li a:hover {
     transition: transform 0.5s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
+/* the same thin frame as the selected work above */
+.rd-more-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--rd-text);
+    pointer-events: none;
+}
+
 .rd-more-tile:hover .rd-more-tile__arrow {
     transform: translateX(6px);
 }
