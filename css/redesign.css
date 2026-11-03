@@ -294,6 +294,11 @@ body.redesign ul li a:hover {
     pointer-events: none;
 }
 
+/* inside a frame, the work sits flat: a soft shadow would read as a smudge */
+.rd-work.rd-work--three .rd-work__item--glow .rd-work__subject {
+    filter: none;
+}
+
 .rd-work--three .rd-work__item--petro,
 .rd-work--three .rd-work__item--passkeys {
     --subject-height: 128%;
@@ -424,7 +429,7 @@ body.redesign ul li a:hover {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
-    padding: 0 12px clamp(72px, 12vh, 140px);
+    padding: 0 12px 12px;
 }
 
 .rd-more-tile {
