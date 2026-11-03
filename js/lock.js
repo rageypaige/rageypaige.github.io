@@ -15,7 +15,8 @@
     var message = form.querySelector('.rd-lock__message');
     var cat = lock.querySelector('.rd-lock__cat');
     var payload = JSON.parse(payloadEl.textContent);
-    var STORE_KEY = 'rd-unlock:' + location.pathname;
+    // Pages locked as a group share a key, so one unlock opens them all for the visit.
+    var STORE_KEY = 'rd-unlock:' + (payload.group || location.pathname);
 
     function bytes(b64) {
         var bin = atob(b64);

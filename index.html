@@ -53,7 +53,7 @@
         <!-- FIRST SCREEN: the intro, then the projects as full-bleed rectangles side by
              side, together filling the screen. The earlier collage layout is saved in git
              under the tag home-collage. -->
-        <div class="rd-first-screen">
+        <div class="rd-first-screen rd-first-screen--auto">
 
         <!-- HERO: one big statement on the left, the short facts on the right -->
         <section class="rd-hero">
@@ -67,22 +67,32 @@
 
         </section>
 
-        <!-- WORK: full-bleed rectangles, edge to edge, one per project, in one row.
-             Thumbnails are still images until the gifs are ready: swap each img src
-             for the gif. -->
-        <section class="rd-work rd-work--two" aria-label="Work">
+        <!-- SELECTED WORK: three framed tiles in a row, each with the work shown small
+             inside it. The offer hub and passkeys are Petro-Canada projects with their own
+             case studies; the app overview is in the tiles below. -->
+        <section class="rd-work rd-work--three" aria-label="Selected work">
 
-            <a class="rd-work__item rd-work__item--glow rd-work__item--petro rd-reveal" href="petro-protected.html">
+            <a class="rd-work__item rd-work__item--glow rd-work__item--petro rd-reveal" href="petro-offer-hub.html">
                 <span class="rd-work__text">
-                    <span class="rd-work__label">Petro-Canada app</span>
-                    <span class="rd-work__note">Product design · 3 years</span>
+                    <span class="rd-work__label">Petro-Canada &middot; Offer hub</span>
+                    <span class="rd-work__note">29M offers added in 2026</span>
                 </span>
                 <span class="rd-work__media">
                     <img class="rd-work__subject" src="img/home/petro-phone.webp" width="656" height="1400" alt="The Petro-Canada app's offer hub, a list of Petro-Points offers to add">
                 </span>
             </a>
 
-            <a class="rd-work__item rd-work__item--glow rd-work__item--duet rd-reveal" href="duet-booth.html">
+            <a class="rd-work__item rd-work__item--glow rd-work__item--passkeys rd-reveal" href="petro-passkeys.html" style="--rd-delay: 60ms">
+                <span class="rd-work__text">
+                    <span class="rd-work__label">Petro-Canada &middot; Passkeys</span>
+                    <span class="rd-work__note">20% of users in the first week</span>
+                </span>
+                <span class="rd-work__media">
+                    <img class="rd-work__subject" src="img/home/passkey-phone.webp" width="656" height="1392" alt="The Petro-Canada app asking to create a passkey: Sign in faster on this device, with a Face ID prompt">
+                </span>
+            </a>
+
+            <a class="rd-work__item rd-work__item--glow rd-work__item--duet rd-reveal" href="duet-booth.html" style="--rd-delay: 120ms">
                 <span class="rd-work__text">
                     <span class="rd-work__label">Duet Booth</span>
                     <span class="rd-work__note">Figma Make-a-thon winner</span>
@@ -96,19 +106,24 @@
 
         </div>
 
-        <!-- MORE WORK: three thin tiles under the two big ones, a flat colour each, no image -->
-        <nav class="rd-more-tiles" aria-label="More work">
-            <a class="rd-more-tile rd-more-tile--tn rd-reveal" href="trip-ninja.html">
+        <!-- MORE WORK: four thin tiles under the selected work, a flat colour each, no image -->
+        <nav class="rd-more-tiles rd-more-tiles--four" aria-label="More work">
+            <a class="rd-more-tile rd-more-tile--petro rd-reveal" href="petro-protected.html">
+                <span class="rd-more-tile__name">Petro-Canada app</span>
+                <span class="rd-more-tile__note">More from 3 years at Suncor</span>
+                <span class="rd-more-tile__arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="rd-more-tile rd-more-tile--tn rd-reveal" href="trip-ninja.html" style="--rd-delay: 60ms">
                 <span class="rd-more-tile__name">Trip Ninja</span>
                 <span class="rd-more-tile__note">Design lead &middot; 2022&ndash;23</span>
                 <span class="rd-more-tile__arrow" aria-hidden="true">&rarr;</span>
             </a>
-            <a class="rd-more-tile rd-more-tile--sb rd-reveal" href="simply-benefits.html" style="--rd-delay: 60ms">
+            <a class="rd-more-tile rd-more-tile--sb rd-reveal" href="simply-benefits.html" style="--rd-delay: 120ms">
                 <span class="rd-more-tile__name">Simply Benefits</span>
                 <span class="rd-more-tile__note">Sole designer &middot; 2021&ndash;22</span>
                 <span class="rd-more-tile__arrow" aria-hidden="true">&rarr;</span>
             </a>
-            <a class="rd-more-tile rd-more-tile--sq rd-reveal" href="side-quests.html" style="--rd-delay: 120ms">
+            <a class="rd-more-tile rd-more-tile--sq rd-reveal" href="side-quests.html" style="--rd-delay: 180ms">
                 <span class="rd-more-tile__name">Side quests</span>
                 <span class="rd-more-tile__note">Detours &amp; experiments</span>
                 <span class="rd-more-tile__arrow" aria-hidden="true">&rarr;</span>

@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """Password-protect a page: encrypt a private HTML file into a public lock page.
 
-Usage:  python3 tools/lock_page.py [SOURCE] [OUTPUT] [TITLE]
+Usage:  python3 tools/lock_page.py [SOURCE] [OUTPUT] [TITLE] [GROUP]
         (defaults: private/petro-canada.html  petro-protected.html  Petro-Canada)
+
+Pages locked with the same GROUP and password share a key, so unlocking one of them
+also opens the others for the rest of the visit, e.g. the three Petro-Canada pages:
+        python3 tools/lock_page.py private/petro-offer-hub.html petro-offer-hub.html \
+            "Petro-Canada offer hub" petro
 
 Asks for the password twice (it's never shown or saved), encrypts SOURCE, and writes
 OUTPUT from tools/lock-template.html, plus the encrypted page itself as OUTPUT's name
@@ -26,11 +31,13 @@ import json
 import os
 import subprocess
 import sys
+import urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else 'private/petro-canada.html')
 OUTPUT = os.path.join(ROOT, sys.argv[2] if len(sys.argv) > 2 else 'petro-protected.html')
 TITLE = sys.argv[3] if len(sys.argv) > 3 else 'Petro-Canada'
+GROUP = sys.argv[4] if len(sys.argv) > 4 else None
 TEMPLATE = os.path.join(ROOT, 'tools', 'lock-template.html')
 ITERATIONS = 300000
 
@@ -49,7 +56,8 @@ def main():
         sys.exit("Those didn't match; nothing written.")
 
     plain = open(SOURCE, 'rb').read()
-    salt = os.urandom(16)
+    # a group's pages share one salt, so the same password gives the same key on each
+    salt = hashlib.sha256(('rd-lock-group:' + GROUP).encode('utf-8')).digest()[:16] if GROUP else os.urandom(16)
     iv = os.urandom(16)
     keys = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, ITERATIONS, dklen=64)
     enc_key, mac_key = keys[:32], keys[32:]
@@ -64,10 +72,13 @@ def main():
         fh.write(data)
     # the tag changes on every lock, so it busts any cached copy of the old .bin
     src = os.path.basename(data_path) + '?v=' + tag.hex()[:12]
-    payload = json.dumps({'v': 2, 'iter': ITERATIONS, 'salt': b64(salt), 'iv': b64(iv),
-                          'tag': b64(tag), 'src': src})
+    payload = {'v': 2, 'iter': ITERATIONS, 'salt': b64(salt), 'iv': b64(iv), 'tag': b64(tag), 'src': src}
+    if GROUP:
+        payload['group'] = GROUP
+    payload = json.dumps(payload)
     page = (open(TEMPLATE, encoding='utf-8').read()
             .replace('__PAYLOAD__', payload)
+            .replace('__TITLE_URL__', urllib.parse.quote(TITLE))
             .replace('__TITLE__', TITLE)
             .replace('__SOURCE__', os.path.basename(SOURCE)))
     with open(OUTPUT, 'w', encoding='utf-8') as fh:
