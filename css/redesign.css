@@ -627,6 +627,75 @@ body.redesign ul li a:hover {
     }
 }
 
+/* SIDE QUESTS, matching the homepage: framed tiles at a shorter, fixed shape, the
+   work shown smaller and flat inside each frame, and no big gap before the footer */
+.rd-work--archive {
+    padding-bottom: 12px;
+}
+
+.rd-work--archive .rd-work__item {
+    aspect-ratio: 16 / 10;
+}
+
+.rd-work--archive .rd-work__item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border: 1px solid var(--rd-text);
+    pointer-events: none;
+}
+
+.rd-work.rd-work--archive .rd-work__item--glow .rd-work__subject {
+    filter: none;
+}
+
+.rd-work--archive .rd-databody {
+    box-shadow: none;
+}
+
+.rd-work--archive .rd-work__item--shophopper {
+    --subject-height: 120%;
+    --subject-bottom: -64%;
+}
+
+.rd-work--archive .rd-work__item--noggn {
+    --subject-width: 66%;
+    --subject-bottom: -18%;
+}
+
+.rd-work--archive .rd-work__item--covid {
+    --subject-width: 38%;
+    --subject-bottom: 10%;
+}
+
+.rd-work--archive .rd-databody {
+    width: 50%;
+    bottom: -16%;
+}
+
+@media (max-width: 760px) {
+    .rd-work--archive .rd-work__item {
+        aspect-ratio: 5 / 4;
+    }
+    .rd-work--archive .rd-work__item--shophopper {
+        --subject-height: 128%;
+        --subject-bottom: -60%;
+    }
+    .rd-work--archive .rd-work__item--noggn {
+        --subject-width: 104%;
+        --subject-bottom: -30%;
+    }
+    .rd-work--archive .rd-work__item--covid {
+        --subject-width: 54%;
+        --subject-bottom: 6%;
+    }
+    .rd-work--archive .rd-databody {
+        width: 78%;
+        bottom: -18%;
+    }
+}
+
 /* CUSTOM CURSOR */
 
 html.rd-has-custom-cursor body.redesign,
