@@ -718,21 +718,22 @@ html.rd-has-custom-cursor button {
     height: 20px;
     border-radius: 50%;
     background: var(--rd-cursor);
-    mix-blend-mode: difference;
     pointer-events: none;
     z-index: 9999;
     opacity: 0;
     transform: translate(-50%, -50%);
-    transition: opacity 0.2s ease, width 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), height 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), border-radius 0.25s ease;
+    transition: opacity 0.2s ease, width 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), height 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), border-radius 0.25s ease, background-color 0.25s ease;
 }
 
 .rd-cursor.is-visible {
     opacity: 1;
 }
 
+/* over a link: a bigger, see-through coral, so the link text still reads through it */
 .rd-cursor.is-hovering {
     width: 44px;
     height: 44px;
+    background: rgba(255, 107, 74, 0.3);
 }
 
 /* over text: a thin bar, as tall as the line, that blinks once the mouse rests */
