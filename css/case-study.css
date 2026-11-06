@@ -582,3 +582,8 @@ html:not(.js) .rd-cs-embed iframe {
 .rd-cs-section h3.rd-cs-sub {
     margin-top: 56px;
 }
+
+/* room between a pull-quote and the paragraph after it */
+.rd-cs-main .rd-cs-question + p:not(.rd-cs-cite) {
+    margin-top: 20px;
+}
