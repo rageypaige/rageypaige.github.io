@@ -14,6 +14,12 @@
     --rd-small-font: 'Inter', sans-serif;
 }
 
+/* selected text: a soft wash of the cursor's coral */
+::selection {
+    background: rgba(255, 107, 74, 0.28);
+    color: inherit;
+}
+
 body.redesign {
     margin: 0;
     background: var(--rd-bg);
@@ -717,7 +723,7 @@ html.rd-has-custom-cursor button {
     z-index: 9999;
     opacity: 0;
     transform: translate(-50%, -50%);
-    transition: opacity 0.2s ease, width 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), height 0.25s cubic-bezier(0.16, 0.8, 0.3, 1);
+    transition: opacity 0.2s ease, width 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), height 0.25s cubic-bezier(0.16, 0.8, 0.3, 1), border-radius 0.25s ease;
 }
 
 .rd-cursor.is-visible {
@@ -727,6 +733,21 @@ html.rd-has-custom-cursor button {
 .rd-cursor.is-hovering {
     width: 44px;
     height: 44px;
+}
+
+/* over text: a thin bar, as tall as the line, that blinks once the mouse rests */
+.rd-cursor.is-text {
+    width: 2px;
+    height: var(--caret-h, 20px);
+    border-radius: 1px;
+}
+
+.rd-cursor.is-text.is-resting {
+    animation: rd-caret-blink 1.06s steps(1, end) infinite;
+}
+
+@keyframes rd-caret-blink {
+    50% { opacity: 0; }
 }
 
 .rd-cursor__fish {
