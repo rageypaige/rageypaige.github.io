@@ -79,6 +79,8 @@
         document.open();
         document.write(html);
         document.close();
+        // a public preview can sit above the lock, so start the case study at the top
+        window.scrollTo(0, 0);
     }
 
     if (!window.crypto || !crypto.subtle) {

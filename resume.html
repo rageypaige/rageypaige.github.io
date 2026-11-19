@@ -95,7 +95,7 @@
             justify-content: space-between;
             align-items: flex-end;
             column-gap: 24px;
-            margin-bottom: 28px;
+            margin-bottom: 22px;
         }
 
         header .contact {
@@ -128,6 +128,12 @@
             text-decoration-thickness: 0.5px;
         }
 
+        .summary {
+            margin: -8px 0 0;
+            max-width: 6.2in;
+            color: var(--body);
+        }
+
         /* SECTIONS: a small heading, then who, role and dates |
            what I did */
 
@@ -135,7 +141,7 @@
             display: grid;
             grid-template-columns: 1.7in 1fr;
             column-gap: 20px;
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         .label {
@@ -150,7 +156,7 @@
         }
 
         .entry + .entry > * {
-            margin-top: 24px;
+            margin-top: 18px;
         }
 
         .who {
@@ -261,10 +267,13 @@
             <p class="title mono">Senior Product Designer</p>
         </div>
         <div class="contact">
-            <p>Calgary, AB<span class="sep">&middot;</span><a href="mailto:paige.a.latimer@outlook.com">paige.a.latimer@outlook.com</a></p>
+            <p>Calgary, AB<span class="sep">&middot;</span>Relocating to Vancouver, BC<span class="sep">&middot;</span><a href="mailto:paige.a.latimer@outlook.com">paige.a.latimer@outlook.com</a></p>
             <p><a href="https://paigelatimer.ca">paigelatimer.ca</a><span class="sep">&middot;</span><a href="https://www.linkedin.com/in/paigelatimer/">linkedin.com/in/paigelatimer</a></p>
         </div>
     </header>
+
+    <!-- SUMMARY: two lines a recruiter (or a keyword search) can take in at a glance -->
+    <p class="summary">Senior product designer with 5+ years designing consumer mobile apps, payments and loyalty. I find problems in the data, test my way to the answer, and ship features millions of people use.</p>
 
     <!-- EXPERIENCE -->
     <section>
@@ -279,11 +288,12 @@
                 <span class="dates">June 2023 &ndash; October 2026</span>
             </p>
             <ul class="what">
-                <li>First dedicated product designer on the <span class="nowrap">Petro-Canada</span> app (<b>2.4M</b> users annually): moved design from Adobe XD to Figma, set the process and standards, taught UX across the company, and helped hire and onboard two designers.</li>
-                <li>Spotted a high volume of password resets in analytics, made the case to prioritize <span class="nowrap">sign-in</span>, and championed passkeys for a faster, more secure <span class="nowrap">sign-in</span>: <b>20%</b> of monthly active users registered one in the first week.</li>
+                <li>First dedicated product designer on the <span class="nowrap">Petro-Canada</span> app (<b>2.4M</b> users, <b>$100M+</b> in sales a year): moved design to Figma, set the process and standards, taught UX across the company, and helped hire two designers.</li>
+                <li>Spotted a spike in password resets in analytics, made the case for passkeys, and championed them to launch: <b>20%</b> of monthly active users registered one in week one.</li>
                 <li>Designed the Petro-Points offer hub, a new app-exclusive feature validated through testing; <b>1.1M</b> members added <b>29M</b> offers to their accounts <span class="nowrap">Jan&ndash;Oct</span> 2026, <span class="nowrap">up <b>179%</b> YoY</span>.</li>
                 <li>Leading design for the Petro-Canada &times; WestJet loyalty partnership (early 2027) across app and web: account linking, points conversion and earning.</li>
-                <li>Brought SuperPass fleet cards into the app for business drivers: <span class="nowrap">fuel-ups</span> up <b>176%</b> YoY, with drivers fuelling up <b>2&times;</b> as often.</li>
+                <li>Brought SuperPass fleet cards into the app for business drivers: <span class="nowrap">fuel-ups</span> up <b>176%</b> YoY.</li>
+                <li>Designed in-app car wash sales: <b>$19K</b> in two weeks, a third of the website&rsquo;s yearly total.</li>
                 <li>Led an accessibility-focused redesign, and designed and launched dark mode.</li>
             </ul>
         </div>
@@ -292,11 +302,10 @@
             <p class="who">
                 <span class="org">Trip Ninja</span>
                 <span>Product Designer</span>
-                <span>Design lead</span>
                 <span class="dates">April 2022 &ndash; June 2023</span>
             </p>
             <ul class="what">
-                <li>Led design end to end, from user research and roadmap planning with product and engineering to UI and product marketing.</li>
+                <li>Design lead: set up the design practice and led design end to end, from user research and roadmap planning with product and engineering to UI and product marketing.</li>
                 <li>Designed QuickTrip, a booking platform for agencies without Trip Ninja&rsquo;s API, with <span class="nowrap">self-serve</span> sign-up and an admin dashboard.</li>
                 <li>Led a brand refresh and developed a design system with WCAG&nbsp;AAA colour contrast, partnering with the CEO to redesign the marketing site and increase demo bookings.</li>
             </ul>
@@ -306,16 +315,15 @@
             <p class="who">
                 <span class="org">Simply Benefits</span>
                 <span>UX Design Specialist</span>
-                <span>Sole designer</span>
                 <span class="dates">April 2021 &ndash; April 2022</span>
                 <span class="step">Design &amp; Marketing Intern</span>
                 <span class="dates">May 2020 &ndash; April 2021</span>
             </p>
             <ul class="what">
-                <li>Led design for the member app and three web portals, with engineering and product.</li>
-                <li>Redesigned the member app, growing downloads <b>163%</b> and updates <b>20%</b>, and rebuilt sign-up for <b>20%</b> more sign-ups.</li>
+                <li>Sole designer, leading design for the member app, three web portals and the public site.</li>
+                <li>Redesigned the member app (downloads up <b>163%</b>) and sign-up flow (sign-ups up <b>20%</b>).</li>
                 <li>Redesigned advisor quoting, cutting turnaround from the industry&rsquo;s 4&ndash;6 weeks to about 5 days, and designed Voluntary Benefits, a new revenue stream.</li>
-                <li>Redesigned the public site and built its front end in React: bounce rate down <b>8%</b>, session length up <b>12%</b>.</li>
+                <li>Redesigned the public site and built it in React: bounce rate down <b>8%</b>, sessions up <b>12%</b>.</li>
             </ul>
         </div>
     </section>
@@ -365,8 +373,12 @@
             <p class="what">User research, usability testing, accessibility (WCAG), Google Analytics</p>
         </div>
         <div class="row">
+            <p class="who"><span class="org">Domains</span></p>
+            <p class="what">Payments, loyalty &amp; rewards, consumer mobile, B2B SaaS, HR tech, travel tech</p>
+        </div>
+        <div class="row">
             <p class="who"><span class="org">Platforms</span></p>
-            <p class="what">iOS and Android apps, responsive web, B2B and B2C products</p>
+            <p class="what">iOS and Android apps, responsive web</p>
         </div>
         <div class="row">
             <p class="who"><span class="org">Tools &amp; code</span></p>

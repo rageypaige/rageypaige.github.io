@@ -81,6 +81,10 @@ def main():
             .replace('__TITLE_URL__', urllib.parse.quote(TITLE))
             .replace('__TITLE__', TITLE)
             .replace('__SOURCE__', os.path.basename(SOURCE)))
+    # a public preview above the password box, if this page has one in tools/previews/
+    import add_preview
+    if os.path.exists(add_preview.preview_path(OUTPUT)):
+        page = add_preview.apply(page, open(add_preview.preview_path(OUTPUT), encoding='utf-8').read())
     with open(OUTPUT, 'w', encoding='utf-8') as fh:
         fh.write(page)
     print(f'Locked {os.path.relpath(SOURCE, ROOT)} -> {os.path.relpath(OUTPUT, ROOT)}'
