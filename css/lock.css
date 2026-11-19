@@ -138,3 +138,77 @@ html {
         animation: none;
     }
 }
+
+/* ============================================
+   Public preview above the lock: the case study's header and results,
+   so someone without the password still sees the work.
+   ============================================ */
+
+.rd-teaser {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 96px var(--rd-gutter) 0;
+}
+
+.rd-teaser__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 32px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid #d1d5dd;
+}
+
+.rd-teaser__stats dt {
+    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    color: var(--rd-text);
+}
+
+.rd-teaser__stats dd {
+    margin: 8px 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #525a68;
+}
+
+/* under a preview, the lock sits lower down the page as its own quiet block */
+.rd-lock--after-teaser {
+    margin-top: 96px;
+    padding-top: 72px;
+    border-top: 1px solid #d1d5dd;
+    max-width: 34em;
+}
+
+@media (max-width: 640px) {
+    .rd-teaser {
+        padding-top: 56px;
+    }
+    .rd-teaser__stats {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        padding-top: 0;
+        border-top: 0;
+    }
+    .rd-teaser__stats div {
+        display: grid;
+        grid-template-columns: 96px minmax(0, 1fr);
+        align-items: baseline;
+        gap: 12px;
+        padding: 14px 0;
+        border-top: 1px solid #d1d5dd;
+    }
+    .rd-teaser__stats dt {
+        font-size: 26px;
+    }
+    .rd-teaser__stats dd {
+        margin: 0;
+    }
+    .rd-lock--after-teaser {
+        margin: 64px var(--rd-gutter) 0;
+        padding: 56px 8px 96px;
+    }
+}
