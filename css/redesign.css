@@ -443,8 +443,10 @@ body.redesign ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    min-height: 128px;
-    padding: 20px 22px;
+    /* short, so they read as links rather than empty cards; the arrow sits on the right */
+    justify-content: center;
+    min-height: 0;
+    padding: 18px 52px 18px 22px;
     background: var(--tile-bg);
     color: var(--rd-text);
     font-family: 'Inter', sans-serif;
@@ -462,7 +464,8 @@ body.redesign ul li a:hover {
 .rd-more-tile__arrow {
     position: absolute;
     right: 22px;
-    bottom: 18px;
+    top: 50%;
+    margin-top: -12px;
     font-size: 16px;
     transition: transform 0.5s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
@@ -499,7 +502,7 @@ body.redesign ul li a:hover {
         grid-template-columns: minmax(0, 1fr);
     }
     .rd-more-tile {
-        min-height: 96px;
+        min-height: 0;
     }
 }
 
