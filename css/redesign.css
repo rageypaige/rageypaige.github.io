@@ -135,6 +135,28 @@ body.redesign ul li a:hover {
     font-style: italic;
 }
 
+/* a letter gives a small stop-motion hop as the cursor passes (js/hop.js): up, then
+   back down, in the same jerky steps as the rest of the site */
+.rd-hop-word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rd-hop {
+    display: inline-block;
+}
+
+.rd-hop.is-hopping {
+    animation: rd-hop 0.3s steps(1, end);
+}
+
+@keyframes rd-hop {
+    0%   { transform: translateY(0); }
+    33%  { transform: translateY(-0.08em); }
+    66%  { transform: translateY(-0.03em); }
+    100% { transform: translateY(0); }
+}
+
 /* the short facts, in the small voice */
 .rd-hero__facts {
     margin: 0;
@@ -850,23 +872,19 @@ html.js .rd-reveal.is-visible {
         grid-template-columns: minmax(0, 1fr);
         align-items: start;
     }
-    /* phones: name and links on one line, a little closer together */
+    /* phones: name on its own line, then all the links in one row beneath it */
     .rd-nav {
-        gap: 18px;
+        flex-wrap: wrap;
+        gap: 10px 18px;
         padding-top: 16px;
+    }
+    .rd-nav__logo {
+        flex-basis: 100%;
     }
     .rd-nav__links {
         gap: 18px;
     }
-}
-
-/* the narrowest phones: name on its own line, the links in a row beneath it */
-@media (max-width: 330px) {
-    .rd-nav {
-        flex-wrap: wrap;
-        row-gap: 10px;
-    }
-    .rd-nav__logo {
-        flex-basis: 100%;
+    .rd-nav__links a {
+        white-space: nowrap;
     }
 }
