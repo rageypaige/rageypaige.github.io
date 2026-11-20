@@ -135,8 +135,9 @@ body.redesign ul li a:hover {
     font-style: italic;
 }
 
-/* "actually think." waves on its own every so often (js/hop.js): each letter hops
-   up and back down in turn, in the same jerky steps as the rest of the site */
+/* stop-motion in the headline (js/hop.js), in the same jerky steps as the rest of the
+   site: "actually think." waves on its own, a letter at a time, and the rest of the
+   sentence gives a smaller hop under the cursor */
 .rd-hop-word {
     display: inline-block;
     white-space: nowrap;
@@ -154,6 +155,17 @@ body.redesign ul li a:hover {
     0%   { transform: translateY(0); }
     33%  { transform: translateY(-0.1em); }
     66%  { transform: translateY(-0.04em); }
+    100% { transform: translateY(0); }
+}
+
+.rd-hop.is-nudged {
+    animation: rd-nudge 0.3s steps(1, end);
+}
+
+@keyframes rd-nudge {
+    0%   { transform: translateY(0); }
+    33%  { transform: translateY(-0.08em); }
+    66%  { transform: translateY(-0.03em); }
     100% { transform: translateY(0); }
 }
 
