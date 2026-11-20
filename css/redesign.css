@@ -674,7 +674,8 @@ body.redesign ul li a:hover {
     position: absolute;
     inset: 0;
     z-index: 2;
-    border: 1px solid var(--rd-text);
+    /* tinted like the home tiles: a deeper shade of the tile's own colour */
+    border: 1px solid color-mix(in srgb, var(--tile-bg, #dfe2e7) 72%, var(--rd-text));
     pointer-events: none;
 }
 
