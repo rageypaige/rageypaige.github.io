@@ -276,27 +276,8 @@ body.redesign ul li a:hover {
 
 /* SELECTED WORK: three framed tiles in a row, a fixed shape rather than filling the
    screen, with the work shown small inside each one */
-/* the intro and the three case studies fill the first screen exactly: the tiles sit
-   along the bottom edge, and the headline is centred in the space above them, so
-   the smaller tiles only show once you scroll */
 .rd-first-screen--auto {
-    /* 43px: the nav bar above it */
-    min-height: max(calc(100svh - 43px), 600px);
-}
-
-.rd-first-screen--auto .rd-hero {
-    flex: 1 1 auto;
-    align-content: center;
-}
-
-/* more room above than below, so the headline sits a little low and reads as the
-   introduction to the work under it, instead of floating mid-space (phones keep
-   their own spacing) */
-@media (min-width: 761px) {
-    .rd-first-screen--auto .rd-hero {
-        padding-top: clamp(40px, 16vh, 180px);
-        padding-bottom: clamp(32px, 4vh, 48px);
-    }
+    min-height: 0;
 }
 
 .rd-work--three {
