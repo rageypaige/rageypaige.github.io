@@ -312,12 +312,14 @@ body.redesign ul li a:hover {
 
 /* SELECTED WORK: three framed tiles in a row, a fixed shape rather than filling the
    screen, with the work shown small inside each one */
-/* the intro and the three case studies fill the first screen exactly: the tiles sit
-   along the bottom edge, and the headline and bio are centred in the space above
-   them, so the smaller tiles only show once you scroll */
+/* the intro and the three case studies fill the first screen: the tiles sit along the
+   bottom edge, and the headline and bio are centred in the space above them, so the
+   smaller tiles only show once you scroll. On big screens the space above the tiles
+   stops growing at 480px, so the work doesn't drift down the page. */
 .rd-first-screen--auto {
-    /* 43px: the nav bar above it */
-    min-height: max(calc(100svh - 43px), 600px);
+    /* 43px: the nav bar above it. 492px + the tiles: 480px of intro, plus the tile
+       row (three 5:4 tiles across the width, less the 12px gaps) and its 12px edge */
+    min-height: max(600px, min(calc(100svh - 43px), calc(492px + (100vw - 48px) * 0.2667)));
 }
 
 .rd-first-screen--auto .rd-hero {
