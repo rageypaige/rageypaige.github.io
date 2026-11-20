@@ -158,6 +158,20 @@ body.redesign ul li a:hover {
 }
 
 /* the short facts, in the small voice */
+/* a short bio beside the headline, in place of the Now / Based facts */
+.rd-hero__bio {
+    max-width: 29em;
+    margin: 0;
+    font-family: var(--rd-small-font);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--rd-text);
+}
+
+.rd-hero__bio-soft {
+    opacity: 0.5;
+}
+
 .rd-hero__facts {
     margin: 0;
     font-family: var(--rd-small-font);
