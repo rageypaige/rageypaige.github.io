@@ -47,7 +47,7 @@
 /* same heading font as the case-study titles */
 .rd-about__title {
     margin: 0;
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', 'Inter', sans-serif;
     font-weight: 400;
     font-size: clamp(26px, 2.4vw, 32px);
     letter-spacing: -0.03em;
@@ -61,7 +61,7 @@
 /* the home page's light voice */
 .rd-about__intro {
     margin: 14px 0 0;
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', 'Inter', sans-serif;
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.02em;

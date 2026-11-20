@@ -38,7 +38,7 @@ html {
 
 .rd-lock__title {
     margin: 0;
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', 'Inter', sans-serif;
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.02em;
@@ -160,7 +160,7 @@ html {
 }
 
 .rd-teaser__stats dt {
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', 'Inter', sans-serif;
     font-size: 32px;
     letter-spacing: -0.035em;
     line-height: 1;
