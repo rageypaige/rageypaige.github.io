@@ -11,7 +11,7 @@
     --rd-cursor: #ff6b4a;
     --rd-gutter: 20px;
     /* the small voice: nav links, intro facts, project labels */
-    --rd-small-font: 'Inter', sans-serif;
+    --rd-small-font: 'Fustat', sans-serif;
 }
 
 /* selected text: a soft wash of the cursor's coral */
@@ -24,7 +24,7 @@ body.redesign {
     margin: 0;
     background: var(--rd-bg);
     color: var(--rd-text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
 }
 
 /* FILM GRAIN: a fine, still noise over every page, a nod to shooting 35mm.
@@ -62,7 +62,7 @@ body.redesign::after {
 
 .rd-nav__logo {
     margin-right: auto;
-    font-family: 'Fustat', 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: -0.02em;
@@ -123,7 +123,7 @@ body.redesign ul li a:hover {
 .rd-hero__title {
     max-width: 13em;
     margin: 0;
-    font-family: 'Fustat', 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 300;
     font-size: clamp(34px, 4.4vw, 64px);
     letter-spacing: -0.045em;
@@ -413,7 +413,7 @@ body.redesign ul li a:hover {
     align-items: center;
     justify-content: center;
     background: var(--tile, #dcdfe5);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 12px;
     color: rgba(25, 29, 39, 0.35);
 }
@@ -426,7 +426,7 @@ body.redesign ul li a:hover {
     gap: 6px;
     padding: var(--rd-gutter);
     background: var(--tile, #dcdfe5);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 14px;
     line-height: 1.4;
 }
@@ -457,7 +457,7 @@ body.redesign ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
@@ -474,7 +474,7 @@ body.redesign ul li a:hover {
 
 .rd-more__label {
     margin: 0 0 14px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 13px;
     color: #838b99;
 }
@@ -497,7 +497,7 @@ body.redesign ul li a:hover {
     padding: 18px 52px 18px 22px;
     background: var(--tile-bg);
     color: var(--rd-text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.45;
@@ -570,7 +570,7 @@ body.redesign ul li a:hover {
 .rd-archive__title {
     max-width: 14em;
     margin: 0;
-    font-family: 'Fustat', 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 300;
     font-size: clamp(34px, 4.4vw, 64px);
     letter-spacing: -0.035em;
@@ -581,7 +581,7 @@ body.redesign ul li a:hover {
 .rd-archive__intro {
     max-width: 34em;
     margin: 20px 0 clamp(48px, 8vh, 88px);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 16px;
     line-height: 1.55;
     color: #525a68;
