@@ -21,7 +21,8 @@
 
     // Over the words themselves (not the space around them), the dot becomes a thin
     // text cursor, as tall as the line it's on. It blinks once the mouse rests.
-    var NOT_TEXT = 'a, button, .rd-cat, input, textarea, .rd-canvas, .rd-lock';
+    // Not over the home headline, which has its own motion and reads better left alone.
+    var NOT_TEXT = 'a, button, .rd-cat, input, textarea, .rd-canvas, .rd-lock, .rd-hero__title';
     function textUnder(px, py) {
         var node, offset;
         if (document.caretRangeFromPoint) {

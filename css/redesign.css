@@ -135,8 +135,8 @@ body.redesign ul li a:hover {
     font-style: italic;
 }
 
-/* a letter gives a small stop-motion hop as the cursor passes (js/hop.js): up, then
-   back down, in the same jerky steps as the rest of the site */
+/* "actually think." waves on its own every so often (js/hop.js): each letter hops
+   up and back down in turn, in the same jerky steps as the rest of the site */
 .rd-hop-word {
     display: inline-block;
     white-space: nowrap;
@@ -147,17 +147,31 @@ body.redesign ul li a:hover {
 }
 
 .rd-hop.is-hopping {
-    animation: rd-hop 0.3s steps(1, end);
+    animation: rd-hop 0.36s steps(1, end) backwards;
 }
 
 @keyframes rd-hop {
     0%   { transform: translateY(0); }
-    33%  { transform: translateY(-0.08em); }
-    66%  { transform: translateY(-0.03em); }
+    33%  { transform: translateY(-0.1em); }
+    66%  { transform: translateY(-0.04em); }
     100% { transform: translateY(0); }
 }
 
 /* the short facts, in the small voice */
+/* a short bio beside the headline, in place of the Now / Based facts */
+.rd-hero__bio {
+    max-width: 29em;
+    margin: 0;
+    font-family: var(--rd-small-font);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--rd-text);
+}
+
+.rd-hero__bio-soft {
+    opacity: 0.5;
+}
+
 .rd-hero__facts {
     margin: 0;
     font-family: var(--rd-small-font);
@@ -298,8 +312,19 @@ body.redesign ul li a:hover {
 
 /* SELECTED WORK: three framed tiles in a row, a fixed shape rather than filling the
    screen, with the work shown small inside each one */
+/* the intro and the three case studies fill the first screen: the tiles sit along the
+   bottom edge, and the headline and bio are centred in the space above them, so the
+   smaller tiles only show once you scroll. On big screens the space above the tiles
+   stops growing at 480px, so the work doesn't drift down the page. */
 .rd-first-screen--auto {
-    min-height: 0;
+    /* 43px: the nav bar above it. 492px + the tiles: 480px of intro, plus the tile
+       row (three 5:4 tiles across the width, less the 12px gaps) and its 12px edge */
+    min-height: max(600px, min(calc(100svh - 43px), calc(492px + (100vw - 48px) * 0.2667)));
+}
+
+.rd-first-screen--auto .rd-hero {
+    flex: 1 1 auto;
+    align-content: center;
 }
 
 .rd-work--three {
