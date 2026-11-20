@@ -312,13 +312,14 @@ body.redesign ul li a:hover {
     aspect-ratio: 5 / 4;
 }
 
-/* a thin frame, drawn above the work so it sits crisp on every edge */
+/* a thin frame, drawn above the work so it sits crisp on every edge, in a deeper
+   shade of the tile's own colour (softer than black) */
 .rd-work--three .rd-work__item::after {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 2;
-    border: 1px solid var(--rd-text);
+    border: 1px solid color-mix(in srgb, var(--tile-bg, #dfe2e7) 72%, var(--rd-text));
     pointer-events: none;
 }
 
@@ -492,12 +493,12 @@ body.redesign ul li a:hover {
     transition: transform 0.5s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-/* the same thin frame as the selected work above */
+/* the same thin, tinted frame as the selected work above */
 .rd-more-tile::after {
     content: '';
     position: absolute;
     inset: 0;
-    border: 1px solid var(--rd-text);
+    border: 1px solid color-mix(in srgb, var(--tile-bg) 72%, var(--rd-text));
     pointer-events: none;
 }
 
@@ -673,7 +674,8 @@ body.redesign ul li a:hover {
     position: absolute;
     inset: 0;
     z-index: 2;
-    border: 1px solid var(--rd-text);
+    /* tinted like the home tiles: a deeper shade of the tile's own colour */
+    border: 1px solid color-mix(in srgb, var(--tile-bg, #dfe2e7) 72%, var(--rd-text));
     pointer-events: none;
 }
 
