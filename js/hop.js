@@ -1,7 +1,7 @@
 (function () {
     // "actually think." in the home headline does a little stop-motion wave on its own:
-    // each letter hops in turn, once soon after the page loads and then every so often
-    // while the headline is on screen. Screen readers keep the plain sentence.
+    // each letter hops in turn, on a loop with a short pause between waves, while the
+    // headline is on screen. Screen readers keep the plain sentence.
 
     var title = document.querySelector('.rd-hero__title');
     var words = title && title.querySelector('em');
@@ -9,7 +9,7 @@
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     var FIRST = 1600;    // after the headline has faded in
-    var EVERY = 9000;    // then again, every nine seconds
+    var EVERY = 2600;    // then again on a loop: about a second of wave, then a pause
     var STAGGER = 55;    // between one letter and the next
 
     title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
