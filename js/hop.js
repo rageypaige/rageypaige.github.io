@@ -1,48 +1,64 @@
 (function () {
-    // Letters in the home headline give a small stop-motion hop as the cursor passes
-    // over them, like a cat batting at them. Only the letter under the cursor moves.
-    // Screen readers keep the plain sentence.
+    // "actually think." in the home headline does a little stop-motion wave on its own:
+    // each letter hops in turn, once soon after the page loads and then every so often
+    // while the headline is on screen. Screen readers keep the plain sentence.
 
     var title = document.querySelector('.rd-hero__title');
-    if (!title) return;
-    if (!window.matchMedia('(hover: hover)').matches) return;
+    var words = title && title.querySelector('em');
+    if (!words) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var FIRST = 1600;    // after the headline has faded in
+    var EVERY = 9000;    // then again, every nine seconds
+    var STAGGER = 55;    // between one letter and the next
 
     title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
 
     // wrap each word (so words never break across lines) and each letter in a span
-    function split(node) {
-        Array.prototype.slice.call(node.childNodes).forEach(function (child) {
-            if (child.nodeType === 1) { split(child); return; }
-            if (child.nodeType !== 3) return;
-            var frag = document.createDocumentFragment();
-            child.textContent.split(/(\s+)/).forEach(function (part) {
-                if (!part) return;
-                if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
-                var word = document.createElement('span');
-                word.className = 'rd-hop-word';
-                word.setAttribute('aria-hidden', 'true');
-                Array.prototype.forEach.call(part, function (ch) {
-                    var letter = document.createElement('span');
-                    letter.className = 'rd-hop';
-                    letter.textContent = ch;
-                    word.appendChild(letter);
-                });
-                frag.appendChild(word);
+    Array.prototype.slice.call(words.childNodes).forEach(function (child) {
+        if (child.nodeType !== 3) return;
+        var frag = document.createDocumentFragment();
+        child.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+            var word = document.createElement('span');
+            word.className = 'rd-hop-word';
+            word.setAttribute('aria-hidden', 'true');
+            Array.prototype.forEach.call(part, function (ch) {
+                var letter = document.createElement('span');
+                letter.className = 'rd-hop';
+                letter.textContent = ch;
+                word.appendChild(letter);
             });
-            node.replaceChild(frag, child);
+            frag.appendChild(word);
         });
-    }
-    split(title);
+        words.replaceChild(frag, child);
+    });
 
-    var letters = Array.prototype.slice.call(title.querySelectorAll('.rd-hop'));
-
-    letters.forEach(function (el) {
-        el.addEventListener('mouseenter', function () {
-            el.classList.add('is-hopping');
-        });
+    var letters = Array.prototype.slice.call(words.querySelectorAll('.rd-hop'));
+    letters.forEach(function (el, i) {
+        el.style.animationDelay = (i * STAGGER) + 'ms';
         el.addEventListener('animationend', function () {
             el.classList.remove('is-hopping');
         });
     });
+
+    function wave() {
+        letters.forEach(function (el) { el.classList.add('is-hopping'); });
+    }
+
+    // only wave while the headline is on screen and the tab is in view
+    var visible = true;
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+        }).observe(title);
+    }
+
+    setTimeout(function () {
+        wave();
+        setInterval(function () {
+            if (visible && !document.hidden) wave();
+        }, EVERY);
+    }, FIRST);
 })();
