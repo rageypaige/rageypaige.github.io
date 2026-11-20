@@ -38,7 +38,7 @@ html {
 
 .rd-lock__title {
     margin: 0;
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.02em;
@@ -48,7 +48,7 @@ html {
 
 .rd-lock__note {
     margin: 8px 0 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #838b99;
@@ -70,7 +70,7 @@ html {
 .rd-lock__label {
     display: block;
     margin-bottom: 6px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 13px;
     color: #838b99;
 }
@@ -90,7 +90,7 @@ html {
     border: 0;
     border-radius: 0;
     outline: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 16px;
     color: var(--rd-text);
 }
@@ -105,7 +105,7 @@ html {
     padding: 8px 0;
     background: none;
     border: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: var(--rd-text);
@@ -124,7 +124,7 @@ html {
 .rd-lock__message {
     min-height: 1.5em;
     margin: 10px 0 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 13px;
     color: #838b99;
 }
@@ -160,7 +160,7 @@ html {
 }
 
 .rd-teaser__stats dt {
-    font-family: 'Inter Tight', 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 32px;
     letter-spacing: -0.035em;
     line-height: 1;
@@ -169,7 +169,7 @@ html {
 
 .rd-teaser__stats dd {
     margin: 8px 0 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fustat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #525a68;
