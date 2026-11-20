@@ -135,8 +135,8 @@ body.redesign ul li a:hover {
     font-style: italic;
 }
 
-/* letters hop in stop-motion as the cursor passes (js/hop.js): up, a held frame
-   near the top, then back down, in the same jerky steps as the rest of the site */
+/* a letter gives a small stop-motion hop as the cursor passes (js/hop.js): up, then
+   back down, in the same jerky steps as the rest of the site */
 .rd-hop-word {
     display: inline-block;
     white-space: nowrap;
@@ -147,14 +147,13 @@ body.redesign ul li a:hover {
 }
 
 .rd-hop.is-hopping {
-    animation: rd-hop 0.36s steps(1, end);
+    animation: rd-hop 0.3s steps(1, end);
 }
 
 @keyframes rd-hop {
     0%   { transform: translateY(0); }
-    25%  { transform: translateY(calc(var(--hop, -0.16em) * 0.6)); }
-    50%  { transform: translateY(var(--hop, -0.16em)); }
-    75%  { transform: translateY(calc(var(--hop, -0.16em) * 0.4)); }
+    33%  { transform: translateY(-0.08em); }
+    66%  { transform: translateY(-0.03em); }
     100% { transform: translateY(0); }
 }
 

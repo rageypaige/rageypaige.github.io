@@ -1,7 +1,7 @@
 (function () {
-    // Letters in the home headline hop in stop-motion as the cursor passes over them,
-    // like a cat batting at them. The letter under the cursor hops highest and its
-    // neighbours a little less, a moment later. Screen readers keep the plain sentence.
+    // Letters in the home headline give a small stop-motion hop as the cursor passes
+    // over them, like a cat batting at them. Only the letter under the cursor moves.
+    // Screen readers keep the plain sentence.
 
     var title = document.querySelector('.rd-hero__title');
     if (!title) return;
@@ -37,18 +37,9 @@
 
     var letters = Array.prototype.slice.call(title.querySelectorAll('.rd-hop'));
 
-    function hop(el, size, delay) {
-        if (!el || el.classList.contains('is-hopping')) return;
-        el.style.setProperty('--hop', size);
-        el.style.animationDelay = delay + 'ms';
-        el.classList.add('is-hopping');
-    }
-
-    letters.forEach(function (el, i) {
+    letters.forEach(function (el) {
         el.addEventListener('mouseenter', function () {
-            hop(el, '-0.16em', 0);
-            hop(letters[i - 1], '-0.07em', 60);
-            hop(letters[i + 1], '-0.07em', 60);
+            el.classList.add('is-hopping');
         });
         el.addEventListener('animationend', function () {
             el.classList.remove('is-hopping');
