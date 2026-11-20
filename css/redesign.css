@@ -887,8 +887,4 @@ html.js .rd-reveal.is-visible {
     .rd-nav__links a {
         white-space: nowrap;
     }
-    /* email is in the footer; up here it would crowd the row */
-    .rd-nav__contact {
-        display: none;
-    }
 }
