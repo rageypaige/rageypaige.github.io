@@ -1,2 +1,8 @@
 private/
 .DS_Store
+
+# Impeccable (design skill in .claude/skills/impeccable): its downloaded engine
+# binary and runtime state stay local
+.claude/skills/impeccable/scripts/bin/
+**/.impeccable/hook.cache.json
+.impeccable/live/
