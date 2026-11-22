@@ -38,7 +38,7 @@
     line-height: 1.4;
     color: var(--rd-text);
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.65;
     transition: opacity 0.2s steps(2, end);
 }
 
@@ -66,7 +66,7 @@
     line-height: 1.4;
     color: var(--rd-text);
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.65;
     transition: opacity 0.2s steps(2, end), padding-left 0.24s steps(3, end);
 }
 
@@ -110,7 +110,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-cs-title {
@@ -221,7 +221,7 @@ html:not(.js) .rd-video video {
     margin-top: 12px;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 /* Role / timeline / team / skills */
@@ -238,7 +238,7 @@ html:not(.js) .rd-video video {
     margin-bottom: 6px;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-cs-meta dd {
@@ -456,7 +456,7 @@ html:not(.js) .rd-cs-embed iframe {
 .rd-cs-main .rd-cs-cite {
     margin: 10px 0 0 21px;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 /* A pull-quote style line for the one big question */
