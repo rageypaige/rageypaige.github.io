@@ -162,45 +162,6 @@ body.redesign ul li a:hover {
 }
 
 /* the short facts, in the small voice */
-/* the bio and a small portrait beside it, like the photo on a form */
-.rd-hero__about {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-/* black and white at rest; hovering develops it into colour, like a print in
-   the darkroom */
-.rd-hero__portrait {
-    flex: none;
-    width: 84px;
-    height: 105px;
-    object-fit: cover;
-    border-radius: 2px;
-    filter: grayscale(1) contrast(1.05);
-    transition: filter 1.4s ease;
-}
-
-.rd-hero__about:hover .rd-hero__portrait {
-    filter: grayscale(0) contrast(1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .rd-hero__portrait {
-        transition: none;
-    }
-}
-
-@media (max-width: 640px) {
-    .rd-hero__about {
-        gap: 16px;
-    }
-    .rd-hero__portrait {
-        width: 72px;
-        height: 90px;
-    }
-}
-
 /* the way to reach Paige from the first screen */
 .rd-hero__say {
     color: var(--rd-text);
