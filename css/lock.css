@@ -51,7 +51,7 @@ html {
     font-family: 'Fustat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-lock__note a {
@@ -72,7 +72,7 @@ html {
     margin-bottom: 6px;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-lock__row {
@@ -126,7 +126,7 @@ html {
     margin: 10px 0 0;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-lock.is-wrong .rd-lock__message {

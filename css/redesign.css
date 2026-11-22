@@ -7,6 +7,8 @@
 :root {
     --rd-bg: #eef0f4;
     --rd-text: #191d27;
+    /* secondary text: labels, captions, meta. Dark enough for WCAG AA (4.6:1 on --rd-bg) */
+    --rd-muted: #656d7b;
     --rd-section-alt: #d4d7de;
     --rd-cursor: #ff6b4a;
     --rd-gutter: 20px;
@@ -171,7 +173,7 @@ body.redesign ul li a:hover {
 }
 
 .rd-hero__bio-soft {
-    opacity: 0.5;
+    opacity: 0.65;
 }
 
 .rd-hero__facts {
@@ -193,7 +195,7 @@ body.redesign ul li a:hover {
 
 .rd-hero__facts dt {
     color: var(--rd-text);
-    opacity: 0.5;
+    opacity: 0.65;
 }
 
 .rd-hero__facts dd {
@@ -256,7 +258,7 @@ body.redesign ul li a:hover {
 }
 
 .rd-work__item--glow .rd-work__note {
-    opacity: 0.55;
+    opacity: 0.65;
 }
 
 .rd-work__media {
@@ -467,7 +469,7 @@ body.redesign ul li a:hover {
 }
 
 .rd-work__note {
-    opacity: 0.55;
+    opacity: 0.65;
 }
 
 /* MORE WORK: three thin tiles under the two big ones, the same gutter and corners,
@@ -478,7 +480,7 @@ body.redesign ul li a:hover {
     margin: 0 0 14px;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-more-tiles {
@@ -508,7 +510,7 @@ body.redesign ul li a:hover {
 }
 
 .rd-more-tile__note {
-    opacity: 0.55;
+    opacity: 0.65;
 }
 
 .rd-more-tile__arrow {

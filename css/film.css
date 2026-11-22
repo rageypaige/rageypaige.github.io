@@ -59,7 +59,7 @@ body.redesign {
     letter-spacing: normal;
     text-transform: none;
     line-height: 1.4;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-film-organize {
@@ -270,7 +270,7 @@ div.rd-film-ph {
     left: 32px;
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-lightbox__close {
@@ -282,7 +282,7 @@ div.rd-film-ph {
     border: 0;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
     cursor: pointer;
 }
 
@@ -295,7 +295,7 @@ div.rd-film-ph {
     font-family: 'Fustat', sans-serif;
     font-size: 28px;
     line-height: 1;
-    color: #838b99;
+    color: var(--rd-muted);
     transform: translateY(-50%);
     cursor: pointer;
 }

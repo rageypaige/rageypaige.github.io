@@ -32,7 +32,7 @@
     margin-top: 8px;
     font-family: 'Fustat', sans-serif;
     font-size: 12px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 /* WHO I AM */
@@ -41,7 +41,7 @@
     margin: 0 0 10px;
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 /* same heading font as the case-study titles */
@@ -90,7 +90,7 @@
     font-family: 'Fustat', sans-serif;
     font-size: 13px;
     line-height: 1.5;
-    color: #838b99;
+    color: var(--rd-muted);
 }
 
 .rd-about__rows dd,
