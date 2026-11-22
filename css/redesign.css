@@ -294,8 +294,26 @@ body.redesign ul li a:hover {
     transition: transform 0.9s cubic-bezier(0.16, 0.8, 0.3, 1);
 }
 
-.rd-work__item--glow:hover img.rd-work__subject {
+.rd-work__item--glow:hover img.rd-work__subject,
+.rd-work__item--glow:focus-visible img.rd-work__subject {
     transform: translateX(-50%) translateY(-14px);
+}
+
+/* hovering deepens the tile a touch, like the smaller tiles below */
+.rd-work__item--glow .rd-work__media {
+    transition: background-color 0.4s ease;
+}
+
+.rd-work__item--glow:hover .rd-work__media,
+.rd-work__item--glow:focus-visible .rd-work__media {
+    background: color-mix(in srgb, var(--tile-bg, #e3e6ec) 94%, var(--rd-text));
+}
+
+/* keyboard focus: a ring in the tile's own deeper colour, just outside its frame */
+.rd-work__item:focus-visible,
+.rd-more-tile:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--tile-bg, #dfe2e7) 45%, var(--rd-text));
+    outline-offset: 3px;
 }
 
 /* Petro-Canada: the phone, sized by height, on a dusty rose (Petro red, nearly all the colour taken out) */
@@ -382,7 +400,8 @@ body.redesign ul li a:hover {
 
 .rd-work--three .rd-work__item--duet {
     --subject-width: 88%;
-    --subject-bottom: -12%;
+    /* its top lines up with the phones' tops beside it (both at 32% of the tile) */
+    --subject-bottom: -5.6%;
 }
 
 @media (max-width: 760px) {
@@ -543,11 +562,13 @@ body.redesign ul li a:hover {
     pointer-events: none;
 }
 
-.rd-more-tile:hover .rd-more-tile__arrow {
+.rd-more-tile:hover .rd-more-tile__arrow,
+.rd-more-tile:focus-visible .rd-more-tile__arrow {
     transform: translateX(6px);
 }
 
-.rd-more-tile:hover {
+.rd-more-tile:hover,
+.rd-more-tile:focus-visible {
     background: var(--tile-bg-hover);
 }
 
