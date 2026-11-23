@@ -30,7 +30,7 @@
 
 .rd-about__portrait figcaption {
     margin-top: 8px;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 12px;
     color: var(--rd-muted);
 }
@@ -39,7 +39,7 @@
 
 .rd-about__kicker {
     margin: 0 0 10px;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     color: var(--rd-muted);
 }
@@ -47,10 +47,10 @@
 /* same heading font as the case-study titles */
 .rd-about__title {
     margin: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-display);
     font-weight: 400;
     font-size: clamp(26px, 2.4vw, 32px);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     line-height: 1.1;
 }
 
@@ -61,7 +61,7 @@
 /* the home page's light voice */
 .rd-about__intro {
     margin: 14px 0 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.02em;
@@ -87,7 +87,7 @@
 
 .rd-about__rows dt,
 .rd-about__facts dt {
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     line-height: 1.5;
     color: var(--rd-muted);
@@ -96,7 +96,7 @@
 .rd-about__rows dd,
 .rd-about__facts dd {
     margin: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 14px;
     line-height: 1.5;
 }
@@ -141,7 +141,7 @@
 }
 
 .rd-about__links li {
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 14px;
 }

@@ -53,7 +53,7 @@ body.redesign {
 .rd-film-hint,
 .rd-film-organize {
     margin: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 12px;
     letter-spacing: normal;
@@ -138,7 +138,7 @@ html.rd-has-custom-cursor .rd-canvas {
 }
 
 .rd-canvas__group-name {
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-display);
     font-weight: 300;
     font-size: 20px;
     letter-spacing: -0.02em;
@@ -280,7 +280,7 @@ div.rd-film-ph {
     padding: 4px;
     background: none;
     border: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     color: var(--rd-muted);
     cursor: pointer;
@@ -292,7 +292,7 @@ div.rd-film-ph {
     padding: 12px;
     background: none;
     border: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 28px;
     line-height: 1;
     color: var(--rd-muted);
