@@ -28,7 +28,7 @@
 
 .rd-footer__note {
     position: relative;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 13px;
     color: var(--rd-footer-muted);
@@ -53,7 +53,7 @@
 
 .rd-footer__col-title {
     position: relative;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 0.04em;
@@ -62,7 +62,7 @@
 }
 
 .rd-footer__col a {
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 14px;
     color: var(--rd-footer-muted);
@@ -83,7 +83,7 @@
     width: fit-content;
     margin: 40px 0 0;
     padding: 0 var(--rd-gutter);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     color: var(--rd-footer-muted);
 }
@@ -109,7 +109,7 @@
     margin: 52px 0 0;
     padding: 20px var(--rd-gutter) 28px;
     border-top: 1px solid var(--rd-footer-line);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     color: var(--rd-footer-muted);
 }

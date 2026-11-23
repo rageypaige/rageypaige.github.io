@@ -13,7 +13,10 @@
     --rd-cursor: #ff6b4a;
     --rd-gutter: 20px;
     /* the small voice: nav links, intro facts, project labels */
-    --rd-small-font: 'Fustat', sans-serif;
+    --rd-small-font: var(--rd-body);
+    /* type: Clash Grotesk for headings (served by Fontshare), Inter for everything else */
+    --rd-display: 'Clash Grotesk', 'Inter', sans-serif;
+    --rd-body: 'Inter', sans-serif;
 }
 
 /* selected text: a soft wash of the cursor's coral */
@@ -26,7 +29,7 @@ body.redesign {
     margin: 0;
     background: var(--rd-bg);
     color: var(--rd-text);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
 }
 
 /* FILM GRAIN: a fine, still noise over every page, a nod to shooting 35mm.
@@ -64,10 +67,10 @@ body.redesign::after {
 
 .rd-nav__logo {
     margin-right: auto;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-display);
     font-weight: 400;
     font-size: 18px;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--rd-text);
     text-decoration: none;
 }
@@ -125,12 +128,12 @@ body.redesign ul li a:hover {
 .rd-hero__title {
     max-width: 13em;
     margin: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-display);
     font-weight: 300;
     font-size: clamp(34px, 4.4vw, 64px);
-    letter-spacing: -0.045em;
-    /* tight letters, but a little more room between words so they don't run together */
-    word-spacing: 0.08em;
+    letter-spacing: -0.012em;
+    /* Clash is tightly spaced already: barely tighten it, and give words a touch of room */
+    word-spacing: 0.02em;
     line-height: 1.02;
     color: var(--rd-text);
 }
@@ -162,6 +165,12 @@ body.redesign ul li a:hover {
 }
 
 /* the short facts, in the small voice */
+/* a cat sitting beside Say hi (fed and blinks like the footer cats) */
+.rd-hero__bio .rd-cat {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
 /* the way to reach Paige from the first screen */
 .rd-hero__say {
     color: var(--rd-text);
@@ -270,7 +279,8 @@ body.redesign ul li a:hover {
 }
 
 .rd-work__item--glow .rd-work__note {
-    opacity: 0.65;
+    /* 72%: still AA (4.5:1) on the deepest tile colour, grape */
+    opacity: 0.72;
 }
 
 .rd-work__media {
@@ -316,16 +326,16 @@ body.redesign ul li a:hover {
     outline-offset: 3px;
 }
 
-/* Petro-Canada: the phone, sized by height, on a dusty rose (Petro red, nearly all the colour taken out) */
+/* Petro-Canada: the phone, sized by height, on bubble pink */
 .rd-work__item--petro {
-    --tile-bg: #ecdedd;
+    --tile-bg: #edd9dd;
     --subject-height: 104%;
     --subject-bottom: -24%;
 }
 
-/* Duet Booth: the browser window, sized by width, on a soft sage (the rose's complement) */
+/* Duet Booth: the browser window, sized by width, on grape green */
 .rd-work__item--duet {
-    --tile-bg: #dde4da;
+    --tile-bg: #d7dab4;
     --subject-width: 80%;
     --subject-bottom: -12%;
 }
@@ -393,9 +403,9 @@ body.redesign ul li a:hover {
     --subject-bottom: -60%;
 }
 
-/* Passkeys: the same phone, on a rose with a little lilac, so it reads as Petro but its own project */
+/* Passkeys: the same phone, on light lavender */
 .rd-work__item--passkeys {
-    --tile-bg: #e6dde2;
+    --tile-bg: #e5e6f5;
 }
 
 .rd-work--three .rd-work__item--duet {
@@ -448,7 +458,7 @@ body.redesign ul li a:hover {
     align-items: center;
     justify-content: center;
     background: var(--tile, #dcdfe5);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 12px;
     color: rgba(25, 29, 39, 0.35);
 }
@@ -461,7 +471,7 @@ body.redesign ul li a:hover {
     gap: 6px;
     padding: var(--rd-gutter);
     background: var(--tile, #dcdfe5);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 14px;
     line-height: 1.4;
 }
@@ -492,7 +502,7 @@ body.redesign ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
@@ -509,7 +519,7 @@ body.redesign ul li a:hover {
 
 .rd-more__label {
     margin: 0 0 14px;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 13px;
     color: var(--rd-muted);
 }
@@ -532,7 +542,7 @@ body.redesign ul li a:hover {
     padding: 18px 52px 18px 22px;
     background: var(--tile-bg);
     color: var(--rd-text);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.45;
@@ -573,10 +583,10 @@ body.redesign ul li a:hover {
 }
 
 /* quiet colours that sit beside the rose and sage tiles above */
-.rd-more-tile--tn { --tile-bg: #dfe4ee; --tile-bg-hover: #d6dce9; }
-.rd-more-tile--sb { --tile-bg: #d6eaf0; --tile-bg-hover: #c9e3eb; } /* Simply Benefits blue (#54bcd8), lightened */
+.rd-more-tile--tn { --tile-bg: #e9eaf5; --tile-bg-hover: color-mix(in srgb, var(--tile-bg) 94%, var(--rd-text)); } /* light lavender, lightened */
+.rd-more-tile--sb { --tile-bg: #e0e3ce; --tile-bg-hover: color-mix(in srgb, var(--tile-bg) 94%, var(--rd-text)); } /* grape, lightened */
 .rd-more-tile--sq { --tile-bg: #e6e3ef; --tile-bg-hover: #ddd9ea; }
-.rd-more-tile--petro { --tile-bg: #f0e7e6; --tile-bg-hover: #ebdfde; }
+.rd-more-tile--petro { --tile-bg: #eee3e7; --tile-bg-hover: color-mix(in srgb, var(--tile-bg) 94%, var(--rd-text)); } /* bubble, lightened */
 
 .rd-more-tiles--four {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -607,10 +617,10 @@ body.redesign ul li a:hover {
 .rd-archive__title {
     max-width: 14em;
     margin: 0;
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-display);
     font-weight: 300;
     font-size: clamp(34px, 4.4vw, 64px);
-    letter-spacing: -0.035em;
+    letter-spacing: -0.01em;
     line-height: 1.02;
     color: var(--rd-text);
 }
@@ -618,7 +628,7 @@ body.redesign ul li a:hover {
 .rd-archive__intro {
     max-width: 34em;
     margin: 20px 0 clamp(48px, 8vh, 88px);
-    font-family: 'Fustat', sans-serif;
+    font-family: var(--rd-body);
     font-size: 16px;
     line-height: 1.55;
     color: #525a68;
